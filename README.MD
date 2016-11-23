@@ -27,7 +27,7 @@
 ### Miscellaneous
 *  [Normalizr](https://github.com/paularmstrong/normalizr)
 
-  > Normalizes nested JSON according to a schema 
+  > Normalizes nested JSON according to a schema
 
 ### Debug Tools
 *  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
@@ -40,3 +40,15 @@
 
 
 # Security
+
+# Miscellaneous
+* [Cygwin](https://www.cygwin.com/)
+  > a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
+* [fish](https://fishshell.com/)
+  > friendly-interactive shell for the 90s
+* [ATOM](https://atom.io/)
+  > a hackable text editor for the 21st century.
+
+  > suitable for the front end development
+* [JSON Generator](http://www.json-generator.com/)
+  > online JSON generator for fake data
