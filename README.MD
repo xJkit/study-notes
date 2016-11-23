@@ -13,11 +13,16 @@
 
 ### React-related libraries
 * [react-paginate](https://github.com/AdeleD/react-paginate)
-> demo: https://github.com/AdeleD/react-paginate/blob/master/docs/img/react-paginate.gif
+
+  > demo: https://github.com/AdeleD/react-paginate/blob/master/docs/img/react-paginate.gif
+
 * [react-component/pagination](https://github.com/react-component/pagination)
-> example & docs: http://react-component.github.io/pagination/
+
+  > example & docs: http://react-component.github.io/pagination/
+
 * [react-component/slider](https://github.com/react-component/slider)
-> example & docs: http://react-component.github.io/slider/
+
+  > example & docs: http://react-component.github.io/slider/
 
 ### Reference
 * [Awesome React](https://github.com/enaqx/awesome-react)
