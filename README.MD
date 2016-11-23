@@ -24,6 +24,11 @@
 
   > example & docs: http://react-component.github.io/slider/
 
+### Miscellaneous
+*  [normalizr](https://github.com/paularmstrong/normalizr)
+
+  >Normalizes nested JSON according to a schema 
+
 ### Reference
 * [Awesome React](https://github.com/enaqx/awesome-react)
 
