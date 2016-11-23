@@ -24,6 +24,10 @@
 
   > example & docs: http://react-component.github.io/slider/
 
+ * [Rodal](https://github.com/chenjiahan/rodal)
+
+  > A React modal with animations.
+
 ### Miscellaneous
 *  [Normalizr](https://github.com/paularmstrong/normalizr)
 
