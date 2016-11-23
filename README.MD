@@ -25,9 +25,15 @@
   > example & docs: http://react-component.github.io/slider/
 
 ### Miscellaneous
-*  [normalizr](https://github.com/paularmstrong/normalizr)
+*  [Normalizr](https://github.com/paularmstrong/normalizr)
 
-  >Normalizes nested JSON according to a schema 
+  > Normalizes nested JSON according to a schema 
+
+### Debug Tools
+*  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+*  [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+*  [Eslint](https://github.com/eslint/eslint)
+  > A fully pluggable tool for identifying and reporting on patterns in JavaScript
 
 ### Reference
 * [Awesome React](https://github.com/enaqx/awesome-react)
