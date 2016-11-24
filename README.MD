@@ -24,9 +24,11 @@
 
   > example & docs: http://react-component.github.io/slider/
 
- * [Rodal](https://github.com/chenjiahan/rodal)
+* [rodal](https://github.com/chenjiahan/rodal)
 
   > A React modal with animations.
+  * __[project demo](https://github.com/xJkit/react-modal-example)__
+
 
 ### Miscellaneous
 *  [Normalizr](https://github.com/paularmstrong/normalizr)
@@ -54,7 +56,7 @@
   > a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
 
 * [fish](https://fishshell.com/)
-  
+
   > friendly-interactive shell for the 90s
 
 * [ATOM](https://atom.io/)
