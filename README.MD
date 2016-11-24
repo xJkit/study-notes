@@ -36,6 +36,7 @@
 *  [Normalizr](https://github.com/paularmstrong/normalizr)
 
   > Normalizes nested JSON according to a schema
+  > * __[project demo](https://github.com/xJkit/normalizr-example)__
 
 ### Debug Tools
 *  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
