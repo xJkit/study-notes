@@ -3,6 +3,8 @@
 
 > 放在 github 上面一方面是督促自己要常常上來看開源的東西,另外就是若專業的“大大”們看到有觀念錯誤，還不吝請多多指教發個 email 或PR，我會很感激你的！
 
+---
+
 在驟變的前端 2016，不做個筆記忘超快就是了，跟做夢一樣。因為新技術的層出不窮， JavaScript 社群的力量讓學習資源與工具多到炸，不學很快就會過時。
 以下是F2E學習大綱，更細節的部份詳見各自筆記。
 
@@ -45,11 +47,18 @@
 ### Reference
 * [Awesome React](https://github.com/enaqx/awesome-react)
 
+---
+
+資訊安全是我另一個非常感興趣的領域。時常關注國內外的 CTF 競賽，但是實力粗淺只有乾瞪眼的份。不論如何，看到好用的開源工具或腳本，先筆記！
 
 # Security
 * [Nmap](https://nmap.org/)
 
   > A very handy network discovery tool.
+
+---
+
+其他包含編輯器、 shell 或是好用的輔助工具在開發的過程都佔有重要的地位，加速專案實作流程和速度，不可不用！
 
 # Miscellaneous
 * [Cygwin](https://www.cygwin.com/)
