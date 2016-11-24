@@ -27,7 +27,7 @@
 * [rodal](https://github.com/chenjiahan/rodal)
 
   > A React modal with animations.
-  * __[project demo](https://github.com/xJkit/react-modal-example)__
+  > * __[project demo](https://github.com/xJkit/react-modal-example)__
 
 
 ### Miscellaneous
@@ -39,6 +39,7 @@
 *  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 *  [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 *  [Eslint](https://github.com/eslint/eslint)
+
   > A fully pluggable tool for identifying and reporting on patterns in JavaScript
 
 ### Reference
