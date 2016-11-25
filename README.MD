@@ -31,6 +31,10 @@
   > A React modal with animations.
   > * __[project demo](https://github.com/xJkit/react-modal-example)__
 
+* [react-select](https://github.com/JedWatson/react-select)
+
+  > A Select control build with and for React JS
+
 
 ### Miscellaneous
 *  [Normalizr](https://github.com/paularmstrong/normalizr)
