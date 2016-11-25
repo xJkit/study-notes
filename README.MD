@@ -77,5 +77,12 @@
   > suitable for the front end development
 
 * [JSON Generator](http://www.json-generator.com/)
-
+https://www.haskell.org/
   > online JSON generator for fake data
+
+# Languages
+*  [Haskell](https://www.haskell.org/)
+
+  > An advanced, purely functional programming language
+
+  > __[project demo](https://github.com/xJkit/Haskell-example)__
