@@ -49,6 +49,13 @@
 
   > A fully pluggable tool for identifying and reporting on patterns in JavaScript
 
+* [Merge conflict](https://github.com/smashwilson/merge-conflicts)
+
+  > Resolve git merge conflicts in Atom
+
+  > 直接在 Atom 的 UI 介面上解決衝突！牛逼！
+
+
 ### Reference
 * [Awesome React](https://github.com/enaqx/awesome-react)
 
@@ -79,6 +86,8 @@
   > a hackable text editor for the 21st century.
 
   > suitable for the front end development
+
+
 
 * [JSON Generator](http://www.json-generator.com/)
 https://www.haskell.org/
