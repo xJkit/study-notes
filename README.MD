@@ -35,6 +35,17 @@
 
   > A Select control build with and for React JS
 
+### Async request
+* [axios](https://github.com/mzabriskie/axios)
+
+  > Promise based HTTP client for the browser and node.js
+
+* [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
+
+  > Isomorphic WHATWG Fetch API, for Node & Browserify
+  > 這個讓 fetch 變成 global, 你也可以在瀏覽器中使用 fetch()
+  > 這個也是 Promise-based, 但是需要 polyfilles: [Es6-promise](https://github.com/stefanpenner/es6-promise)
+
 
 ### Miscellaneous
 *  [Normalizr](https://github.com/paularmstrong/normalizr)
