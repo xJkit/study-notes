@@ -68,6 +68,11 @@
   > Normalizes nested JSON according to a schema
   > * __[project demo](https://github.com/xJkit/normalizr-example)__
 
+* [ELECTRON](https://github.com/electron/electron)
+
+  > 用 JS 寫 Desktop App 太狂了！顆顆
+  > Desktop Apps [應用在此](http://electron.atom.io/apps/)
+
 ### Debug Tools & Helpers
 *  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
