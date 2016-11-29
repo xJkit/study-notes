@@ -13,7 +13,7 @@
 * [react](https://github.com/facebook/react)
 * [react-router](https://github.com/ReactTraining/react-router)
 
-### React-related libraries
+### React-related Libraries
 * [react-paginate](https://github.com/AdeleD/react-paginate)
 
   > demo: https://github.com/AdeleD/react-paginate/blob/master/docs/img/react-paginate.gif
@@ -39,9 +39,9 @@
 
   > A simple javascript utility for conditionally joining classNames together
 
-  > 可以把判斷邏輯、Inline CSS 寫在 Component 裡面的函式庫 
+  > 可以把判斷邏輯、Inline CSS 寫在 Component 裡面的函式庫
 
-### Async request
+### Async Request
 * [axios](https://github.com/mzabriskie/axios)
 
   > Promise based HTTP client for the browser and node.js
@@ -50,31 +50,41 @@
 
   > Isomorphic WHATWG Fetch API, for Node & Browserify
   > 這個讓 fetch 變成 global, 你也可以在瀏覽器中使用 fetch()
-  > 這個也是 Promise-based, 但是需要 polyfilles: [Es6-promise](https://github.com/stefanpenner/es6-promise)
+  > 這個也是 Promise-based, 但是需要 polyfilles: [es6-promise](https://github.com/stefanpenner/es6-promise)
 
 
 ### Miscellaneous
-*  [Normalizr](https://github.com/paularmstrong/normalizr)
+*  [normalizr](https://github.com/paularmstrong/normalizr)
 
   > Normalizes nested JSON according to a schema
   > * __[project demo](https://github.com/xJkit/normalizr-example)__
 
-### Debug Tools
+### Debug Tools & Helpers
 *  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+
+  > RESTful API 快速驗證工具
+
 *  [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
-*  [Eslint](https://github.com/eslint/eslint)
+*  [eslint](https://github.com/eslint/eslint)
 
   > A fully pluggable tool for identifying and reporting on patterns in JavaScript
 
-* [Merge conflict](https://github.com/smashwilson/merge-conflicts)
+* [merge conflict](https://github.com/smashwilson/merge-conflicts)
 
   > Resolve git merge conflicts in Atom
 
   > 直接在 Atom 的 UI 介面上解決衝突！牛逼！
 
+* [RegexHub](https://projects.lukehaas.me/regexhub/)
 
-### Reference
+  > A collection of useful regex patterns
+
+  > 快速驗證你的 Regular Expressions 好用工具
+
+
+### Reference & Articles
 * [Awesome React](https://github.com/enaqx/awesome-react)
+* [State-of-the-Art JavaScript 2016](https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b#.kj8081e20)
 
 ---
 
@@ -104,13 +114,11 @@
 
   > suitable for the front end development
 
-
-
 * [JSON Generator](http://www.json-generator.com/)
-https://www.haskell.org/
+
   > online JSON generator for fake data
 
-# Languages
+# Secondary Languages
 *  [Haskell](https://www.haskell.org/)
 
   > An advanced, purely functional programming language
