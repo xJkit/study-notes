@@ -41,6 +41,15 @@
 
   > 可以把判斷邏輯、Inline CSS 寫在 Component 裡面的函式庫
 
+### Modern F2E Essential Tools
+
+  * [Webpack](https://github.com/webpack/webpack)
+    > 前端必備打包工具
+
+    > 延伸閱讀：
+
+      * [知乎－Webpack 配置說明](https://zhuanlan.zhihu.com/p/21346555?refer=jscss)
+
 ### Async Request
 * [axios](https://github.com/mzabriskie/axios)
 
