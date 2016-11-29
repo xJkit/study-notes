@@ -58,7 +58,9 @@
 * [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
 
   > Isomorphic WHATWG Fetch API, for Node & Browserify
+
   > 這個讓 fetch 變成 global, 你也可以在瀏覽器中使用 fetch()
+
   > 這個也是 Promise-based, 但是需要 polyfilles: [es6-promise](https://github.com/stefanpenner/es6-promise)
 
 
@@ -71,6 +73,7 @@
 * [ELECTRON](https://github.com/electron/electron)
 
   > 用 JS 寫 Desktop App 太狂了！顆顆
+
   > Desktop Apps [應用在此](http://electron.atom.io/apps/)
 
 ### Debug Tools & Helpers
