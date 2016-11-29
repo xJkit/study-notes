@@ -35,6 +35,12 @@
 
   > A Select control build with and for React JS
 
+* [classNames](https://github.com/JedWatson/classnames)
+
+  > A simple javascript utility for conditionally joining classNames together
+
+  > 可以把判斷邏輯、Inline CSS 寫在 Component 裡面的函式庫 
+
 ### Async request
 * [axios](https://github.com/mzabriskie/axios)
 
