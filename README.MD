@@ -108,6 +108,8 @@
 
   > friendly-interactive shell for the 90s
 
+  > * Project tutorial: __[fish-shell-mac](https://github.com/xJkit/fish-shell-mac)__ ,an installation guide for fish on Mac
+
 * [ATOM](https://atom.io/)
 
   > a hackable text editor for the 21st century.
