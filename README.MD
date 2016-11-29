@@ -74,6 +74,11 @@
   > RESTful API 快速驗證工具
 
 *  [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+
+  > Chrome extension for redux app
+
+  > Excellent GUI tool for checking the state in the store of a react app with redux
+
 *  [eslint](https://github.com/eslint/eslint)
 
   > A fully pluggable tool for identifying and reporting on patterns in JavaScript
@@ -89,6 +94,12 @@
   > A collection of useful regex patterns
 
   > 快速驗證你的 Regular Expressions 好用工具
+
+* [nodemon](https://github.com/remy/nodemon)
+
+  > Monitor for any changes in your node.js application and automatically restart the server
+
+  > Perfect for the development
 
 
 ### References & Articles
