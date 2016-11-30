@@ -63,6 +63,8 @@
 
   > 這個也是 Promise-based, 但是需要 polyfilles: [es6-promise](https://github.com/stefanpenner/es6-promise)
 
+  > 欲使用 query string, 可搭配 [URLSearchParams](https://developer.mozilla.org/zh-TW/docs/Web/API/URLSearchParams)
+
 * 延伸閱讀：
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
 
