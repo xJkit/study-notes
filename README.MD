@@ -41,6 +41,12 @@
 
   > 可以把判斷邏輯、Inline CSS 寫在 Component 裡面的函式庫
 
+* [Draft.js](https://facebook.github.io/draft-js/)
+
+  > A framework for building rich text editors in React.
+
+  > 適合拿來當管理介面的寫作 UI 編輯器
+
 ### Modern F2E Essential Tools
 
   * [Webpack](https://github.com/webpack/webpack)
