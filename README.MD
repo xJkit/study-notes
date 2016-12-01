@@ -68,16 +68,26 @@
 * 延伸閱讀：
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
 
+### Back End
+  * [express](https://github.com/expressjs/express)
+    > Fast, unopinionated, minimalist web framework for node.
+
+    > 超古老經典 Node 框架
+
+  * [request](https://github.com/request/request)
+    > Simplified HTTP request client.
+
+    > 方便讓我繞過瀏覽器的 Ajax Same Origin Policy
 
 ### Miscellaneous
-*  [normalizr](https://github.com/paularmstrong/normalizr)
+* [normalizr](https://github.com/paularmstrong/normalizr)
 
   > Normalizes nested JSON according to a schema
   > * __[project demo](https://github.com/xJkit/normalizr-example)__
 
 * [ELECTRON](https://github.com/electron/electron)
 
-  > 用 JS 寫 Desktop App 太狂了！顆顆
+  > 用 JS 寫 Desktop App 太狂了！
 
   > Desktop Apps [應用在此](http://electron.atom.io/apps/)
 
