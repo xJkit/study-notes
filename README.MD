@@ -68,17 +68,6 @@
 * 延伸閱讀：
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
 
-### Back End
-  * [express](https://github.com/expressjs/express)
-    > Fast, unopinionated, minimalist web framework for node.
-
-    > 超古老經典 Node 框架
-
-  * [request](https://github.com/request/request)
-    > Simplified HTTP request client.
-
-    > 方便讓我繞過瀏覽器的 Ajax Same Origin Policy
-
 ### Miscellaneous
 * [normalizr](https://github.com/paularmstrong/normalizr)
 
@@ -128,6 +117,22 @@
 ### References & Articles
 * [Awesome React](https://github.com/enaqx/awesome-react)
 * [State-of-the-Art JavaScript 2016](https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b#.kj8081e20)
+
+---
+
+# Back End
+
+要善用 Full Stack JavaScript 不可或缺的後端功能
+
+  * [express](https://github.com/expressjs/express)
+    > Fast, unopinionated, minimalist web framework for node.
+
+    > 超古老經典 Node 框架
+
+  * [request](https://github.com/request/request)
+    > Simplified HTTP request client.
+
+    > 方便讓我繞過瀏覽器的 Ajax Same Origin Policy
 
 ---
 
