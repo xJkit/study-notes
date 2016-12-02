@@ -65,6 +65,7 @@ Given synopsis below. please check more detail on the ``Project Demo``.
     > 延伸閱讀：
 
       * [知乎－Webpack 配置說明](https://zhuanlan.zhihu.com/p/21346555?refer=jscss)
+      * [手把手深入理解 webpack dev middleware 原理與相關 plugins](https://segmentfault.com/a/1190000005614604)
 
 ### Async Request
 * [axios](https://github.com/mzabriskie/axios)
