@@ -1,12 +1,15 @@
 # J's Study Notes
-> 個人學習 JavaScript 與資訊安全技術的心路歷程，在此記下工程師的青春。
+> 個人學習 JavaScript 的心路歷程，以此紀念。
 
-> 放在 github 上面一方面是督促自我要時常上來看開源的專案，另一方面就是盼各位專業“大大”們發現觀念有誤，還不吝指教發個 email 通知或直接 PR，我會很感激你的！
+> If you stranger finds something incorrect, give me a pull request is much appreciated.
+
+> If you stranger has a better ideas or tools, open an issue to speak out loudly. Welcome.
 
 ---
 
-在驟變的前端 2016，不做個筆記忘超快就是了，跟做夢一樣。因為新技術的層出不窮， JavaScript 社群的力量讓學習資源與工具多到炸，不學很快就會過時。
-以下是F2E學習大綱，更細節的部份詳見各自筆記或 ``Project Demo``。
+在驟變的前端世界，不做個筆記留下工程師的青春，就會跟夢一樣輕易流逝。JavaScript 真的是像在演肥皂劇，從以前跑龍套的語言變成今日能挑大樑的勇士，如此動人的情節跟川普在不被看好的亂世中獲勝是一樣的驚天地泣鬼神？
+
+Given synopsis below. please check more detail on the ``Project Demo``.
 
 # Front End
 ### React official
@@ -14,6 +17,13 @@
 * [react-router](https://github.com/ReactTraining/react-router)
 
 ### React-related Libraries
+
+* [ant-design](https://github.com/ant-design/ant-design/)
+
+  > An enterprise-class UI design language and React-based implementation.
+
+  > [Official Site](https://ant.design/)
+
 * [react-paginate](https://github.com/AdeleD/react-paginate)
 
   > demo: https://github.com/AdeleD/react-paginate/blob/master/docs/img/react-paginate.gif
@@ -128,7 +138,7 @@
 
 # Back End
 
-要善用 Full Stack JavaScript 不可或缺的後端功能
+要善用 Full Stack JavaScript 不可或缺的後端功能。感謝 [Node](https://nodejs.org/en/), 讚嘆 [Node](https://nodejs.org/en/).
 
   * [express](https://github.com/expressjs/express)
     > Fast, unopinionated, minimalist web framework for node.
@@ -140,9 +150,19 @@
 
     > 方便讓我繞過瀏覽器的 Ajax Same Origin Policy
 
+### Miscellaneous
+
+  * [docker](https://www.docker.com/)
+
+    > 超狂 application containers, BJ4.
+
+    > 傳送門：
+
+      * [Get started with docker for Mac](https://docs.docker.com/docker-for-mac/)
+
 ---
 
-資訊安全是我另一個非常感興趣的領域。時常關注國內外的 CTF 競賽，但是實力粗淺只有乾瞪眼的份。不論如何，看到好用的開源工具或腳本，先筆記！
+資訊安全是我另一個感興趣的領域。偶爾關注國內外的 CTF ，但是實力粗淺只有乾瞪眼的份。不論如何，看到好用的開源工具或腳本，先筆記。
 
 # Security
 * [Nmap](https://nmap.org/)
