@@ -15,6 +15,9 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 ### React official
 * [react](https://github.com/facebook/react)
 * [react-router](https://github.com/ReactTraining/react-router)
+* [redux](https://github.com/reactjs/redux)
+
+  > Predictable state container for JavaScript apps
 
 ### React-related Libraries
 
