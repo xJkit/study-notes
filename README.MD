@@ -172,7 +172,7 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
 * [LOIC](https://github.com/NewEraCracker/LOIC)
 
-  > DDoS Tool for Windows
+  > DoS Tool for Windows
 
 * [Dripcap](https://github.com/dripcap/dripcap)
 
