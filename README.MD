@@ -1,9 +1,9 @@
 # J's Study Notes
 > 個人學習 JavaScript 的心路歷程，以此紀念。
 
-> If you stranger finds something incorrect, give me a pull request is much appreciated.
+> If you stranger finds something incorrect, a pull request is much appreciated.
 
-> If you stranger has a better ideas or tools, open an issue to speak out loudly. Welcome.
+> If you stranger has a better ideas or tools, just open an issue to speak out loudly; welcome.
 
 ---
 
