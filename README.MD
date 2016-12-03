@@ -181,6 +181,12 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
   > Wireshark filter [documentation](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
 
+* [Kali Linux Docker Image](https://www.kali.org/news/official-kali-linux-docker-images/)
+
+  > Install Kali Linux with Docker!
+
+  > [Kali Linux Meta Packages](https://www.kali.org/news/kali-linux-metapackages/)
+
 ---
 
 其他包含編輯器、 shell 或是好用的輔助工具在開發的過程都佔有重要的地位，加速專案實作流程和速度，不可不用！
