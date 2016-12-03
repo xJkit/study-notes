@@ -170,6 +170,16 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
   > A very handy network discovery tool.
 
+* [LOIC](https://github.com/NewEraCracker/LOIC)
+
+  > DDoS Tool for Windows
+
+* [Dripcap](https://github.com/dripcap/dripcap)
+
+  > Packet Caffeinated Packet Analyzer
+
+  > documentation:[Berkeley Packet Filter Syntax](http://biot.com/capstats/bpf.html)
+
 ---
 
 其他包含編輯器、 shell 或是好用的輔助工具在開發的過程都佔有重要的地位，加速專案實作流程和速度，不可不用！
