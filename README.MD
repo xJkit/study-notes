@@ -187,6 +187,14 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
   > [Kali Linux Meta Packages](https://www.kali.org/news/kali-linux-metapackages/)
 
+* [Metasploit](https://github.com/rapid7/metasploit-framework)
+
+  > The best penetration testing framework, ever!
+
+* [Metasploitable 2](https://community.rapid7.com/docs/DOC-1875)
+
+  > The intentionally vulnerable version of Ubuntu Linux VM designed for testing security tools and demonstrating common vulnerabilities.
+
 ---
 
 其他包含編輯器、 shell 或是好用的輔助工具在開發的過程都佔有重要的地位，加速專案實作流程和速度，不可不用！
