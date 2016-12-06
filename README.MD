@@ -161,39 +161,54 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 資訊安全是我另一個感興趣的領域。偶爾關注國內外的 CTF ，但是實力粗淺只有乾瞪眼的份。不論如何，看到好用的開源工具或腳本，先筆記。
 
 # Security
-* [Nmap](https://nmap.org/)
-
-  > A very handy network discovery tool.
-
-* [LOIC](https://github.com/NewEraCracker/LOIC)
-
-  > DoS Tool for Windows
-
-* [Dripcap](https://github.com/dripcap/dripcap)
-
-  > Packet Caffeinated Packet Analyzer
-
-  > documentation:[Berkeley Packet Filter Syntax](http://biot.com/capstats/bpf.html)
-
-* [Wireshark](https://github.com/wireshark/wireshark)
-
-  > The world’s foremost and widely-used network protocol analyzer.
-
-  > Wireshark filter [documentation](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
-
 * [Kali Linux Docker Image](https://www.kali.org/news/official-kali-linux-docker-images/)
 
   > Install Kali Linux with Docker!
 
   > [Kali Linux Meta Packages](https://www.kali.org/news/kali-linux-metapackages/)
 
-* [Metasploit](https://github.com/rapid7/metasploit-framework)
+* Reconnaissance:
+  * [Nmap](https://nmap.org/)
 
-  > The best penetration testing framework, ever!
+    > A very handy network discovery tool.
 
-* [Metasploitable 2](https://community.rapid7.com/docs/DOC-1875)
+  * [Dripcap](https://github.com/dripcap/dripcap)
 
-  > The intentionally vulnerable version of Ubuntu Linux VM designed for testing security tools and demonstrating common vulnerabilities.
+    > Packet Caffeinated Packet Analyzer based on [ELECTRON](https://github.com/electron/electron)
+
+    > documentation:[Berkeley Packet Filter Syntax](http://biot.com/capstats/bpf.html)
+
+  * [Wireshark](https://github.com/wireshark/wireshark)
+
+    > The world’s foremost and widely-used network protocol analyzer.
+
+    > Wireshark filter [documentation](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
+
+* Password Recovery:
+
+  * [John the Ripper](https://github.com/magnumripper/JohnTheRipper)
+
+    > Fast password cracker
+
+  * [Hashcat](https://github.com/hashcat/hashcat)
+
+    > World's fastest and most advanced password recovery utility
+
+* Exploits and Attacks:
+
+  * [Metasploit](https://github.com/rapid7/metasploit-framework)
+
+    > The best penetration testing framework, ever!
+
+  * [LOIC](https://github.com/NewEraCracker/LOIC)
+
+    > DoS Tool for Windows
+
+* Miscellaneous:
+
+  * [Metasploitable 2](https://community.rapid7.com/docs/DOC-1875)
+
+    > The intentionally vulnerable version of Ubuntu Linux VM designed for testing security tools and demonstrating common vulnerabilities.
 
 ---
 
