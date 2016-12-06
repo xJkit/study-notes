@@ -21,3 +21,5 @@ $ db_status
 * [Metasploit Fundamentals](https://www.offensive-security.com/metasploit-unleashed/using-databases/)
 
 * [Metasploit for Beginners](MetaSploit tutorial for beginners)
+
+* [msfconsole core command](https://www.offensive-security.com/metasploit-unleashed/msfconsole-commands/)
