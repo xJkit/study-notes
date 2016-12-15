@@ -105,7 +105,7 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
   > JavaScript 3D library
 
-  > The library provides <canvas>, <svg>, CSS3D and WebGL renderers
+  > The library provides &lt;canvas&gt;, &lt;svg&gt;, CSS3D and WebGL renderers
 
 ### Debug Tools & Helpers
 *  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
