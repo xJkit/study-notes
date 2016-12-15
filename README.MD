@@ -191,6 +191,12 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
     > Wireshark filter [documentation](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
 
+  * [OpenDoor](https://github.com/stanislav-web/OpenDoor)
+
+    > OWASP Directory Access scanner
+
+    > Find all possible ways to login, empty directories and entry points.
+
 * Password Recovery:
 
   * [John the Ripper](https://github.com/magnumripper/JohnTheRipper)
@@ -216,6 +222,20 @@ Given synopsis below. please check more detail on the ``Project Demo``.
   * [Metasploitable 2](https://community.rapid7.com/docs/DOC-1875)
 
     > The intentionally vulnerable version of Ubuntu Linux VM designed for testing security tools and demonstrating common vulnerabilities.
+
+  * [VulApps](https://github.com/Medicean/VulApps)
+
+    > 快速搭建各种漏洞环境(Various vulnerability environment)
+
+    > 为方便使用，统一采用 __``Dockerfile``__ 形式
+
+* Blogs
+
+  * [深網與暗網指南](http://tutorial.evogtechteam.com/deep-web-dark-web-tutorial/#.WE640KJ975X)
+
+    > 深網：互联网上无法通过普通方法访问到的内容，这些普通的方法包括使用谷歌与百度等搜索引擎。深网内容主要是一些需要某些条件如注册或付费才能访问的内容，也有的是数据库和某些服务。
+
+    > 暗網：暗网简单的解释就是加密网络，它必需使用匿名代理工具才能访问
 
 ---
 
