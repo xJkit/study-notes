@@ -101,6 +101,12 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
   > Desktop Apps [應用在此](http://electron.atom.io/apps/)
 
+* [Three](https://github.com/mrdoob/three.js/)
+
+  > JavaScript 3D library
+
+  > The library provides <canvas>, <svg>, CSS3D and WebGL renderers
+
 ### Debug Tools & Helpers
 *  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
