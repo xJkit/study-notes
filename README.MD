@@ -217,6 +217,10 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
     > DoS Tool for Windows
 
+  * [WifiPhisher](https://github.com/sophron/wifiphisher)
+
+    > Automated victim-customized phishing attacks against Wi-Fi clients
+
 * Miscellaneous:
 
   * [Metasploitable 2](https://community.rapid7.com/docs/DOC-1875)
