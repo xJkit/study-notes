@@ -60,6 +60,12 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
   > 適合拿來當管理介面的寫作 UI 編輯器
 
+* [react-css-modules](https://github.com/gajus/react-css-modules)
+
+  > Seamless mapping of class names to CSS modules inside of React components
+
+  > 寫出 Modular 與 Reusable CSS!
+
 ### Modern F2E Essential Tools
 
   * [Webpack](https://github.com/webpack/webpack)
