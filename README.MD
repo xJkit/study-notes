@@ -66,6 +66,12 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
   > 寫出 Modular 與 Reusable CSS!
 
+  * 設計哲學來自 [CSS Modules](https://github.com/css-modules/css-modules)，其為一種 __paradigm__
+
+    > 搭配 webpack, css-loader, style-loder. 也可使用 stylus 強化原生 CSS (搭配 stylus-loader)
+
+  * 由於 ``react-css-modules`` 會拖垮效能，另一個輕量級的 alternatives 為使用 [babel-plugin-react-css-modules](https://github.com/gajus/babel-plugin-react-css-modules)
+
 ### Modern F2E Essential Tools
 
   * [Webpack](https://github.com/webpack/webpack)
