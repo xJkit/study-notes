@@ -93,6 +93,11 @@ Given synopsis below. please check more detail on the ``Project Demo``.
       * [手把手深入理解 webpack dev middleware 原理與相關 plugins](https://segmentfault.com/a/1190000005614604)
       * [译 Webpack——令人困惑的地方](https://segmentfault.com/a/1190000005089993?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
 
+  * [Babel](https://github.com/babel/babel)
+    > Transpiler for JavaScript, and more.
+
+    > 原本只是讓你寫 ES6+ 的轉轉譯工具，但是發展至今已經更強大了...
+
 ### Async Request
 * [axios](https://github.com/mzabriskie/axios)
 
