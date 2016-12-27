@@ -2,7 +2,7 @@
 
 > [Official Documentation](https://facebook.github.io/react-native/docs/getting-started.html)
 
-### Development Dependencies & Setup
+## Development Dependencies & Setup
 1. ``XCode``
   * Apple Official IDE for iOS devices
   * used for packaging the code + react-native library
@@ -37,9 +37,40 @@
 
 
 
-### Get Started
+## Get Started
 ```shell
   react-native init ProjectName # Change ProjectName at your will
   cd ProjectName
   react-native run-ios # Kick off iOS app
 ```
+
+##### Directory Structure:
+```shell
+.
+├── __tests__
+├── android
+├── index.android.js
+├── index.ios.js
+├── ios
+├── node_modules
+├── package.json
+└── yarn.lock
+```
+where ``index.ios.js`` and ``index.android.js`` are the entry files for the ``ios`` and ``android`` directories respectively.
+
+#### React and React Native libraries
+1. ``React``:
+  * Knows how a component should behave
+  * Knows how to take a bunch of components and make them work together
+2. ``React Native``:
+  * Knows how to take the output from a component and place it on the screen
+  * Provides default core components(image, text, ...)
+In the matter of fact, ``React Native`` code looks like the ``React``.
+
+#### Difference between ``React`` and ``React Native``
+1. Render to the screen:
+  * ``React`` 使用 ``ReactDOM`` 而 ``ReactNative`` 則為 ``AppRegistry.registerComponent``:
+  ```js
+    AppRegistry.registerComponent('moduleName', () => App);
+    // moduleName is supposed to be the same name as the project folder. 
+  ```
