@@ -24,7 +24,7 @@
   * __``Atom``__:
     1. Base on the original lint system: ``linter``
     2. Use Atom preference to install ``linter`` and ``linter-eslint``
-    3. npm install --save-dev ``esllint-config-rallycoding``
+    3. npm install --save-dev ``eslint-config-rallycoding``
     4. Add ``.eslintrc`` file:
       * Paste a config object:
       ```json
@@ -72,5 +72,11 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
   * ``React`` 使用 ``ReactDOM`` 而 ``ReactNative`` 則為 ``AppRegistry.registerComponent``:
   ```js
     AppRegistry.registerComponent('moduleName', () => App);
-    // moduleName is supposed to be the same name as the project folder. 
+    // moduleName is supposed to be the same name as the project folder.
   ```
+  相同的是，都只有 Root Component 需要 AppRegistry(或 ReactDOM.render)
+2. Styling:
+  * ``React`` 上分為 inline, block 與 inline-block, 幾乎適用所有 CSS styles.
+  * ``React Native`` 上的 UI 元件有各自適用的 Styles, 並非套用網頁的規則。
+   * 使用 camelCasing 而不是 dash-casing 的方式
+   * 使用 flex box 來做排版
