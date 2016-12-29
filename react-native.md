@@ -80,3 +80,6 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
   * ``React Native`` 上的 UI 元件有各自適用的 Styles, 並非套用網頁的規則。
    * 使用 camelCasing 而不是 dash-casing 的方式
    * 使用 flex box 來做排版
+3. ``React Native`` 的 flexbox:
+  * style 屬性物件使用 camelCasing，value使用 __string__ 或 **number**
+  * 不需要宣告 {``display: 'flex'``},預設就是以 flexbo 作為排版引擎
