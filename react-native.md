@@ -86,3 +86,20 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
 4. Debugging:
   * `React` 為網頁應用程式，使用 ``console.log`` 或是 ``debugger;``設定中斷點，在 Chrome DevTools 中操作非常方便。搭配 ``React``, ``Redux DevTools`` 等 Chrome 外掛風味更佳，
   * ``React Native`` 在 iOS Simulator 上開發，必須使用瀏覽器 remotely 去偵測。在 Simulator 中使用 ``cmd + D`` 選擇 __``Debug JS Remotely``__ 並開啟瀏覽器 debug 視窗。後續與 ``React``方式相同。
+5. Networking:
+  * ``React``:
+    * 網頁應用程式使用 __fetch api__ 需要安裝 [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
+    * 瀏覽器有 ``CORS`` 同源政策限制
+  * ``React Native``:
+    * 原生 React Native 提供 Fetch API, 毋需導入任何第三方函式庫
+    * 直接使用 ``Fetch`` 會讓 eslint 發生抱怨，加入以下程式碼：
+      ```json
+      "env": {
+        "browser": true
+        }
+      ```
+    * Apple 原生有網路安全協議 ``NSAppTransportSecurity``,有一下三種解法：
+      1. 修改 ``info.plist``, 允許 App 通過造訪任意的 __http__ 請求, 請參見 [React Native: Networking](https://facebook.github.io/react-native/docs/network.html)
+      2. 改成 __https__ 協議
+
+      > 開發時直接使用 localhost，比較方便。
