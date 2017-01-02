@@ -80,13 +80,18 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
   * ``React Native`` 上的 UI 元件有各自適用的 Styles, 並非套用網頁的規則。
    * 使用 camelCasing 而不是 dash-casing 的方式
    * 使用 flex box 來做排版
-3. ``React Native`` 的 flexbox:
+   * 沒有分開的 CSS 檔案，而是直接寫在相同檔案的一個物件
+   * 使用類似 ``CSS Modules`` 的方式作為 inline-css, 透過 component 統一 props: ``style``(單數)
+3. ``React Native`` 的 flex box:
   * style 屬性物件使用 camelCasing，value使用 __string__ 或 **number**
-  * 不需要宣告 {``display: 'flex'``},預設就是以 flexbo 作為排版引擎
-4. Debugging:
+  * 不需要宣告 {``display: 'flex'``},預設就是以 flex box 作為排版引擎
+4. iOS 獨特的 Styles:
+  * [shadow props](https://facebook.github.io/react-native/docs/shadow-props.html)
+  * elevation
+5. Debugging:
   * `React` 為網頁應用程式，使用 ``console.log`` 或是 ``debugger;``設定中斷點，在 Chrome DevTools 中操作非常方便。搭配 ``React``, ``Redux DevTools`` 等 Chrome 外掛風味更佳，
   * ``React Native`` 在 iOS Simulator 上開發，必須使用瀏覽器 remotely 去偵測。在 Simulator 中使用 ``cmd + D`` 選擇 __``Debug JS Remotely``__ 並開啟瀏覽器 debug 視窗。後續與 ``React``方式相同。
-5. Networking:
+6. Networking:
   * ``React``:
     * 網頁應用程式使用 __fetch api__ 需要安裝 [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
     * 瀏覽器有 ``CORS`` 同源政策限制
