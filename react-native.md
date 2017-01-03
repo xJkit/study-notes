@@ -108,3 +108,26 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
       2. 改成 __https__ 協議
 
       > 開發時直接使用 localhost，比較方便。
+
+### React Native Style Tricks
+
+1. [Image](https://facebook.github.io/react-native/docs/images.html) 的 tricks:
+  * 使用 ``<Image />``
+  * source 屬性丟入一個物件， uri 寫入檔案位置
+  * 必須標示 width 與 height 圖片才會顯示
+  * 要讓圖片 100% 放大，使用以下 tricks:
+    1. height: 300 (先標示固定高度)
+    2. flex: 1 (讓 flexbox item 膨脹)
+    3. width: null (寬度代入 null)
+2. [ScrollView](https://facebook.github.io/react-native/docs/using-a-scrollview.html)
+  * 當內部內容溢出時需要
+  * 先定義 ScrollView 的 component
+    * 通常是使用 map 渲染清單的那個 component
+    * 舊版 bug 是當你使用 scrollView 時 root component 必須代入 { flex: 1 } 的 style 修正
+3. 製作 Button:
+  * 不一定要用原生的 iOS ``<Button />``，可以自行製作
+  * 使用 Touch＊ 等相關的 Component 來處理使用者 touch events:
+    * [TouchableHighlight](https://facebook.github.io/react-native/docs/touchablehighlight.html)
+    * [TouchableNativeFeedback](https://facebook.github.io/react-native/docs/touchablenativefeedback.html)
+    * [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity.html)
+    * [TouchableWithoutFeedback](https://facebook.github.io/react-native/docs/touchablewithoutfeedback.html)
