@@ -1,6 +1,10 @@
 # React Native Notes
-
-> [Official Documentation](https://facebook.github.io/react-native/docs/getting-started.html)
+  * [Official Documentation](https://facebook.github.io/react-native/docs/getting-started.html)
+  * [大陸人翻譯好的好讀版文件](http://reactnative.cn/)
+  * [各種別人寫好的元件](https://github.com/jondot/awesome-react-native)
+  * [F8 2016 App 官方的完整範例](http://makeitopen.com/)
+  * [React Native Taiwan 社群](https://www.facebook.com/groups/1084440818288147/)
+  * [React Native Community 社群](https://www.facebook.com/groups/react.native.community/?fref=ts)
 
 ## Development Dependencies & Setup
 1. ``XCode``
