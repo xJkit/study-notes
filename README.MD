@@ -22,9 +22,17 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 * [react-native](https://github.com/facebook/react-native#getting-started)
   > A framework for building native apps with React.
 
-  > 用 React 來寫 iOS 與 Android App. 期待發展到 Desktop 與 Electron 相抗衡
+  > 用 React 來寫 iOS 與 Android App.
 
   > Learn once, write anywhere.
+
+  * [react-native-windows](https://github.com/ReactWindows/react-native-windows)
+
+    > react-native plugin for UWP(Universal Windows Platform)
+
+  * [react-native-macOS](https://github.com/ptmt/react-native-macos)
+
+    > Build macOS desktop apps using React Native and Cocoa.
 
 ### React-related Libraries
 
