@@ -12,13 +12,9 @@
 Given synopsis below. please check more detail on the ``Project Demo``.
 
 # Front End
-### React official
+### React officials
 * [react](https://github.com/facebook/react)
 * [react-router](https://github.com/ReactTraining/react-router)
-* [redux](https://github.com/reactjs/redux)
-
-  > Predictable state container for JavaScript apps
-
 * [react-native](https://github.com/facebook/react-native#getting-started)
   > A framework for building native apps with React.
 
@@ -33,6 +29,43 @@ Given synopsis below. please check more detail on the ``Project Demo``.
   * [react-native-macOS](https://github.com/ptmt/react-native-macos)
 
     > Build macOS desktop apps using React Native and Cocoa.
+
+
+### Redux
+* [redux](https://github.com/reactjs/redux)
+
+  > Predictable state container for JavaScript apps
+
+* [react-redux](https://github.com/reactjs/react-redux)
+
+  > Official React bindings for Redux
+
+* [react-router-redux](https://github.com/reactjs/react-router-redux)
+
+  > Bindings for react-router and redux
+
+  > 讓 react-router 與 redux store 同步
+
+* [redux-thunk](https://github.com/gaearon/redux-thunk)
+
+  > Thunk middleware for Redux
+
+  > 讓 action creators 回傳不只是 action 物件，而是 Thunk 函數
+
+  > 處理 Asynchronous 的一種方式
+
+* [redux-saga](https://github.com/redux-saga/redux-saga)
+
+  > make side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better.
+
+  > 使用 ES6 generators 讓非同步請求更加容易處理與測試
+
+*  [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+
+  > Chrome extension for redux app
+
+  > Excellent GUI tool for checking the state in the store of a react app with redux
+
 
 ### React-related Libraries
 
@@ -120,7 +153,7 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 
     > Mac only...
 
-### Async Request
+### Async Request Libraries
 * [axios](https://github.com/mzabriskie/axios)
 
   > Promise based HTTP client for the browser and node.js
@@ -138,10 +171,13 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 * 延伸閱讀：
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
 
+* [redux-thunk]()
+
 ### Miscellaneous
 * [normalizr](https://github.com/paularmstrong/normalizr)
 
   > Normalizes nested JSON according to a schema
+  
   > * __[project demo](https://github.com/xJkit/normalizr-example)__
 
 * [ELECTRON](https://github.com/electron/electron)
@@ -160,12 +196,6 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 *  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
   > RESTful API 快速驗證工具
-
-*  [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
-
-  > Chrome extension for redux app
-
-  > Excellent GUI tool for checking the state in the store of a react app with redux
 
 *  [eslint](https://github.com/eslint/eslint)
 
