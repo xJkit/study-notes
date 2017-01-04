@@ -9,7 +9,7 @@
 
 在驟變的前端世界，不做個筆記留下工程師的青春，就會跟夢一樣輕易流逝。JavaScript 真的是像在演肥皂劇，從以前跑龍套的語言變成今日能挑大樑的勇士，如此動人的情節跟川普在不被看好的亂世中獲勝是一樣的驚天地泣鬼神？
 
-Given synopsis below. please check more detail on the ``Project Demo``.
+Given synopsis below. Please check more detail on the ``Project Demo``.
 
 # Front End
 ### React officials
@@ -171,13 +171,11 @@ Given synopsis below. please check more detail on the ``Project Demo``.
 * 延伸閱讀：
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
 
-* [redux-thunk]()
-
 ### Miscellaneous
 * [normalizr](https://github.com/paularmstrong/normalizr)
 
   > Normalizes nested JSON according to a schema
-  
+
   > * __[project demo](https://github.com/xJkit/normalizr-example)__
 
 * [ELECTRON](https://github.com/electron/electron)
