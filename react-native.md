@@ -113,6 +113,10 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
 
       > 開發時直接使用 localhost，比較方便。
 
+7. TextInput 處理方式：
+  * React 就像網頁一樣，使用者在 input 輸入， onChange 改變 state
+  * ReactNative 的 TextInput 要明確指定 value 這個 props 等於 state 才行
+
 ### React Native Style Tricks
 
 1. [Image](https://facebook.github.io/react-native/docs/images.html) 的 tricks:
