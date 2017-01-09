@@ -46,29 +46,48 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 讓 react-router 與 redux store 同步
 
-* [redux-thunk](https://github.com/gaearon/redux-thunk)
-
-  > thunk middleware for redux
-
-  > 讓 action creators 回傳不只是 action 物件，而是 Thunk 函數
-
-  > 處理 async 的另一種方式
-
-  > 注意： action creator 標準是必須回傳 plain object, 但是使用 thunk middleware 後才允許回傳 function (--> thunk function)
-
-* [redux-saga](https://github.com/redux-saga/redux-saga)
-
-  > make side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better.
-
-  > 使用 ES6 generators 讓非同步請求統一放在 saga 中使得更加容易處理與測試
-
-  > 最推薦處理 async 的方式，但是需要 generators 的知識！
-
 *  [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
   > Chrome extension for redux app
 
   > Excellent GUI tool for checking the state in the store of a react app with redux
+
+#### Redux Middleware for Async Action Side Effects  
+
+* [redux-thunk](https://github.com/gaearon/redux-thunk) - __ :star: 3.9K__
+
+  > Redux 原作者所開發，讓 action creators 回傳不只是 action 物件，而是 thunk 函數
+
+  > 使用 thunk middleware for redux，處理 async 的另一種方式
+
+  > 注意： action creator 標準是必須回傳 plain object, 但是使用 thunk middleware 後才允許回傳 function (--> thunk function)
+
+* [redux-promise](https://github.com/acdlite/redux-promise) - __ :star: 1.2K__
+
+  > 讓 Action Creators 回傳 Promise
+
+  > 發者也是 React 官方成員之一，但是很久沒更新了...
+
+
+* [redux-promise-middleware](https://github.com/pburtchaell/redux-promise-middleware) - __ :star: 0.6K__
+
+  > Redux middleware for resolving and rejecting promises with conditional optimistic updates
+
+  > 作者也是 FB 開發者之一
+
+* [redux-observable](https://github.com/redux-observable/redux-observable) - __ :star: ~2K__
+
+  > 以 RxJS 為基礎來開發的 Middleware
+
+  > 精神： RxJS + Redux + React = Amazing
+
+  > 開發者為 RxJS 之一，也是 Netflix 工程師
+
+* [redux-saga](https://github.com/redux-saga/redux-saga) - __ :star: ~6K__
+
+  > 使用 ES6 generators 讓非同步請求統一放在 saga 中使得更加容易處理與測試
+
+  > 現今最流行處理 async 的方式，但是需要 generators 的知識！
 
 
 ### React-related Libraries
