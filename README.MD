@@ -48,17 +48,21 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 * [redux-thunk](https://github.com/gaearon/redux-thunk)
 
-  > Thunk middleware for Redux
+  > thunk middleware for redux
 
   > 讓 action creators 回傳不只是 action 物件，而是 Thunk 函數
 
-  > 處理 Asynchronous 的一種方式
+  > 處理 async 的另一種方式
+
+  > 注意： action creator 標準是必須回傳 plain object, 但是使用 thunk middleware 後才允許回傳 function (--> thunk function)
 
 * [redux-saga](https://github.com/redux-saga/redux-saga)
 
   > make side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better.
 
-  > 使用 ES6 generators 讓非同步請求更加容易處理與測試
+  > 使用 ES6 generators 讓非同步請求統一放在 saga 中使得更加容易處理與測試
+
+  > 最推薦處理 async 的方式，但是需要 generators 的知識！
 
 *  [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
@@ -170,6 +174,11 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 * 延伸閱讀：
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
+
+  * [Why do we need middleware for async flow in Redux?](http://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux/34623840#34623840)
+    > 非同步網路請求到底是放在 middleware? 還是放在 action creator 裡面？作者在 StackOverflow 有非常好的說明(包含是否適用 redux-thunk 或 redux-saga，有兩者比較的討論串)
+
+    > Action Creator 需要是 "pure function" 嗎？ 作者回答： Redux 官方文件以前說是，但是錯了！他並非一定 pure.
 
 ### Miscellaneous
 * [normalizr](https://github.com/paularmstrong/normalizr)
