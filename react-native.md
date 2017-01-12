@@ -94,6 +94,7 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
     * 預設 ``flexDirection``: **'column'** (而不是 **'row'**)
     * 預設 ``alignItems``: **'stretch'** (而不是 **'flex-start'**) --> cross axis 排版
     * ``flex``: 只能填入一個數值(意義為 ``flex-grow``)
+  * [更多官方佈局說明請點這裡](http://reactnative.cn/docs/0.36/layout-with-flexbox.html)
 4. iOS 獨特的 Styles:
   * [shadow props](https://facebook.github.io/react-native/docs/shadow-props.html)
   * elevation
