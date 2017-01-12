@@ -89,6 +89,11 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
 3. ``React Native`` 的 flex box:
   * style 屬性物件使用 camelCasing，value使用 __string__ 或 **number**
   * 不需要宣告 {``display: 'flex'``},預設就是以 flex box 作為排版引擎
+  * Default 數值的不同：
+    * 在 React Native 中基本上使用 ``flexDirection``, ``alignItems``, ``justifyContent`` 已經滿足大家的需求
+    * 預設 ``flexDirection``: **'column'** (而不是 **'row'**)
+    * 預設 ``alignItems``: **'stretch'** (而不是 **'flex-start'**) --> cross axis 排版
+    * ``flex``: 只能填入一個數值(意義為 ``flex-grow``)
 4. iOS 獨特的 Styles:
   * [shadow props](https://facebook.github.io/react-native/docs/shadow-props.html)
   * elevation
