@@ -52,6 +52,12 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > Excellent GUI tool for checking the state in the store of a react app with redux
 
+  * [remote-redux-devtools-on-debugger](https://github.com/jhen0409/remote-redux-devtools-on-debugger/)
+
+    > Redux DevTools 的延伸，用於 React-Native
+
+    > 在 ``npm postinstall`` 之中把 react native 原生的 debugger 換掉
+
 #### Redux Middleware for Async Action Side Effects  
 
 * [redux-thunk](https://github.com/gaearon/redux-thunk) - :star: __3.9K__
