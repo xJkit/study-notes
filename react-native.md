@@ -123,6 +123,10 @@ In the matter of fact, ``React Native`` code looks like the ``React``.
   * React 就像網頁一樣，使用者在 input 輸入， onChange 改變 state
   * ReactNative 的 TextInput 要明確指定 value 這個 props 等於 state 才行
 
+8. Rendering the list:
+  * React 使用 map function
+  * React-Native 使用原生 ListView component
+
 ### React Native Style Tricks
 
 1. [Image](https://facebook.github.io/react-native/docs/images.html) 的 tricks:
