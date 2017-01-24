@@ -338,6 +338,10 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
     > Automated victim-customized phishing attacks against Wi-Fi clients
 
+  * [backdoorppt](https://github.com/r00t-3xp10it/backdoorppt)
+
+    > transform your payload.exe into one fake word doc (.ppt)
+
 * Miscellaneous:
 
   * [Metasploitable 2](https://community.rapid7.com/docs/DOC-1875)
