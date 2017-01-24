@@ -7,6 +7,8 @@ Realtime Application Framework.
 * [Socket.io Github](https://github.com/socketio)
 * [Socket.io - NodeJS server](https://github.com/socketio/socket.io)
 * [Socket.io - Client](https://github.com/socketio/socket.io-client)
+* Tutorials:
+  1. [TutorialsPoint](https://www.tutorialspoint.com/socket.io/index.htm)
 
 
 ### Installation
@@ -53,4 +55,21 @@ const PORT = process.env.PORT || 3000;
 server.listen(, err => {
   console.log(`Server fires up at ${ADDR}:${PORT}`);
 })
+```
+
+### Namespaces & Rooms
+* Reference
+  * [socket.io 中namespace 和 room的概念。](http://blog.csdn.net/lijiecong/article/details/50781417)
+  * [socket.io的命名空间(namespace)和房间(room)](http://www.itye.org/archives/2816)
+
+1. Namespaces 用途為透過指定不同的 endpoints 或 paths 以減少過多的連線數量。
+2. 若不指定， 則 client 端以及 server 端預設 namespace 皆為 ``/``.
+3. 每一個 client 端的 socket 實體預設會發送 'connection' 事件，並且被當作 server 的參數丟進去做事：
+```javascript
+  io.on('connection', (socket) => {
+    // ... new user connected
+    socket.on('disconnect', () => {
+      // a user disconnected
+    });
+  });
 ```
