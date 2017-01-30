@@ -1,17 +1,14 @@
-# Docker
-website:
-
-## Installation Guide
-
-## Docker Hub
-
+# Docker Implementation
+* [Docker Hub](https://hub.docker.com/)
+* [Awesome-Docker](https://github.com/veggiemonk/awesome-docker)
 ## Common Usage
 image -> container -> modified container -> commit -> new image
 
 ```shell
 docker push # 上傳本地 image 到 Docker hub
 docker pull # 從 Docker hub 抓 image 到本地
-docker tag # 將標籤加到 image，入版本號、作者資訊
+docker tag # 將標籤加到 image，入版本號、作者資訊, 通常用在 push 前的處理
+docker login # 在終端機登入，通常在 push 前會做的事
 docker images # 查看本地所有的 images
 docker run # 從 image 建立一個 container.
 # -i -t 讓我們在建立 container 同時開啟 interactive mode 進入容器
@@ -30,11 +27,14 @@ docker network # 查看網路介面
 docker inspect # 查看 low-level 的 container info
 # 以 JSON 秀出詳細資訊，包含硬體與網路設定、image ID 或是 Log in path
 docker logs [container] # 查看容器的所有日誌資訊
+docker history # 秀出所有的 image layers
+docker commit # 保存 container 的檔案變更並建立新的 Image
+# docker commit [container_ID] [Repo_Name:Tag]
+# 範例： docker commit c8b82ee27706 jayz54780/hello-world:1.00
+docker build # 從 Dockerfile 建立 image
+# -t 指定 name 與 標籤(通常是版本號)
+# -f 指定自製 Dockerfile 名稱，不指定使用預設叫做 Dockerfile
 ```
-
-## Related Apps
-
-* Kitematic
 
 ### FAQ
 
