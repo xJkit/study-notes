@@ -138,7 +138,7 @@ A application-level virtualization technology.
             vim
             CMD ["echo", "hello world"]
           ```
-          
+
           此例子 CMD 建立時會跳過，知道你 run 一個新的 container 時便會執行 (印出 hello world)。
     2. ``COPY``
       1. 在 build context 過程中將檔案或資料夾拷貝到 docker image 之中保存
@@ -170,12 +170,14 @@ A application-level virtualization technology.
     1. 重新命名 image 檔案名稱
     2. 命名為 ``docker_hub_username_id / repo_name``
   * 範例與常用指令：
+
     ```shell
       $ docker images # 秀出所有的 images
       $ docker tag 491c0f07cfff jayz54780/debian:1.01 # 將 image_id 映像檔改為自訂的 tag
       $ docker login --username=jayz54780 # 上傳前做個登入
       $ docker push jayz54780/debian:1.01 # 將自訂映像檔上傳到自己的 DockerHub
     ```
+    
   * 注意 tag:
     1. tag 標註版本號沒有嚴格規定
     2. 若你將版本號設為 __latest__，以後的版本號在 ``docker pull`` 時都會拉不到
