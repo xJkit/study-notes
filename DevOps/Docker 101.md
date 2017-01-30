@@ -77,12 +77,14 @@ A application-level virtualization technology.
     ```
   * 注意：你也可以打包但檔案進去，但是要在相同目錄下（因為 Docker Daemon 可以在遠端）
   * Dockerfile Instructions 範例:
+
     ```
       FROM ubuntu:latest
       RUN apt-get update
       RUN apt-get install -y git
       RUN apt-get install -y vim
     ```
+
     注意：第一行必須為 ``FROM`` 指定 Base Image,下面都是建構出自己的 Image Layers
 4. 良好的 Dockerfile 設計習慣：
   * Chain ``RUN`` Instructions:
@@ -90,15 +92,18 @@ A application-level virtualization technology.
     2. 這個新的 layer 會供下一行 ``RUN`` 指令去使用，因此一個 ``RUN`` 就會產生一個 image layer
     3. 最佳建議是使用 Chain Instructions 去減少 Image Layer 的產生。
     4. 改寫上面的 Dockerfile 範例：
+
       ```
         FROM ubuntu:latest
         RUN apt-get update && apt-get install -y \
         git \
         vim
       ```
+
   * Sort multi-line Arguments __Alphanumerically__
     1. 當你需要安裝許多套件時，最好按照字幕排序，才不會搞亂
     2. 上述若要安裝 Python, 應放在:
+
       ```
         FROM ubuntu:latest
         RUN apt-get update && apt-get install -y \
@@ -106,6 +111,7 @@ A application-level virtualization technology.
         python \
         vim
       ```
+
   * Docker Cache
     1. 每一次執行 Dockerfile 都會比上一次快，因為 Docker Daemon 使用了 Cache
     2. Cache 是將你某一行指令所產生的 image layer 暫存起來，直到下次發現有相同的 instruction 便直接跳過使用舊的 layer
@@ -123,6 +129,7 @@ A application-level virtualization technology.
         1. 這個是當別人從你建立的 image 檔案 run 出一個 container 時會最先執行的指令
         2. 如果你沒有在 Dockerfile 裡頭註明 CMD, 如此一來便會以 base image layer 為主
         3. 注意： CMD instruction 在 build image 不會執行，只有 run container 才會
+
           ```
             FROM ubuntu:latest
             RUN apt-get update && apt-get install -y \
@@ -131,6 +138,7 @@ A application-level virtualization technology.
             vim
             CMD ["echo", "hello world"]
           ```
+          
           此例子 CMD 建立時會跳過，知道你 run 一個新的 container 時便會執行 (印出 hello world)。
     2. ``COPY``
       1. 在 build context 過程中將檔案或資料夾拷貝到 docker image 之中保存
@@ -141,6 +149,7 @@ A application-level virtualization technology.
           $ docker build -t jayz54780/deian .
         ```
         其中 Dockerfile 最後一行加上 ``COPY``:
+
         ```
           FROM ubuntu:latest
           RUN apt-get update && apt-get install -y \
