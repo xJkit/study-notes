@@ -328,6 +328,11 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
     > Facebook 所開發
 
+``Others``
+
+  * [GraphQL](http://graphql.org/)
+
+    > A query language for your API
 
 ### Miscellaneous
 
