@@ -42,6 +42,7 @@ docker build # 從 Dockerfile 建立 image
 ```
 
 ### Dockerfile Instructions
+For more detail, please check [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
 
 ``FROM``
   * 指定 Base Image
@@ -82,6 +83,7 @@ docker build # 從 Dockerfile 建立 image
 ``CMD``
   * 建立 Image 時會跳過
   * 啟動 Container 時才會執行的命令
+
 
 ### FAQ
 

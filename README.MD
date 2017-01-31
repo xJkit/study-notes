@@ -266,7 +266,9 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 # Back End
 
-要善用 Full Stack JavaScript 不可或缺的後端功能。感謝 [Node](https://nodejs.org/en/), 讚嘆 [Node](https://nodejs.org/en/).
+Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
+
+### Web Server
 
   * [express](https://github.com/expressjs/express)
     > Fast, unopinionated, minimalist web framework for node.
@@ -278,7 +280,70 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
     > 方便讓我繞過瀏覽器的 Ajax Same Origin Policy
 
+### Database
+
+``RDBMS``
+
+  * [MySQL](https://www.mysql.com/)
+
+  * [MariaDB](https://github.com/MariaDB/server)
+
+    > Originally forked from MySQL with the same team developers.
+
+  * [Posgresql](https://github.com/postgres/postgres)
+
+  * [CouchDB](https://github.com/apache/couchdb)
+
+``NoSQL``
+
+  * NoSQL 主要有四大類：
+    1. Key-value, 如 __Redis__
+    2. Document-oriented, 如 __mongoDB__
+    3. Wide Column Store, 如 __Cassandra__
+    4. Graph-oriented, 如 __Neo4J__
+
+  * [Redis](https://github.com/antirez/redis) :star: __21.5k__
+
+    > key-value model, in-memory data structure server
+
+  * [MongoDB](https://github.com/mongodb/mongo) :star: __10.7k__
+
+    > extremely famous document-oriented NoSQL database
+
+  * [Cassandra](https://github.com/apache/cassandra) :star: __3.2k__
+
+    > 最初由 Facebook 開發，用於儲存收件箱等簡單格式資料，集Google BigTable的資料模型與 Amazon Dynamo 的完全分散式架構
+
+    > 使用 Java 開發
+
+  * [Neo4j](https://github.com/neo4j/neo4j) :star: __3.4k__
+
+    > Graph Database
+
+    > 使用 Java 開發
+
+  * [RocksDB](https://github.com/facebook/rocksdb)
+
+    > persistent key-value store for fast storage
+
+    > Facebook 所開發
+
+
 ### Miscellaneous
+
+  * [MongoChef](http://3t.io/mongochef/)
+
+    > GUI for MongoDB
+
+  * [Robomongo](https://robomongo.org/)
+
+    > native MongoDB management tool with admin UI
+
+  * [Sequal Pro](https://github.com/sequelpro/sequelpro)
+
+    > MySQL 的 GUI Application
+
+    > Mac only
 
 ---
 
