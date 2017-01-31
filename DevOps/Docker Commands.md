@@ -59,7 +59,7 @@ docker build # 從 Dockerfile 建立 image
 ``USER``
   * 使用 Docker 建立 Image 期間所設定的使用者
   * 若未設定,預設使用 __root__, 具有資安風險
-  * 在 ``USER`` 之前先使用 ``RUN`` 建立使用者：
+  * 在 ``USER`` 之前先使用 ``RUN`` 透過 __useradd__ 建立使用者：
 
     ```
       RUN useradd -ms joey
