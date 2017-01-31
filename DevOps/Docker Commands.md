@@ -41,6 +41,48 @@ docker build # 從 Dockerfile 建立 image
 # -f 指定自製 Dockerfile 名稱，不指定使用預設叫做 Dockerfile
 ```
 
+### Dockerfile Instructions
+
+``FROM``
+  * 指定 Base Image
+  * 若本地沒有制定的 Base Image, 則 Daemon 會自動從 DockerHub 下載(Pull)
+  * 若未指定版本，則使用 __latest__
+
+``MAINTAINER``
+  * 選擇性，記載作者資訊
+  * 通常使用電子郵件，如 joey54780@gmail.com
+
+``RUN``
+  * 建立 Image 期間所執行的命令
+  * 常用來安裝套件、設定環境變數等操作
+
+``USER``
+  * 使用 Docker 建立 Image 期間所設定的使用者
+  * 若未設定,預設使用 __root__, 具有資安風險
+  * 在 ``USER`` 之前先使用 ``RUN`` 建立使用者：
+
+    ```
+      RUN useradd -ms joey
+      USER joey
+    ```
+
+``WORKDIR``
+  * 切換 container 執行時的工作目錄
+  * 一般來說僅能使用 ``RUN cd /app`` 來切換，但每 RUN 一次就會產生新的 Image Layer, 在 RUN 裡面變更目錄僅適用同一層級的 Image Layer, 因此每一次 RUN 都需要變更目錄一次
+  * 使用 ``WORKDIR`` 讓你接下來的 Image Layer 都以此為目錄出發點
+  * 若沒有該目錄則會自動建立
+
+``COPY``
+  * 複製當前目錄下的檔案或資料夾到 Image 裡面
+
+``ADD``
+  * 如同 COPY 但效能更強
+  * 還可以下載 Internet 上的資料或檔案...
+
+``CMD``
+  * 建立 Image 時會跳過
+  * 啟動 Container 時才會執行的命令
+
 ### FAQ
 
 * Docker 吃掉所有空間?
