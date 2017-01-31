@@ -356,9 +356,8 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
 ---
 
-資訊安全是我另一個感興趣的領域。偶爾關注國內外的 CTF ，但是實力粗淺只有乾瞪眼的份。不論如何，看到好用的開源工具或腳本，先筆記。
-
 # Security
+
 * [Kali Linux Docker Image](https://www.kali.org/news/official-kali-linux-docker-images/)
 
   > Install Kali Linux with Docker!
@@ -438,6 +437,24 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
 ---
 
+# DevOps
+
+  * [Docker](https://www.docker.com/)
+
+    > 超狂 application-level containers, BJ4.
+
+    > 傳送門：
+
+      * [Get started with docker for Mac](https://docs.docker.com/docker-for-mac/)
+
+### CIs
+
+  * [Jenkins](https://github.com/jenkinsci/jenkins)  
+  * [Travis CI](https://github.com/travis-ci/travis-ci)
+  * [Circle CI](https://github.com/circleci)
+
+---
+
 其他包含編輯器、 shell 或是好用的輔助工具在開發的過程都佔有重要的地位，加速專案實作流程和速度，不可不用！
 
 # Miscellaneous
@@ -461,13 +478,6 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
   > online JSON generator for fake data
 
-* [docker](https://www.docker.com/)
-
-  > 超狂 application-level containers, BJ4.
-
-  > 傳送門：
-
-    * [Get started with docker for Mac](https://docs.docker.com/docker-for-mac/)
 
 # Secondary Languages
 *  [Haskell](https://www.haskell.org/)
