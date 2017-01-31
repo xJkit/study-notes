@@ -270,15 +270,19 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
 ### Web Server
 
-  * [express](https://github.com/expressjs/express)
+  * [Express](https://github.com/expressjs/express)
+
     > Fast, unopinionated, minimalist web framework for node.
 
     > 超古老經典 Node 框架
 
-  * [request](https://github.com/request/request)
-    > Simplified HTTP request client.
+  * [Koa](https://github.com/koajs/koa)
 
-    > 方便讓我繞過瀏覽器的 Ajax Same Origin Policy
+    > 使用 generator 操作的 http framework
+
+  * [Request](https://github.com/request/request)
+
+    > Simplified HTTP request client.
 
 ### Database
 
