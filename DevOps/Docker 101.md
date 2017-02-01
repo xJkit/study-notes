@@ -187,8 +187,9 @@ A application-level virtualization technology.
 ## Create Dockerized Web Applications
 
 1. ``Links``
-  * docker run --link [another_container] [this_container]
-  * Docker Container Links 讓容器之間可以直接溝通，無須暴露 ip 給 Host OS
+  * 用法：docker run --link [another_container] [this_container]
+  * Docker Container Links 讓容器之間形成安全的通道彼此直接溝通，無須全部暴露 ip 給 Host OS 或外界（一整個大架構只需要一個窗口）
+  * ``--link`` 使得不同的服務可以獨立啟動在不同的容器之中安全地執行隔離環境又可以彼此溝通，在整個 Micro services 架構下非常好用
   * 在 Host 底下有兩個角色：
     1. Source: 資料庫，如 Redis 或 MongoDB
     2. Recipient: 接收資料者，如 docker app
@@ -222,7 +223,8 @@ A application-level virtualization technology.
     ```
 
   * Link 如何運作？
-    1. 查看 container 的 ``/etc/hosts`` 來驗證：
+    Docker Link 讓 Recipient Container(docker app) 的 ``/etc/hosts`` 中登記其連結的 container. 可做下列的驗證：
+    1. 查看 recipient container 的 ``/etc/hosts`` ：
 
     ```shell
     $ docker exec -it 35201b7c8347 bash
@@ -256,7 +258,7 @@ A application-level virtualization technology.
     round-trip min/avg/max/stddev = 0.152/0.159/0.165/0.000 ms
     ```
 
-    2. 使用 ``docker inspect`` 來驗證：
+    2.  ``docker inspect`` 來驗證 source container 與 recipient container 是否登記相同的位址：
 
     ```shell
     $ docker ps
