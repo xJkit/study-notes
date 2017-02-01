@@ -1,5 +1,6 @@
 # Introduction to Docker
 A application-level virtualization technology.
+* Reference: [《Docker —— 從入門到實踐­》正體中文版](https://philipzheng.gitbooks.io/docker_practice/content/introduction/what.html)
 
 ## Get Started With Docker
 
