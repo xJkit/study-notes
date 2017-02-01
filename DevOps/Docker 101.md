@@ -259,7 +259,12 @@ A application-level virtualization technology.
     2. 使用 ``docker inspect`` 來驗證：
 
     ```shell
-    $ docker inspect redis | grep IP # redis 也可鍵入 container ID
+    $ docker ps
+    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    35201b7c8347        dockerapp:v0.2      "python app.py"          33 minutes ago      Up 33 minutes       0.0.0.0:5000->5000/tcp   nifty_varahamihira
+    7ba3887ab858        redis:3.2.0         "docker-entrypoint..."   36 minutes ago      Up 36 minutes       6379/tcp                 redis
+    # 查看 redis, 使用 inspect:
+    $ docker inspect redis | grep IP # 也可鍵入 redis 的 container ID (7ba3887ab858)
     # 注意的是，由於 inspect 會秀出太多資訊，使用 grep 來過濾出 ip 位址
     "LinkLocalIPv6Address": "",
     "LinkLocalIPv6PrefixLen": 0,
