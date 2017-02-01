@@ -187,6 +187,7 @@ A application-level virtualization technology.
 ## Create Dockerized Web Applications
 
 1. ``Links``
+  * docker run --link [another_container] [this_container]
   * Docker Container Links 讓容器之間可以直接溝通，無須暴露 ip 給 Host OS
   * 在 Host 底下有兩個角色：
     1. Source: 資料庫，如 Redis 或 MongoDB
@@ -211,7 +212,7 @@ A application-level virtualization technology.
     $ docker run -d -p 5000:5000 --link redis dockerapp:v0.2
     ```
 
-    其中 ``--link`` 將 dpckerapp 與 redis 連結在一起，讓他們彼此看得到對方，你只需要將 docker app 的 ip 對應到 localhost.
+    其中 ``--link`` 將 dockerapp 與 redis 連結在一起，讓他們彼此看得到對方，你只需要將 docker app 的 ip 對應到 localhost.
     查看啟動中的容器： ``docker ps``
 
     ```
@@ -238,7 +239,7 @@ A application-level virtualization technology.
       ff00::0	ip6-mcastprefix
       ff02::1	ip6-allnodes
       ff02::2	ip6-allrouters
-      172.17.0.2	redis 7ba3887ab858
+      172.17.0.2	redis 7ba3887ab858  # Redis 被登記在這裡
       172.17.0.3	35201b7c8347
     ```
 
