@@ -299,9 +299,9 @@ A application-level virtualization technology.
     dockerapp:
       build: .  # 指定從當前目錄的 Dockerfile 來 build 出 image
       ports:
-        - 5000:5000
-      volumes:
-        - ./app:/app  # 把同目錄下的 app 資料夾 mount 進容器中：也就是說，Dockerfile 再也不需要 COPY 這個 instruction 了！
+        - 5000:5000  # [host_port] : [container_port]
+      volumes:  # 把同目錄下的 app 資料夾 mount 進容器中：也就是說，Dockerfile 再也不需要 COPY 這個 instruction 了！
+        - ./app:/app  # [host_dir] : [container_dir]
 
     redis:
       image: redis:3.2.0  # 除了自己 build, 也可以指定已經存在的 image
