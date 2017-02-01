@@ -222,7 +222,7 @@ A application-level virtualization technology.
     ```
 
   * Link 如何運作？
-    1. 進入 docker app:
+    1. 查看 container 的 ``/etc/hosts`` 來驗證：
 
     ```shell
     $ docker exec -it 35201b7c8347 bash
@@ -254,4 +254,26 @@ A application-level virtualization technology.
     ^C--- 172.17.0.2 ping statistics ---
     3 packets transmitted, 3 packets received, 0% packet loss
     round-trip min/avg/max/stddev = 0.152/0.159/0.165/0.000 ms
+    ```
+
+    2. 使用 ``docker inspect`` 來驗證：
+
+    ```shell
+    $ docker inspect redis | grep IP # redis 也可鍵入 container ID
+    # 注意的是，由於 inspect 會秀出太多資訊，使用 grep 來過濾出 ip 位址
+    "LinkLocalIPv6Address": "",
+    "LinkLocalIPv6PrefixLen": 0,
+    "SecondaryIPAddresses": null,
+    "SecondaryIPv6Addresses": null,
+    "GlobalIPv6Address": "",
+    "GlobalIPv6PrefixLen": 0,
+    "IPAddress": "172.17.0.2",   # Redis 的 IP 位址在這裡
+    "IPPrefixLen": 16,
+    "IPv6Gateway": "",
+            "IPAMConfig": null,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
     ```
