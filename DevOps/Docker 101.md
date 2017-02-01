@@ -177,10 +177,80 @@ A application-level virtualization technology.
       $ docker login --username=jayz54780 # 上傳前做個登入
       $ docker push jayz54780/debian:1.01 # 將自訂映像檔上傳到自己的 DockerHub
     ```
-    
+
   * 注意 tag:
     1. tag 標註版本號沒有嚴格規定
     2. 若你將版本號設為 __latest__，以後的版本號在 ``docker pull`` 時都會拉不到
     3. 盡量避免使用 __latest__ 作為你的版本號，除非你知道你在幹嘛。
 
+
 ## Create Dockerized Web Applications
+
+1. ``Links``
+  * Docker Container Links 讓容器之間可以直接溝通，無須暴露 ip 給 Host OS
+  * 在 Host 底下有兩個角色：
+    1. Source: 資料庫，如 Redis 或 MongoDB
+    2. Recipient: 接收資料者，如 docker app
+  * 使用方式：
+    1. 建立 __Redis__ container:
+
+      ```shell
+      $ docker run -d --name redis redis:3.2.0 # 從 redis 這個 base image 啟動 container
+      $ docker ps # 查看執行中的容器：
+      ```
+
+      ```
+      CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+      7ba3887ab858        redis:3.2.0         "docker-entrypoint..."   18 seconds ago      Up 16 seconds       6379/tcp            redis
+      ```
+
+      你可以使用 `` docker inspect `` 查看單一 container 的所有資訊。
+    2. 建立 __dockerapp__ container:
+
+    ```shell
+    $ docker run -d -p 5000:5000 --link redis dockerapp:v0.2
+    ```
+
+    其中 ``--link`` 將 dpckerapp 與 redis 連結在一起，讓他們彼此看得到對方，你只需要將 docker app 的 ip 對應到 localhost.
+    查看啟動中的容器： ``docker ps``
+
+    ```
+    CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    35201b7c8347        dockerapp:v0.2      "python app.py"          2 seconds ago       Up 2 seconds        0.0.0.0:5000->5000/tcp   nifty_varahamihira
+    7ba3887ab858        redis:3.2.0         "docker-entrypoint..."   3 minutes ago       Up 3 minutes        6379/tcp                 redis
+    ```
+
+  * Link 如何運作？
+    1. 進入 docker app:
+
+    ```shell
+    $ docker exec -it 35201b7c8347 bash
+    ```
+
+    進入 dockerapp 容器後，在 ``/etc/hosts`` 中查看所有與本機對應的 host name 與 ip address 的 DNS 表：
+
+    ```shell
+    $ more /etc/hosts # 秀出 Host Database
+
+      127.0.0.1	localhost
+      ::1	localhost ip6-localhost ip6-loopback
+      fe00::0	ip6-localnet
+      ff00::0	ip6-mcastprefix
+      ff02::1	ip6-allnodes
+      ff02::2	ip6-allrouters
+      172.17.0.2	redis 7ba3887ab858
+      172.17.0.3	35201b7c8347
+    ```
+
+    可以發現在 dockerapp 中已登記 ``redis`` 並且 ip 位址為 ``172.17.0.2``. 可以使用 ``ping`` 驗證：
+
+    ```shell
+    ping 172.17.0.2
+    PING 172.17.0.2 (172.17.0.2): 56 data bytes
+    64 bytes from 172.17.0.2: icmp_seq=0 ttl=64 time=0.161 ms
+    64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.165 ms
+    64 bytes from 172.17.0.2: icmp_seq=2 ttl=64 time=0.152 ms
+    ^C--- 172.17.0.2 ping statistics ---
+    3 packets transmitted, 3 packets received, 0% packet loss
+    round-trip min/avg/max/stddev = 0.152/0.159/0.165/0.000 ms
+    ```
