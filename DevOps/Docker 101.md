@@ -285,3 +285,31 @@ A application-level virtualization technology.
             "GlobalIPv6Address": "",
             "GlobalIPv6PrefixLen": 0,
     ```
+
+2. ``Compose``
+  * 當 ``link`` 在很多 containers 下變得很麻煩，要一個一個設定
+  * ``docker-compose`` 指令可以非常迅速的建構整個 micro services architectures
+  * 透過 yaml 檔案： ``docker-compose.yml`` 設定檔直接紀錄整個 micro services 架構下所有容器的連結方式
+  * 使用 version: '2' 紀錄設定檔案讓不同容器自動連接起來，連 --link 的指令都不用打！
+  * ``docker-compose.yml`` 設定檔範例：
+
+  ```yml
+  version: '2'
+  services:
+    dockerapp:
+      build: .  # 指定從當前目錄的 Dockerfile 來 build 出 image
+      ports:
+        - 5000:5000
+      volumes:
+        - ./app:/app  # 把同目錄下的 app 資料夾 mount 進容器中：也就是說，Dockerfile 再也不需要 COPY 這個 instruction 了！
+
+    redis:
+      image: redis:3.2.0  # 除了自己 build, 也可以指定已經存在的 image
+  ```
+
+  * 設定完成後，使用 ``docker-compose``:
+
+    ```shell
+      $ docker-compose up # up 代表 Create and start containers
+    ```
+    注意：由於在 ``docker-compose.yml`` 中使用了 __volumes__, 記得要把 __Dockerfile__ 中的 ``COPY`` 指令給移除！

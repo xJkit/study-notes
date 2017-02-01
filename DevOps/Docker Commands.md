@@ -17,6 +17,7 @@ docker run # 從 image 建立一個 container.
 # --name [name] 指定 container 建立時擁有自己的專屬名稱 (預設會亂取好笑的名字)
 # exit 指令可以離開容器，同時關閉 container 的運作
 # --rm 當離開 container 時自動移除而不保存容器
+# --link 讓容器自己彼此建立網路通道
 # 注意每次一個 run 都是建立全新的 container (不是原本修改過的那個), 離開時都會保存下來
 docker run busybox:1.24 # 從 v1.24 版本的 busybox image 建立一個 container
 docker start # 啟動 container
@@ -39,6 +40,7 @@ docker commit # 保存 container 的檔案變更並建立新的 Image
 docker build # 從 Dockerfile 建立 image
 # -t 指定 name 與 標籤(通常是版本號)
 # -f 指定自製 Dockerfile 名稱，不指定使用預設叫做 Dockerfile
+docker-compose # 從 docker-compose.yml 中的設定檔建立這個 micro services architecture
 ```
 
 ### Dockerfile Instructions
