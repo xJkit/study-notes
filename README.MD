@@ -125,6 +125,10 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > A Select control build with and for React JS
 
+* [react-scroll](https://github.com/fisshy/react-scroll)
+
+  > Directive for basic scrolling and smooth scrolling
+
 * [classNames](https://github.com/JedWatson/classnames)
 
   > A simple javascript utility for conditionally joining classNames together
