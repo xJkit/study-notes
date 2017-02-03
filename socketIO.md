@@ -147,6 +147,64 @@ const socket = io();
   * [socket.io 中 namespace 和 room 的概念。](http://blog.csdn.net/lijiecong/article/details/50781417)
   * [socket.io的命名空间(namespace)和房间(room)](http://www.itye.org/archives/2816)
 
-Namespace 用途為透過指定不同的 endpoints 或 paths 以減少過多的連線數量。
+``Namespace`` 用途為透過指定不同的 endpoints 或 paths 以減少過多的連線數量。
+``Room`` 為 Namespace(空間) 下的不同頻道，可以 **join(加入)** 與 **leave(離開)**, 用途為進一步的連線區隔。
 
-* 三者關係： Namespace(**空間**) > Room(**房間**) > Socket(**個體**)
+* 三者關係： ``Namespace``(空間) > ``Room``(房間) > ``Socket``(個體)
+* 預設的空間為 ``/`` , Client 與 Server 將會在此溝通
+* 自訂 __NameSpace__
+  1. Server-side:
+
+    ```javascript
+      const app = require('express')();
+      const server = require('http').createServer(app); // 將 express app 透過原生 http 包裝成 server 物件
+      const io = require('socket.io')(server); //透過 socketIO 將 server 包成 io 物件
+      /****** 訂製 NameSpace ******/
+      const nsp = io.of('/my-namespace-name');
+      // 透過自定義的命名空間 nsp 作為取代預設為 / 的 io
+      nsp.on('connection', socket => {
+        console.log('a user connected');
+        nsp.emit('greeting', {
+          description: 'good morning, everybody!'
+        }); // 透過 nsp 發送給每一個在空間裡的 socket
+      })
+      // 正常的 server 啟動程序
+      server.listen(3000, () => {
+        console.log(`server is up at port 3000...`);
+      });
+    ```
+
+  2. Client-side:
+   * 在 ``io`` 的 constructor 中丟進 NameSapce:
+
+   ```javascript
+     const io = require('socket.io-client');
+     const socket = io('/my-namespace-name');
+     socket.on('greeting', data => {
+       console.log(`got message: ${data.description}`);
+     });
+   ```
+
+* 自訂 __Room__ 頻道
+  1. 在一個指定的 NameSpace(空間)下，能夠加入(join)與離開(leave)不同的頻道
+  2. 只有 __Server-side__ 能決定某個連線個體(socket)所加入的 room 或離開它
+  * 用法：
+    1. 使用 ``socket.join('room-name')`` 將個體加入 room
+    2. 使用 ``io.sockets.in('room-name').emit('event', 'msg') 寄給在這個 room 頻道下的所有人``
+  * 用法範例：
+    1. Server-side:
+
+    ```javascript
+      const app = require('express')();
+      const server = require('http').createServer(app); // 將 express app 透過原生 http 包裝成 server 物件
+      const io = require('socket.io')(server); //透過 socketIO 將 server 包成 io 物件
+      // use default namespace
+      io.on('connection', socket => {
+        socket.join('room-name'); // 加入頻道
+        io.sockets.in('room-name').emit('connectToRoom', 'You are in this room');
+        socket.leave('room-name'); // 離開頻道
+      });
+      // ... omit the express server
+    ```
+
+    2. Client-side: 與之前都相同

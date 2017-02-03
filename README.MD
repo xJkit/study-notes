@@ -292,6 +292,10 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
     > Realtime application framework
 
+  * [Socket.io-client](https://github.com/socketio/socket.io-client)
+
+  	> Realtime application framework (client)
+
 ### Database
 
 ``RDBMS``
