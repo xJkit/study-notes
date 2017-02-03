@@ -64,6 +64,7 @@ server.listen(, err => {
 ```
 
 ### Client Socket
+[Client Socket API](https://github.com/socketio/socket.io-client/blob/master/docs/API.md#io)
 在一般的 HTML document, 若 server 端使用了 socket.io 函式庫，則會自動暴露在 url 路由：```/socket.io/socket.io.js```，直接在 ```<script>``` 標籤中 get 即可使用：
 ```html
 <script src="/socket.io/socket.io.js"></script>
