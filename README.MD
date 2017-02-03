@@ -272,7 +272,7 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
-### Web Server
+### Web Service
 
   * [Express](https://github.com/expressjs/express)
 
@@ -287,6 +287,10 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
   * [Request](https://github.com/request/request)
 
     > Simplified HTTP request client.
+
+  * [SocketIO](https://github.com/socketio/socket.io)
+
+    > Realtime application framework
 
 ### Database
 
