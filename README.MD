@@ -340,7 +340,41 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
   * [GraphQL](http://graphql.org/)
 
+    > Beautiful static documentation for your API
+
     > A query language for your API
+
+### API Documentation Tools
+
+  * [Slate](https://github.com/lord/slate)
+
+    > Use Markdown & Ruby
+
+  * [apiDoc](https://github.com/apidoc/apidoc)
+
+    > RESTful web API Documentation Generator.
+
+    > [Demo](http://apidocjs.com/example_basic/)
+
+  * [API Blueprint](https://github.com/apiaryio/api-blueprint)
+
+    > A powerful high-level API design language for web APIs
+
+  * [Flatdoc](https://github.com/rstacruz/flatdoc/)
+
+    > Build sites fast from Markdown
+
+  * [Swagger](https://github.com/swagger-api)
+
+    > simple and powerful interface to your API
+
+    > lots of automation, API tooling, and even client SDK generation and discoverability
+
+    > [Demo](http://petstore.swagger.io/)
+
+  * [RAML](http://raml.org/)
+
+    > built on broadly-used standards such as YAML and JSON and it has many tools
 
 ### Miscellaneous
 
