@@ -95,6 +95,19 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 現今最流行處理 async 的方式，但是需要 generators 的知識！
 
+* [Why do we need middleware for async flow in Redux?](http://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux/34623840#34623840)
+  > 非同步網路請求到底是放在 middleware? 還是放在 action creator 裡面？作者在 StackOverflow 有非常好的說明(包含是否適用 redux-thunk 或 redux-saga，有兩者比較的討論串)
+
+  > Action Creator 需要是 "pure function" 嗎？ 作者回答： Redux 官方文件以前說是，但是錯了！他並非一定 pure.
+
+* [RxJS](http://reactivex.io/)
+
+  > Reactive Programming 其實並非 Redux 而是將所有資料流都轉換成 Stream Events
+
+  > ReactiveX is a library for composing asynchronous and event-based programs by using observable sequences.
+
+  > ReactiveX is a combination of the best ideas from the Observer pattern, the Iterator pattern, and functional programming.
+
 
 ### React-related Libraries
 
@@ -179,6 +192,12 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
     > 原本只是讓你寫 ES6+ 的轉轉譯工具，但是發展至今已經更強大了...
 
+  * [Lodash](https://github.com/lodash/lodash)
+
+    > A modern JavaScript utility library delivering modularity, performance, & extras
+
+    > 非常好用之 Functional Programming 的 JS 輔助工具
+
   * [Sketch](https://www.sketchapp.com/)
     > Professional digital design for Mac
 
@@ -186,7 +205,7 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
     > Mac only...
 
-### Async Request Libraries
+### Client-side Request Libraries
 * [axios](https://github.com/mzabriskie/axios)
 
   > Promise based HTTP client for the browser and node.js
@@ -201,19 +220,47 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 欲使用 query string, 可搭配 [URLSearchParams](https://developer.mozilla.org/zh-TW/docs/Web/API/URLSearchParams)
 
-* [RxJS](http://reactivex.io/)
+* [cheerio](https://github.com/cheeriojs/cheerio)
 
-  > ReactiveX is a library for composing asynchronous and event-based programs by using observable sequences.
+  > Fast, flexible, and lean implementation of core jQuery designed specifically for the server
 
-  > ReactiveX is a combination of the best ideas from the Observer pattern, the Iterator pattern, and functional programming.
+* [Request](https://github.com/request/request)
+
+  > Simplified HTTP request client.
+
+  > 適合拿來做 Web Crawler
+
+* [PhantomJS](https://github.com/ariya/phantomjs)
+
+  > Scriptable Headless WebKit
+
+  > 一個沒有 UI 的瀏覽器！適合拿來做以下事情：
+    1. Headless Web Testing (very fast testing without browsers)
+    2. Page Automation (access & manipulate web pages)
+    3. Screen Capture (programmatically capture web contents)
+    4. Network Monitoring (automate performance analysis, track page loading)
+
+* [Webdriver](https://github.com/webdriverio/webdriverio/)
+
+  > Browser Automation Tools
+
+  > Webdriver/Selenium JavaScript bindings for Node.js
 
 * 延伸閱讀：
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
+  * 更多的 Web Crawling / Scraping 的方式請參見： [Awesome Web Scraping](https://github.com/lorien/awesome-web-scraping)
 
-  * [Why do we need middleware for async flow in Redux?](http://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux/34623840#34623840)
-    > 非同步網路請求到底是放在 middleware? 還是放在 action creator 裡面？作者在 StackOverflow 有非常好的說明(包含是否適用 redux-thunk 或 redux-saga，有兩者比較的討論串)
+### Unit Testing
 
-    > Action Creator 需要是 "pure function" 嗎？ 作者回答： Redux 官方文件以前說是，但是錯了！他並非一定 pure.
+> Testing tasks are related to the client-side libraries, please also check that section for more information.
+> Todos
+
+  * [Mocha]()
+  * [Chai]()
+  * [Expect]()
+  * [Enzyme]()
+  * [Jest]()
+  * [Karma]()
 
 ### Miscellaneous
 * [normalizr](https://github.com/paularmstrong/normalizr)
@@ -283,10 +330,6 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
   * [Koa](https://github.com/koajs/koa)
 
     > 使用 generator 操作的 http framework
-
-  * [Request](https://github.com/request/request)
-
-    > Simplified HTTP request client.
 
   * [SocketIO](https://github.com/socketio/socket.io)
 
