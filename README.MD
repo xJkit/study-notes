@@ -117,6 +117,10 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > [Official Site](https://ant.design/)
 
+* [Material-UI](https://github.com/callemall/material-ui)
+
+  > React Components that Implement Google's Material Design
+
 * [react-paginate](https://github.com/AdeleD/react-paginate)
 
   > demo: https://github.com/AdeleD/react-paginate/blob/master/docs/img/react-paginate.gif
