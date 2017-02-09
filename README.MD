@@ -286,11 +286,21 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   > The library provides &lt;canvas&gt;, &lt;svg&gt;, CSS3D and WebGL renderers
 
 ### Debug Tools & Helpers
-*  [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+* [language-babel](https://github.com/gandm/language-babel)
+
+  > language grammar 超級好用工具 for ATOM
+
+  > 搭配 React, JSX, Babel, ES6, graphQL...
+
+* [Emmet](https://github.com/emmetio/emmet)
+
+  > The essential toolkit for web-developers
+
+* [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
   > RESTful API 快速驗證工具
 
-*  [eslint](https://github.com/eslint/eslint)
+* [ESLint](https://github.com/eslint/eslint)
 
   > A fully pluggable tool for identifying and reporting on patterns in JavaScript
 
@@ -551,6 +561,11 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 其他包含編輯器、 shell 或是好用的輔助工具在開發的過程都佔有重要的地位，加速專案實作流程和速度，不可不用！
 
 # Miscellaneous
+
+* [ATOM](https://atom.io/)
+
+  > 自己愛用的前端編輯器
+
 * [Cygwin](https://www.cygwin.com/)
 
   > a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
@@ -561,11 +576,6 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
   > * Project tutorial: __[fish-shell-mac](https://github.com/xJkit/fish-shell-mac)__ ,an installation guide for fish on Mac
 
-* [ATOM](https://atom.io/)
-
-  > a hackable text editor for the 21st century.
-
-  > suitable for the front end development
 
 * [JSON Generator](http://www.json-generator.com/)
 
