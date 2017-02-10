@@ -30,6 +30,10 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
     > Build macOS desktop apps using React Native and Cocoa.
 
+* [React Developer Tools](https://github.com/facebook/react-devtools)
+
+  > An extension that allows inspection of React component hierarchy in Chrome Developer Tools
+
 
 ### Redux
 * [redux](https://github.com/reactjs/redux)
@@ -182,72 +186,72 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 ### Modern F2E Essential Tools
 
-  * [Webpack](https://github.com/webpack/webpack)
-    > 前端必備打包工具
+* [Webpack](https://github.com/webpack/webpack)
+  > 前端必備打包工具
 
-    > 延伸閱讀：
+  > 延伸閱讀：
 
-      * [知乎－Webpack 配置說明](https://zhuanlan.zhihu.com/p/21346555?refer=jscss)
-      * [手把手深入理解 webpack dev middleware 原理與相關 plugins](https://segmentfault.com/a/1190000005614604)
-      * [译 Webpack——令人困惑的地方](https://segmentfault.com/a/1190000005089993?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+    * [知乎－Webpack 配置說明](https://zhuanlan.zhihu.com/p/21346555?refer=jscss)
+    * [手把手深入理解 webpack dev middleware 原理與相關 plugins](https://segmentfault.com/a/1190000005614604)
+    * [译 Webpack——令人困惑的地方](https://segmentfault.com/a/1190000005089993?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
 
-  * [Babel](https://github.com/babel/babel)
-    > Transpiler for JavaScript, and more.
+* [Babel](https://github.com/babel/babel)
+  > Transpiler for JavaScript, and more.
 
-    > 原本只是讓你寫 ES6+ 的轉轉譯工具，但是發展至今已經更強大了...
+  > 原本只是讓你寫 ES6+ 的轉轉譯工具，但是發展至今已經更強大了...
 
-  * [Lodash](https://github.com/lodash/lodash)
+* [Lodash](https://github.com/lodash/lodash)
 
-    > A modern JavaScript utility library delivering modularity, performance, & extras
+  > A modern JavaScript utility library delivering modularity, performance, & extras
 
-    > 非常好用之 Functional Programming 的 JS 輔助工具
+  > 非常好用之 Functional Programming 的 JS 輔助工具
 
-  * [Sketch](https://www.sketchapp.com/)
-    > Professional digital design for Mac
+* [Sketch](https://www.sketchapp.com/)
+  > Professional digital design for Mac
 
-    > 用來做 UI/UX 的 handy tool!
+  > 用來做 UI/UX 的 handy tool!
 
-    > Mac only...
+  > Mac only...
 
-  * [Flow](https://github.com/facebook/flow)
+* [Flow](https://github.com/facebook/flow)
 
-    > static type checker for JavaScript
+  > static type checker for JavaScript
 
-  * [language-babel](https://github.com/gandm/language-babel)
+* [language-babel](https://github.com/gandm/language-babel)
 
-    > language grammar 超級好用工具 for ATOM
+  > language grammar 超級好用工具 for ATOM
 
-    > 搭配 React, JSX, Babel, ES6, graphQL...
+  > 搭配 React, JSX, Babel, ES6, graphQL...
 
-  * [Emmet](https://github.com/emmetio/emmet)
+* [Emmet](https://github.com/emmetio/emmet)
 
-    > The essential toolkit for web-developers
+  > The essential toolkit for web-developers
 
-  * [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+* [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
-    > RESTful API 快速驗證工具
+  > RESTful API 快速驗證工具
 
-  * [ESLint](https://github.com/eslint/eslint)
+* [ESLint](https://github.com/eslint/eslint)
 
-    > A fully pluggable tool for identifying and reporting on patterns in JavaScript
+  > A fully pluggable tool for identifying and reporting on patterns in JavaScript
 
-  * [merge conflict](https://github.com/smashwilson/merge-conflicts)
+* [merge conflict](https://github.com/smashwilson/merge-conflicts)
 
-    > Resolve git merge conflicts in Atom
+  > Resolve git merge conflicts in Atom
 
-    > 直接在 Atom 的 UI 介面上解決衝突！牛逼！
+  > 直接在 Atom 的 UI 介面上解決衝突！牛逼！
 
-  * [RegexHub](https://projects.lukehaas.me/regexhub/)
+* [RegexHub](https://projects.lukehaas.me/regexhub/)
 
-    > A collection of useful regex patterns
+  > A collection of useful regex patterns
 
-    > 快速驗證你的 Regular Expressions 好用工具
+  > 快速驗證你的 Regular Expressions 好用工具
 
-  * [nodemon](https://github.com/remy/nodemon)
+* [nodemon](https://github.com/remy/nodemon)
 
-    > Monitor for any changes in your node.js application and automatically restart the server
+  > Monitor for any changes in your node.js application and automatically restart the server
 
-    > Perfect for the development
+  > Perfect for the development
 
 
 ### Async Request Libraries
