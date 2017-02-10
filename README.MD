@@ -209,7 +209,48 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
     > Mac only...
 
-### Client-side Request Libraries
+  * [Flow](https://github.com/facebook/flow)
+
+    > static type checker for JavaScript
+
+  * [language-babel](https://github.com/gandm/language-babel)
+
+    > language grammar 超級好用工具 for ATOM
+
+    > 搭配 React, JSX, Babel, ES6, graphQL...
+
+  * [Emmet](https://github.com/emmetio/emmet)
+
+    > The essential toolkit for web-developers
+
+  * [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+
+    > RESTful API 快速驗證工具
+
+  * [ESLint](https://github.com/eslint/eslint)
+
+    > A fully pluggable tool for identifying and reporting on patterns in JavaScript
+
+  * [merge conflict](https://github.com/smashwilson/merge-conflicts)
+
+    > Resolve git merge conflicts in Atom
+
+    > 直接在 Atom 的 UI 介面上解決衝突！牛逼！
+
+  * [RegexHub](https://projects.lukehaas.me/regexhub/)
+
+    > A collection of useful regex patterns
+
+    > 快速驗證你的 Regular Expressions 好用工具
+
+  * [nodemon](https://github.com/remy/nodemon)
+
+    > Monitor for any changes in your node.js application and automatically restart the server
+
+    > Perfect for the development
+
+
+### Async Request Libraries
 * [axios](https://github.com/mzabriskie/axios)
 
   > Promise based HTTP client for the browser and node.js
@@ -284,43 +325,6 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   > JavaScript 3D library
 
   > The library provides &lt;canvas&gt;, &lt;svg&gt;, CSS3D and WebGL renderers
-
-### Debug Tools & Helpers
-* [language-babel](https://github.com/gandm/language-babel)
-
-  > language grammar 超級好用工具 for ATOM
-
-  > 搭配 React, JSX, Babel, ES6, graphQL...
-
-* [Emmet](https://github.com/emmetio/emmet)
-
-  > The essential toolkit for web-developers
-
-* [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
-
-  > RESTful API 快速驗證工具
-
-* [ESLint](https://github.com/eslint/eslint)
-
-  > A fully pluggable tool for identifying and reporting on patterns in JavaScript
-
-* [merge conflict](https://github.com/smashwilson/merge-conflicts)
-
-  > Resolve git merge conflicts in Atom
-
-  > 直接在 Atom 的 UI 介面上解決衝突！牛逼！
-
-* [RegexHub](https://projects.lukehaas.me/regexhub/)
-
-  > A collection of useful regex patterns
-
-  > 快速驗證你的 Regular Expressions 好用工具
-
-* [nodemon](https://github.com/remy/nodemon)
-
-  > Monitor for any changes in your node.js application and automatically restart the server
-
-  > Perfect for the development
 
 
 ### References & Articles
