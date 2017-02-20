@@ -7,6 +7,7 @@ Webpack 解決痛點：
 1. 傳統前端通過 ``<script />`` 引入太多第三方函式庫，相依難以管理，又不方便更新，智障才一個個引入。
 2. 承上，包含 ``css`` 甚至是所有的圖片與其他資產都能打包在一起。
   * 在 React 開發時 ``<img>`` 於 .js 檔中使用 ``import`` 而 ``background-image`` 中 url 是在 css 中設定
+3. 統一使用 ``npm`` 管理所有 js 套件，並搭配 ``webpack``與強大 loaders 群與 plugins 外掛工具來打包一切。
 
 ### Reference
 * [深入了解 Webpack Plugins](https://rhadow.github.io/2015/05/30/webpack-loaders-and-plugins/)
