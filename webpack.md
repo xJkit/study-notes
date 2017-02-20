@@ -18,9 +18,43 @@ Webpack 解決痛點：
 * Hot Module Replacement Plugin
 * CommonsChunkPlugin
   * ``new webpack.optimize.CommonsChunkPlugin(options)``
-  * 提取代码中的公共模块，然后将公共模块打包到一个独立的文件中，以便在其他的入口和模块中使用。别忘了在html中单独引入抽离出来的公共模块。
-  * 適用場景：讓 entry 有多個而 最終成為 bundle.js 之前提出所有共用模組並放在另外一個 .js 檔案中（必須在 index.html 中另外引入，不然共用模塊就看不到啦）。
+  * 讓 entry 有多個而最終成為 bundle.js 之前提出所有共用模組並放在另外一個 .js 檔案中（必須在 index.html 中另外引入，不然共用模塊就看不到啦）。
   * [參考說明文件](https://webpack.toobug.net/zh-cn/chapter3/common-chunks-plugin.html)
+  * 適用場景：
+    * 分離第三方套件與專案內部程式碼。由於專案內部程式碼會不斷做更新，而第三方套件一般來說修改的頻率較低，如果沒有與第三方套件分開打包的話，使用者在每一次更新後都必須下載第三方套件加上專案內部程式碼的一整包檔案，使專案運行起來的速度變慢，並降低使用者體驗。
+  * 範例：
+
+    ```js
+      var path = require('path');
+      var webpack = require('webpack');
+      var node_modules_dir = path.resolve(__dirname, 'node_modules');
+
+      var config = {
+        entry: {
+          app: path.resolve(__dirname, 'app/main.js'),
+          vendors: ['react', 'jquery', 'bootstrap']
+        },
+        output: {
+          path: path.resolve(__dirname, 'dist'),
+          filename: 'app.js'
+        },
+        module: {
+          loaders: [{
+            test: /\.js$/,
+            exclude: [node_modules_dir],
+            loader: 'babel'
+          }]
+        },
+        plugins: [
+          // 第一個參數對應到 entry 內的屬性名
+          // 第二個參數是輸出檔案的名稱
+          new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+        ]
+      };
+
+      module.exports = config;
+    ```
+    以上設定會打包成 ``app.js`` 與 ``vendors.js`` 兩個檔案
 * ProvidePlugin
   * ``new webpack.ProvidePlugin(definitions)``
   * 類似 webpack alias，透過 ``definitions`` 定義變數並自動加載模組
@@ -29,7 +63,10 @@ Webpack 解決痛點：
 
     ```js
       new webpack.ProvidePlugin({
-        $: "jquery"
+        $: "jquery",
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        'root.jQuery': 'jquery',
       })
     ```
 
@@ -43,7 +80,6 @@ Webpack 解決痛點：
 * UglifyJsPlugin
   * ``new webpack.optimize.UglifyJsPlugin([options])`` 更多 options(https://github.com/mishoo/UglifyJS2#usage)
   * 解析、壓縮並醜化所有的 js
-* Html Webpack Plugin
 * [DefinePlugin](https://webpack.github.io/docs/list-of-plugins.html#defineplugin)
   * 負責處理環境變數的問題
   * 環境變數適合在 webpack 打包時丟入，而不是透過 node 的執行階段才丟。
@@ -51,3 +87,7 @@ Webpack 解決痛點：
 * DedupePlugin
   * ``new webpack.optimize.DedupePlugin()``
   * 第三方函式庫有自己的相依套件，彼此也可能交互相依，透過此 plugin 找出並刪除重複
+
+* [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)
+  * 動態產生 index.html 並支援 Extract Text Plugin 自動將打包完後的 js 與 css 檔加入
+  * 可自訂 HTML 如 index.template.html 透過樣版引擎設定變數。
