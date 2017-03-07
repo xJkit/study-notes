@@ -330,6 +330,16 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > The library provides &lt;canvas&gt;, &lt;svg&gt;, CSS3D and WebGL renderers
 
+* [Format.js](https://formatjs.io/)
+
+  > Internationalize your web apps on the client & server
+
+  > 多國語系不僅只有文字，更包含量詞、時間與日期等等
+
+  > 相關開源項目：[React-intl](https://github.com/yahoo/react-intl) YAHOO! 開源的 React 組件
+
+  > 參考文獻：[在 React 项目中使用 React-intl 实现多语言支持](https://segmentfault.com/a/1190000005824920)
+
 
 ### References & Articles
 * [Awesome React](https://github.com/enaqx/awesome-react)
