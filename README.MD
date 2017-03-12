@@ -588,9 +588,18 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
 # Miscellaneous
 
-* [ATOM](https://atom.io/)
+* [Atom](https://atom.io/)
 
-  > 自己愛用的前端編輯器
+  > Github 開發的編輯器
+  > 適合前端開發
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+  > 微軟開源的輕量編輯器，啟動速度快過 atom.
+
+  > 得我新寵。
+  
+  >[快捷鍵 VSCode for Mac](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) 
 
 * [Cygwin](https://www.cygwin.com/)
 
