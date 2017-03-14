@@ -91,3 +91,7 @@ Webpack 解決痛點：
 * [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)
   * 動態產生 index.html 並支援 Extract Text Plugin 自動將打包完後的 js 與 css 檔加入
   * 可自訂 HTML 如 index.template.html 透過樣版引擎設定變數。
+
+* [FaviconsWebpackPlugin](https://github.com/jantimon/favicons-webpack-plugin)
+  * 將 png 圖檔為各大行動平台自動產生 favicons
+  * 可搭配 html webpack plugins 風味更佳
