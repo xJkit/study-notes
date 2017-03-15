@@ -629,3 +629,11 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
   > An advanced, purely functional programming language
 
   > __[project demo](https://github.com/xJkit/Haskell-example)__
+
+* [Go](https://github.com/golang/go)
+
+  > [Official Website](https://golang.org/)
+
+  > High performance compiled language
+
+  > 有人說這是 21 世紀的 C...
