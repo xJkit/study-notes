@@ -56,7 +56,11 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > Excellent GUI tool for checking the state in the store of a react app with redux
 
-  * [remote-redux-devtools-on-debugger](https://github.com/jhen0409/remote-redux-devtools-on-debugger/)
+* [react-chrome-redux](https://github.com/tshaddix/react-chrome-redux)
+
+  > 用 react + redux 寫 Chrome Extensions
+
+* [remote-redux-devtools-on-debugger](https://github.com/jhen0409/remote-redux-devtools-on-debugger/)
 
     > Redux DevTools 的延伸，用於 React-Native
 
