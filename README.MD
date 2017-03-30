@@ -154,6 +154,13 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > Directive for basic scrolling and smooth scrolling
 
+* [react-mosaic](https://github.com/palantir/react-mosaic)
+
+  > A React tiling window manager. >> [demo](https://palantir.github.io/react-mosaic/
+)
+
+  > 適合做監視器的管理介面視窗，包含拖曳、放大、縮小、排序等功能。
+
 * [classNames](https://github.com/JedWatson/classnames)
 
   > A simple javascript utility for conditionally joining classNames together
