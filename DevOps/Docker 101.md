@@ -286,30 +286,64 @@ A application-level virtualization technology.
             "GlobalIPv6PrefixLen": 0,
     ```
 
-2. ``Compose``
+2. ``Compose``: 使用 docker-compose
   * 當 ``link`` 在很多 containers 下變得很麻煩，要一個一個設定
   * ``docker-compose`` 指令可以非常迅速的建構整個 micro services architectures
   * 透過 yaml 檔案： ``docker-compose.yml`` 設定檔直接紀錄整個 micro services 架構下所有容器的連結方式
-  * 使用 version: '2' 紀錄設定檔案讓不同容器自動連接起來，連 --link 的指令都不用打！
+  * 使用 version: '2' 的 yaml 版本紀錄設定讓不同容器自動連接起來，連 --link 的指令都不用打！ (彼此透過 container 名稱連接)
+
+    > 注意： version: '1' 語法是以 container 名字為 level 1, 而 version: '2' 則是都歸類在 services 地下
+    
+    > 每一個 container 底下首要須標注 ``image``(指定鏡像檔)  或 ``build``(從 Dockerfile 創造)
+  
   * ``docker-compose.yml`` 設定檔範例：
 
   ```yml
   version: '2'
   services:
     dockerapp:
-      build: .  # 指定從當前目錄的 Dockerfile 來 build 出 image
+      build: .  # 指定從當前目錄的 Dockerfile 來 build 出全新的 image
       ports:
         - 5000:5000  # [host_port] : [container_port]
       volumes:  # 把同目錄下的 app 資料夾 mount 進容器中：也就是說，Dockerfile 再也不需要 COPY 這個 instruction 了！
         - ./app:/app  # [host_dir] : [container_dir]
 
     redis:
-      image: redis:3.2.0  # 除了自己 build, 也可以指定已經存在的 image
+      image: redis:3.2.0  # 指定已經存在的 image
   ```
 
   * 設定完成後，使用 ``docker-compose``:
 
-    ```shell
-      $ docker-compose up # up 代表 Create and start containers
+    ```sh
+      docker-compose up # up 代表 Create and start containers
     ```
+
     注意：由於在 ``docker-compose.yml`` 中使用了 __volumes__, 記得要把 __Dockerfile__ 中的 ``COPY`` 指令給移除！
+  
+  * 深入 ``docker-compose`` workflow 與相關指令：
+    * docker-compose 與 docker 本身指令相當相似，差別在專門是透過 docker-compose 指令所創造出來的服務
+    * 在執行 docker-compose 指令時，與 docker 指令最大差別為必須該路徑底下有 ``docker-compose.yml`` 設定檔, 以下指令才會 work.
+      ```sh
+        docker-compose up -d # start up all containers
+          # -d 表示背景執行
+          # up 指令在當本地已經擁有 image 時不會重新 build
+        docker-compose ps # 查看透過 compose 指令而執行中的程序
+        docker-compose logs [contailer_name] # 查看整個 compose 或是單一容器的 logs. 其實可以透過 Kitematic 圖形介面查看
+        docker-compose stop # 停止 compose 的 containers 服務
+        docker-compose start # 啟動 compose 的 containers 服務
+        docker-compose rm # 刪除透過 docker-compose.yml 所產生的 containers (必須先 stop 才能 rm)
+        docker-compose build 
+          # 當更動 Dockerfile 時使用 docker-compose up 不會產生最新的 image 檔案
+          # 必須使用 build 根據 Dockerfile 全部重頭打造(rebuild all)。
+        
+      ```
+
+      > 注意： docker-compose 
+
+## Docker Networking
+
+1. Default Docker Network Model:
+
+    ![network model](./docker_network.jpg)
+
+  

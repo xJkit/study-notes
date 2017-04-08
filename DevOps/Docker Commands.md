@@ -21,7 +21,7 @@ docker run # 從 image 建立一個 container.
 # 注意每次一個 run 都是建立全新的 container (不是原本修改過的那個), 離開時都會保存下來
 docker run busybox:1.24 # 從 v1.24 版本的 busybox image 建立一個 container
 docker start # 啟動 container
-# 當你從已經建立過的 contaoner 啟動時，一樣可以使用 -it 進入 interactive mode
+# 當你從已經建立過的 container 啟動時，一樣可以使用 -it 進入 interactive mode
 docker stop # 停止 container 運行
 docker exec # 在執行中的 container 下指令
 # -it 讓你進入執行中的 container 並開啟 interactive mode
