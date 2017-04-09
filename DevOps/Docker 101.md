@@ -401,4 +401,7 @@ A application-level virtualization technology.
     
 ## Create a Continious Integration Pipeline
 
-
+1. What is **Contimuous Integration**?
+  * CI 用於當新的程式碼有變更時，自動幫你泡過一次測試，可以立即發現問題。
+  * 傳統的 CI Process:
+  * Docker 融合的 CI Process:
