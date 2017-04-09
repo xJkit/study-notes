@@ -335,6 +335,7 @@ A application-level virtualization technology.
         docker-compose build 
           # 當更動 Dockerfile 時使用 docker-compose up 不會產生最新的 image 檔案
           # 必須使用 build 根據 Dockerfile 全部重頭打造(rebuild all)。
+        docker-compose run [service_name] [...command] # 執行 one time command
         
       ```
 
@@ -398,4 +399,6 @@ A application-level virtualization technology.
           # 可透過 docker network ls 以及 docker network inspect 檢查各種介面的詳細資訊
       ```
     
+## Create a Continious Integration Pipeline
+
 
