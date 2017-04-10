@@ -398,10 +398,13 @@ A application-level virtualization technology.
           # 透過 run 一個全新的容器並指定連接到 my_bridge_net 網路介面
           # 可透過 docker network ls 以及 docker network inspect 檢查各種介面的詳細資訊
       ```
-    
+
+
 ## Create a Continious Integration Pipeline
 
 1. What is **Contimuous Integration**?
   * CI 用於當新的程式碼有變更時，自動幫你泡過一次測試，可以立即發現問題。
   * 傳統的 CI Process:
-  * Docker 融合的 CI Process:
+  * Docker-compose 融合的 CI Process:
+    ![docker-compose-ci](./docker-compose-ci.png)
+
