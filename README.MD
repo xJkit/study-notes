@@ -639,6 +639,13 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
   > online JSON generator for fake data
 
+* [htop](https://github.com/hishamhm/htop)
+
+  * A better top unix-like tool with interactive text-mode
+
+* [ctop](https://github.com/bcicen/ctop)
+
+  * Top-like interface for container metrics
 
 # Secondary Languages
 *  [Haskell](https://www.haskell.org/)
