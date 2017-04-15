@@ -89,6 +89,16 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 作者也是 FB 開發者之一
 
+* [redux-api-middleware](https://github.com/agraboso/redux-api-middleware) - :star: __0.8K__
+
+  > 將整個 SPA 的非同步請求行為集中在 api middleware 共用
+
+  > 透過 Symbol 所產生的 [CALL_API] 來判定是否為非同步 actions
+
+  > 作用： __Redux Standard API-calling Actions__ (RSAAs) ---> __Flux Standard Actions__ (FSAs) -->  next middleware
+
+  > 這個一直都是自幹 api middleware 的方式
+
 * [redux-observable](https://github.com/redux-observable/redux-observable) - :star: __~2K__
 
   > 以 [RxJS](http://reactivex.io/) 為基礎來開發的 Middleware
