@@ -12,7 +12,37 @@ Saga 為一個對付 Side Effects(非同步請求) 的 pattern, 監聽 actions �
 
 ## 與傳統非同步 apiMiddlewares 比較
 
-使用 Redux 的 F2E 通常都會擁有自己的一套 apiMiddleware 用以共用整個 SPA 非同步請求的程式碼片段。通常實作方式為將 **RSAA --> FSA**， 也就是將 ``Redux Standard API-calling Actions`` 轉譯為 ``Flux Standard Actions``. Action Creators 返回 [CALL_API] 的屬性代表非同步請求並被 apiMiddleware 捕捉，發出 REQUEST type action 後進行非同步請求處理；成功取得資料，返回 SUCCESS type action, 失敗返回 FAILURE type action. [redux-api-middleware](https://github.com/agraboso/redux-api-middleware)就是此案例的傳統實作方式（我個人通常也是如此）。
+使用 Redux 的 F2E 通常都會擁有自己的一套 apiMiddleware 用以共用整個 SPA 非同步請求的程式碼片段。通常實作方式為將 **RSAA --> FSA**， 也就是將 ``Redux Standard API-calling Actions`` 轉譯為 ``Flux Standard Actions``. Action Creators 返回 [CALL_API] 的屬性代表非同步請求並被 apiMiddleware 捕捉，發出 REQUEST type action 後進行非同步請求處理；成功取得資料，返回 SUCCESS type action, 失敗返回 FAILURE type action. [redux-api-middleware](https://github.com/agraboso/redux-api-middleware)就是此案例的傳統實作方式（我個人通常也是如此）。如果有更進一步處理的需求，會結合 [redux-thunk](https://github.com/gaearon/redux-thunk) 做更深層的資料流處理，但是相對的會污染 actions (不再是 pure object, 而是 thunk function)。
+
+總結：在 Redux 中處理非同步的三種主流方式：
+1. Promise-based api middleware (例如 [redux-api-middleware](https://github.com/agraboso/redux-api-middleware) 或是自幹)
+2. [redux-thunk](https://github.com/gaearon/redux-thunk) (maybe with ES7 ``async/await``)
+3. redux-saga
+
+  > [Why do we need middleware for async flow in Redux?](http://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux/34623840#34623840) - 重點文摘：作者說 action creators 不再需要保持 pure functions
+
+  > [文章比較：Thunk(async/await) V.S Redux-Saga](http://stackoverflow.com/questions/34930735/pros-cons-of-using-redux-saga-with-es6-generators-vs-redux-thunk-with-es7-async/34933395)
+
+使用 ``Redux-Saga`` 優缺點分析：
+* 缺點：
+  * redux-saga 不強迫捕捉錯誤，這往往是造成錯誤發生而難以追蹤。
+
+    > 良好的習慣： 捕捉每一個請求都設想失敗的可能性。
+
+  * generator 開發環境在經過 babel 的 source-map 經常跑掉，常常需要 **debugger**
+  * 使用 redux-saga 在團隊中難以良好搭配，也許需要一些代價或成本來重寫替換成 saga
+
+* 優點：
+  * 保持 action 一致簡潔，不讓 action creators 五花八門，眼花撩亂。
+  * 提供豐富的 Effects 以及 Saga 機制（而且可隨時被中斷）
+
+**小結：** Redux-Thunk 沒什麼不好，小專案還是可以用，而且搭配 ``async/await`` 非常直覺。倘若專案在非同步請求邏輯非常複雜，建議呼叫 Saga Pattern 來處理這一切。
+
+
+類別          | Imperative  | Declarative
+-------------|-------------|-------------
+DOM          | jQuery      | React
+Side Effects | Redux-Thunk | Redux-Saga
 
 ## Effects
 
@@ -88,10 +118,10 @@ Saga 為一個對付 Side Effects(非同步請求) 的 pattern, 監聽 actions �
   ```js
     function* countSaga() {
       while(true) {
-        const { payload: number } = yield take('BEGIN_COUNT');
+        const { payload: number } = yield take(BEGIN_COUNT);
         const countTaskId = yield fork(count, number); // count 為一個 generator
 
-        yield take('STOP_TASK');
+        yield take(STOP_TASK);
         yield cancel(countTaskId);
       }
     }
