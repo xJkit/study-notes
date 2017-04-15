@@ -76,6 +76,8 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 注意： action creator 標準是必須回傳 plain object, 但是使用 thunk middleware 後才允許回傳 function (--> thunk function)
 
+  > redux-thunk 搭配 ES7 ``async/await`` 會非常強大。  ...[範例在此](https://pastebin.com/R4sQK96K)
+
 * [redux-promise](https://github.com/acdlite/redux-promise) - :star: __1.2K__
 
   > 讓 Action Creators 回傳 Promise

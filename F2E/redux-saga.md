@@ -10,6 +10,10 @@ Saga 為一個對付 Side Effects(非同步請求) 的 pattern, 監聽 actions �
 1. 身為 ``Redux`` 的 **Middleware**, 將所有非同步的行為(Side Effects) 透過 **Middleware** 導到 Saga Pattern 統一處理。
 2. 充分利用 JavaScript ES6 ``Generators`` 的特性，將非同步寫成同步，同時讓測試程式碼非常好寫。
 
+## 與傳統非同步 apiMiddlewares 比較
+
+使用 Redux 的 F2E 通常都會擁有自己的一套 apiMiddleware 用以共用整個 SPA 非同步請求的程式碼片段。通常實作方式為將 **RSAA --> FSA**， 也就是將 ``Redux Standard API-calling Actions`` 轉譯為 ``Flux Standard Actions``. Action Creators 返回 [CALL_API] 的屬性代表非同步請求並被 apiMiddleware 捕捉，發出 REQUEST type action 後進行非同步請求處理；成功取得資料，返回 SUCCESS type action, 失敗返回 FAILURE type action. [redux-api-middleware](https://github.com/agraboso/redux-api-middleware)就是此案例的傳統實作方式（我個人通常也是如此）。
+
 ## Effects
 
 1. 是一個 JavaScript Object
@@ -70,6 +74,44 @@ Saga 為一個對付 Side Effects(非同步請求) 的 pattern, 監聽 actions �
       console.log('新的 action:', action);
       console.log('新的 state:', newState);
     });
+    // takeEvery 替代了 使用 while 迴圈來監聽 action 的 take.
+  ```
+
+5. 同步／非同步呼叫 (Blocking/Non-blocking calls)
+  在 Saga 中，一個 Saga 可有許多 ``子 Saga`` 所組成（或被稱為 sub-transaction）。因此，在 redux-saga 中透過 **fork** 以及 **call** 來實作。
+  1. ``fork``
+    * 非同步呼叫子 Saga
+    * **fork** Effect 即為創造一個子 Saga.
+    * 範例：
+      * 當收到 **BEGIN_COUNT** action  --> 開始倒數
+      * 當收到 **STOP_COUNT** action --> 停止倒數
+  ```js
+    function* countSaga() {
+      while(true) {
+        const { payload: number } = yield take('BEGIN_COUNT');
+        const countTaskId = yield fork(count, number); // count 為一個 generator
+
+        yield take('STOP_TASK');
+        yield cancel(countTaskId);
+      }
+    }
+      // 補充： count generator 
+      function* count(number) {
+        let currentNum = number;
+        while (currentNum >= 0) {
+          console.log(currentNum--);
+          yield delay(1000);
+        }
+      }
+  ```
+  2. ``call``
+    * 同步（阻塞）呼叫子 Saga，或者返回 **Promise** 物件
+  ```js
+    const project = yield call(fetch, {
+      url: UrlMap.fetchProject,
+    });
+    
+    const members = yield call(fetchMembers, project.id);
   ```
 
 ## References
