@@ -50,7 +50,7 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 讓 react-router 與 redux store 同步
 
-*  [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+* [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
   > Chrome extension for redux app
 
@@ -109,6 +109,8 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 開發者為 RxJS 之一，也是 Netflix 工程師
 
+  > 觀看 [基礎範例](http://jsbin.com/jexomi/edit?js,output)
+
 * [redux-saga](https://github.com/redux-saga/redux-saga) - :star: __~6K__
 
   > 使用 ES6 generators 讓非同步請求統一放在 saga 中使得更加容易處理與測試
@@ -127,6 +129,10 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   > ReactiveX is a library for composing asynchronous and event-based programs by using observable sequences.
 
   > ReactiveX is a combination of the best ideas from the Observer pattern, the Iterator pattern, and functional programming.
+
+* 補充：在 Redux 的 Action 物件的普遍格式
+  * [FSA: Flux Standard Action](https://github.com/acdlite/flux-standard-action)
+  * [RSAA: Redux Standard Api-calling Action](https://github.com/agraboso/redux-api-middleware#redux-standard-api-calling-actions)
 
 
 ### React-related Libraries
