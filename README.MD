@@ -103,6 +103,8 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 * [redux-observable](https://github.com/redux-observable/redux-observable) - :star: __~2K__
 
+  > [官方文檔](https://redux-observable.js.org/) 
+
   > 以 [RxJS](http://reactivex.io/) 為基礎來開發的 Middleware
 
   > 精神： RxJS + Redux + React = Amazing
