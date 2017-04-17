@@ -46,6 +46,9 @@ Side Effects | Redux-Thunk | Redux-Saga
 
 
 ## Redux-Saga 術語對照表
+
+![saga-flow](https://qiita-image-store.s3.amazonaws.com/0/69860/8cc1a873-c675-9009-570d-9684da4a704f.png)
+
 Redux Saga                             | 相當於            | 描述
 ---------------------------------------|----------------|------------------------------------------------------------------------------
 Effect                                 | RSAA           | 純粹 JS 物件，相當於處理非同步用的 action 物件
