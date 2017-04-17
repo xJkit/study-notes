@@ -342,6 +342,25 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   * [Jest]()
   * [Karma]()
 
+
+### Static Site Generators
+
+* [jekyll](https://github.com/jekyll/jekyll) :star: ~30K
+
+  > 用 Ruby 實作的工具
+
+  > 想像是一個非常簡單的， file-based CMS
+
+* [hexo](https://github.com/hexojs/hexo) :star: ~15K
+
+  > 用 node.js 實作的靜態網生成器，作者是台灣人
+
+  > A fast, simple & powerful blog framework, powered by Node.js.
+
+* [Gatsby](https://github.com/gatsbyjs/gatsby) :star: ~9K
+
+  >也是用 node.js 實作，但是是 React + Webpack 超有噱頭。
+
 ### Miscellaneous
 * [normalizr](https://github.com/paularmstrong/normalizr)
 
