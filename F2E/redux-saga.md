@@ -44,12 +44,46 @@ Saga 為一個對付 Side Effects(非同步請求) 的 pattern, 監聽 actions �
 DOM          | jQuery      | React
 Side Effects | Redux-Thunk | Redux-Saga
 
+
+## Redux-Saga 術語對照表
+Redux Saga                             | 相當於            | 描述
+---------------------------------------|----------------|------------------------------------------------------------------------------
+Effect                                 | RSAA           | 純粹 JS 物件，相當於處理非同步用的 action 物件
+Task                                   | 執行緒            | 在Saga中可單獨作業的 Process, 也可以執行其他的 Saga, 透過 ``fork`` 建立 Task.
+阻塞、非阻塞呼叫                               | 同步、非同步         | Generator - 運轉停止，等待外部命令才執行 = ``阻塞｀``； Generator 運轉停止，等待狀態回應後自動繼續執行 = ``非阻塞``
+yield ``take(ACTION)``                     | watch (阻塞)     | 監聽指定的 action type, 如 ``take('FETCH_USER_REQUEST')``
+yield ``call(func 或 saga, ...arg)``       | watch (阻塞)     | 1. 等待正常func 回傳 Promise, 或 2. 等待 saga 運作終止
+yield ``put(...)``                         | dispatch (非阻塞) | dispatch 內部的 scheduler
+const task = yield ``fork(saga, ...args)`` | init 執行緒 (非阻塞) | 非同步，執行一個 process, 啟動 saga
+yield ``cancel(task)``                     | restore (非阻塞)        | 非阻塞，立即恢復 task
+yield ``join(task)``                       | wait and quit (阻塞)  | 阻塞，等待 task 終止
+watcher | PM | 觀察被 dispatch 的 action 並在每個 action fork 一個 worker
+worker | 結案人 | 處理 action 並終止
+
+範例： 
+```js
+  function* watcher() {
+    while (true) {
+      const action = yield take(ACTION)
+      yield fork(worker, action.payload)
+    }
+  }
+
+  function* worker(payload) {
+  // ... 做其他事
+}
+```
+
+* 深入研究，請看 >> [官方文檔 API Reference](https://neighborhood999.github.io/redux-saga/docs/api/index.html)
+
 ## Effects
 
 1. 是一個 JavaScript Object
 2. 是一個包含 Side Effects 訊息的 Object
 3. 必須通過 ``yield`` 吐給 sagaMiddleware 才會執行
 4. 承上，所有的 ``yield`` 後面應該為 Effects
+5. 使用 redux-saga 的 Effect generators 建立此類物件（就像 Redux 中的 action creators）
+  * 例： ``call(myFunc, arg1, arg2,  ...)`` 代表使用 myFunc(arg1, arg2, ...) 並產生 effect 物件供 saga middleware 處理
 
   ```js
     yield fetch(UrlMap.fetchData);
