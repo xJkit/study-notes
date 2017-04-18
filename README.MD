@@ -400,6 +400,9 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 ### References & Articles
 * [Awesome React](https://github.com/enaqx/awesome-react)
 * [State-of-the-Art JavaScript 2016](https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b#.kj8081e20)
+* [Front End Top 100](https://www.awesomes.cn/rank?sort=trend)
+
+  > 值得做的很多功課...
 
 ---
 

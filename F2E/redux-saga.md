@@ -53,6 +53,7 @@ Redux Saga                             | 相當於            | 描述
 ---------------------------------------|----------------|------------------------------------------------------------------------------
 Effect                                 | RSAA           | 純粹 JS 物件，相當於處理非同步用的 action 物件
 Task                                   | 執行緒            | 在Saga中可單獨作業的 Process, 也可以執行其他的 Saga, 透過 ``fork`` 建立 Task.
+select(selector, ...args) | getState() | 指示調用的 selectors (然而 selector 就是 (state, ...args) => args)
 阻塞、非阻塞呼叫                               | 同步、非同步         | Generator - 運轉停止，等待外部命令才執行 = ``阻塞｀``； Generator 運轉停止，等待狀態回應後自動繼續執行 = ``非阻塞``
 yield ``take(ACTION)``                     | watch (阻塞)     | 監聽指定的 action type, 如 ``take('FETCH_USER_REQUEST')``
 yield ``call(func 或 saga, ...arg)``       | watch (阻塞)     | 1. 等待正常func 回傳 Promise, 或 2. 等待 saga 運作終止
@@ -77,7 +78,7 @@ worker | 結案人 | 處理 action 並終止
 }
 ```
 
-* 深入研究，請看 >> [官方文檔 API Reference](https://neighborhood999.github.io/redux-saga/docs/api/index.html)
+* 深入研究，請看 >> [官方文檔 API Reference](https://neighborhood999.github.io/redux-saga/docs/api)
 
 ## Effects
 
