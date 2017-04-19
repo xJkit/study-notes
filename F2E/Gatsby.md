@@ -22,6 +22,16 @@ Gatsby 所產生的專案架構如下：
 
 ---
 
+### [樣版引擎](https://github.com/gatsbyjs/gatsby#frontmatter-and-metadata)
+樣板引擎可以使用 ``markdown``, ``html`` 或 ``.js(x)`` 四種。 Gatsby 使用 [front-formatter](https://github.com/jxson/front-matter) 抓取表頭檔並 render 到 React Component 裡面。三種格式寫法如下：
+
+1. Markdown:
+  ```md
+    ---
+    title: This is the title of 
+    ---
+  ```
+
 ### [使用自定義的 Webpack loaders](https://github.com/gatsbyjs/gatsby#how-to-use-your-own-webpack-loaders)
 
 ### [使用自定義的 Webpack plugins](https://github.com/gatsbyjs/gatsby#how-to-use-your-own-webpack-plugins)
