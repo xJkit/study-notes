@@ -693,6 +693,10 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
   * 快速開發 command line tools 的好用工具
 
+* [ack](https://github.com/petdance/ack2)
+
+  * 超強搜尋工具，可以搜尋檔案名稱、檔案內容，使用 Perl 實作
+
 # Secondary Languages
 *  [Haskell](https://www.haskell.org/)
 
