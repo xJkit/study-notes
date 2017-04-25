@@ -1,5 +1,5 @@
 # 開放原始碼 License 圖解說明
-![BSDvsGPL](http://imgur.com/rwy6GCK)
+![Imgur](http://i.imgur.com/rwy6GCK.png)
 
 * BSD - **B**erkerly **S**oftware **D**istribution
     * BSD允許使用者修改和重新發布代碼（以其他協議形式），允許閉源商業發布和銷售。
@@ -23,4 +23,4 @@
 
 ---
     
-![fivelisences](http://imgur.com/saimnjW)
+![fivelisences](http://i.imgur.com/saimnjW.png)
