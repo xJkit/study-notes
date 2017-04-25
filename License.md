@@ -23,4 +23,5 @@
 
 ---
     
-![fivelisences](http://i.imgur.com/saimnjW.png)
+![LicenseChart](http://i.imgur.com/boa5iG8.png)
+![fivelicense](http://i.imgur.com/saimnjW.png)
