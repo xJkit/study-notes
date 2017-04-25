@@ -648,51 +648,59 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
 # Miscellaneous
 
-* [Atom](https://atom.io/)
+## Online Tools
+* [JSON Generator](http://www.json-generator.com/)
+  * online JSON generator for fake data
 
-  > Github 開發的編輯器
-  > 適合前端開發
+## Editors
+* [Atom](https://atom.io/)
+  * Github 開發的編輯器
+  * 適合前端開發
 
 * [Visual Studio Code](https://code.visualstudio.com/)
-
-  > 微軟開源的輕量編輯器，啟動速度快過 atom.
-
-  > 得我新寵。
-  
-  >[快捷鍵 VSCode for Mac](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) 
+  * 微軟開源的輕量編輯器，啟動速度快過 atom.
+  * 得我新寵。
+  * [快捷鍵 VSCode for Mac](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) 
 
 * [neovim](https://github.com/neovim/neovim)
+  * [Official Website](https://neovim.io/)
+  * Vim-fork focused on extensibility and usability.
 
-  > [Official Website](https://neovim.io/)
-
-  > Vim-fork focused on extensibility and usability.
-
+## Command line tools
 * [Cygwin](https://www.cygwin.com/)
-
-  > a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
+  * a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
 
 * [fish](https://fishshell.com/)
-
-  > friendly-interactive shell for the 90s
-
-  > * Project tutorial: __[fish-shell-mac](https://github.com/xJkit/fish-shell-mac)__ ,an installation guide for fish on Mac
-
-
-* [JSON Generator](http://www.json-generator.com/)
-
-  > online JSON generator for fake data
+  * friendly-interactive shell for the 90s
+  * Project tutorial: __[fish-shell-mac](https://github.com/xJkit/fish-shell-mac)__ ,an installation guide for fish on Mac
 
 * [htop](https://github.com/hishamhm/htop)
-
   * A better top unix-like tool with interactive text-mode
 
 * [ctop](https://github.com/bcicen/ctop)
-
   * Top-like interface for container metrics
 
 * [yargs](https://github.com/yargs/yargs)
-
   * 快速開發 command line tools 的好用工具
+
+* [Commander](https://github.com/tj/commander.js)
+  * node.js command-line interfaces made easy
+  * 使用 ES6 generator 的方式來開發 node.js cli 工具， tj 大大開發的
+
+* [inquire](https://github.com/sboudrias/Inquirer.js)
+  * A collection of common interactive command line user interfaces.
+  * 使用 Promise 方式來開發 node.js cli 工具
+
+* [cash](https://github.com/dthree/cash)
+  * Cross-platform Linux commands in ES6
+  * 透過 node.js 讓跨平台（如 Windows） 能夠使用 linux shell 的操作方式
+  * Cash is a cross-platform implementation of Unix shell commands written in straight ES6. No native compiling and no external dependencies.
+
+* [Yeoman](https://github.com/yeoman)
+  * Yeoman helps you to kickstart new projects, prescribing best practices and tools to help you stay productive
+  * 使用 CLI 工具快速產出專案的 Boilerplate.
+  * 使用 [generator ecosystem](http://yeoman.io/generators/), 一種 plugin 能快速 scaffold 專案雛形
+  * 使用 [yo](https://github.com/yeoman/yo) 執行 generators
 
 ## Search Tools
 
