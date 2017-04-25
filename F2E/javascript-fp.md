@@ -180,3 +180,76 @@ Compose 讓子分組可以不需要，或者說可以任意拆解 ...f 便自行
   // 更多變種⋯
 ```
 ...一個以自己喜歡的方式玩樂高積木的態度。最佳的分組方式，就是 讓 ``re-use`` 最大化。
+
+### Pointfree
+**Pointfree style means never having to say your data.** 意志 function 不必提及要操作的資料為何。``First class function``+``Curry``+``Compose`` 協作後所建立的模式。
+
+例如：
+```js
+  // ex.1
+  // 不是 Pointfree, 因為明確指出資料是 'word'
+  const snakeCase = word => word.toLowerCase().replace(/\s+/ig, '_');
+
+  // pointfree
+  const snakeCase = compose(replace(/\s+/ig, '_'), toLowerCase);
+
+  // ex.2
+  // 不是 pointfree, 因為提到資料為 name
+  const initials = name => name.split(' ').map(compose(toUpperCase, head)).join('.');
+
+  // pointfree
+  const initials = compose(join('. '), map(compose(toUpperCase, head)), split(' '));
+  // exec
+  initials('hunter stockton thompson');
+```
+``Curry`` 讓每一個 function 先接受資料，再將資料傳遞下一個 function.
+
+``Pointfree`` 移除不必要的命名，讓程式碼保持簡潔和通用。不過請注意，pointfree 就像一把雙刃劍，有時會混淆視聽。並不是所有的 functional 程式碼都為 pointfree，不過這沒關係。可以使用他的時候就使用，不能使用的時候就用普通的 function。
+
+### Debug 
+Compose 常見的錯誤就是，在沒有第一次部分呼叫前，就 compose 像是 map 接受兩個參數的 function。
+```js
+  const latin = compose(map, angry, reverse); //error: 丟 array 給 angry, 但不知道部分呼叫的 map 接收到什麼
+  const latin = compose(map(angry), reverse);//正確: 每個 function 都預期接受一個參數。
+
+  latin(['frog', 'eyes']); // ['EYES!', 'FROG!']
+```
+
+### Conclusion
+``Compose`` 就是將 function 連結在一起：一群 pure functions, 一群只接受一個參數的 curries functions，就像管線一樣，資料從右到左流動。
+
+## 5. Imperative(命令式) v.s Declarative(宣告式) Programming
+* 命令式：告訴電腦該怎麼做，「先做這個，再做那個。」
+  > 一步一步指示
+* 宣告式：透過撰寫規範來得到結果。 
+  > 表達程式，例如 SQL 語句。
+
+例如：迭代 ``cars``清單
+```js
+  // Imperative
+  let makes = [];
+  for (let i = 0; i < cars.length; i++) {
+    makes.push(cars[i].make);
+  }
+
+  // Declarative
+  const makes = cars.map(car => car.make);
+```
+命令式必須第一次在執行後面的程式碼之前實例化一個陣列。透過 for 迴圈手動增加 counter 等這些零碎資訊會擾亂我們。
+
+map 是一個表達式，指出``指定做什麼而不是怎麼做``。
+
+  > P.S: 對於命令式語法的效能 > 宣告式的爭論，可參考[這個影片](指定做什麼而不是怎麼做)。
+
+```js
+  // Imperative
+  const auth = form => {
+    const user = toUser(form);
+    return logIn(user);
+  }
+
+  // Declarative
+  // Compose 表達式只是簡單的指出一個事實：驗證是 toUser 和 logIn 兩個行為的組合
+  const auth = compose(logIn, toUser);
+```
+因為宣告式的程式不指定執行順序，所以適合運用在``平行計算``。它與 pure function 一起解釋了 functional programming 對於平行計算的未來是一個很好的選擇 - 我們真的不需要做什麼就能實現平行化的系統。
