@@ -231,12 +231,6 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 原本只是讓你寫 ES6+ 的轉轉譯工具，但是發展至今已經更強大了...
 
-* [Lodash](https://github.com/lodash/lodash)
-
-  > A modern JavaScript utility library delivering modularity, performance, & extras
-
-  > 非常好用之 Functional Programming 的 JS 輔助工具
-
 * [Sketch](https://www.sketchapp.com/)
   > Professional digital design for Mac
 
@@ -284,7 +278,6 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > Perfect for the development
 
-
 ### HTTP Request Libraries
 * [axios](https://github.com/mzabriskie/axios)
   * Promise based HTTP client for the browser and node.js
@@ -302,6 +295,27 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   * Simplified HTTP request client.
 
 P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
+
+### Functional Programming JavaScript Libraries
+> Reference: [awesome-fp-js](https://github.com/stoeffel/awesome-fp-js)
+
+* [Lodash](https://github.com/lodash/lodash) :star: ~22K
+  * A modern JavaScript utility library delivering modularity, performance, & extras
+  * 非常好用之 Functional Programming 的 JS 輔助工具
+  * [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide)
+    * An instance of Lodash with its methods wrapped to produce immutable, auto-curried, iteratee-first, data-last methods.
+
+* [Ramda](https://github.com/ramda/ramda) :star: ~8K
+  * A practical functional library for JavaScript that is designed specifically for a functional programming style
+  * A style that makes it easy to create functional pipelines and never mutates user data.
+
+#### Data Structures
+
+* [Immutable.js](https://github.com/facebook/immutable-js) :star: ~19K
+  * Immutable persistent data collections
+
+* [mori](https://github.com/swannodette/mori)
+  * ClojureScript’s persistent data structures and supporting API from the comfort of vanilla JavaScript.
 
 ### Animations
 
