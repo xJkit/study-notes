@@ -303,6 +303,18 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
 
+### Animations
+
+* [SVG.js](https://github.com/svgdotjs/svg.js)
+  * The lightweight library for manipulating and animating SVG
+
+* [Vivus](https://github.com/maxwellito/vivus)
+  * JavaScript library to make drawing animation on SVG
+
+* [Fabric](https://github.com/kangax/fabric.js/)
+  * Javascript Canvas Library, SVG-to-Canvas (& canvas-to-SVG) Parser 
+  * Powerful, simple JS HTML5 canvas library
+
 ### Browser Automation
 
 * [PhantomJS](https://github.com/ariya/phantomjs)
@@ -333,7 +345,8 @@ P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
 
 ### Unit Testing
 
-> Testing tasks are related to the client-side libraries, please also check that section for more information.
+> Testing tasks are related to the client-side libraries, please also check them for more information.
+
 > Todos
 
   * [Mocha]()
@@ -636,7 +649,7 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
       * [Get started with docker for Mac](https://docs.docker.com/docker-for-mac/)
 
-### CIs
+### CIsv
 
   * [Jenkins](https://github.com/jenkinsci/jenkins)  
   * [Travis CI](https://github.com/travis-ci/travis-ci)
