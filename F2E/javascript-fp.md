@@ -106,3 +106,77 @@ pure function 最大好處： referential transparency(透明性)，意思是 ``
 並行執行任何 pure function. 因為 pure function 根本不需要存取共享記憶體；根據定義，也不會因為 side effects 而進入競爭狀態（race condition.
 
 ## 3. Curry (柯里化)
+Curry 的定義有多方說法：
+* Currying is the technique of translating the evaluation of a function that takes multiple arguments (or a tuple of arguments) into evaluating a sequence of functions, each with a single argument. Currying is related to, but not the same as, partial application. by [wiki](https://en.wikipedia.org/wiki/Currying)
+* 是把接受多個參數的函數變換成接受一個單一參數（最初函數的第一個參數）的函數，並且返回接受餘下的參數而且返回結果的新函數的技術 by [維基百科](https://zh.wikipedia.org/wiki/%E6%9F%AF%E9%87%8C%E5%8C%96)
+
+* 基本範例：
+  ```js
+    const add = x => y => x + y;
+    const incre = add(1);
+    console.log(incre(2)); // 3
+  ```
+  上述第一行程式碼在 JavaScript ES5 寫法如下：
+  ```js
+    var add = function (x) {
+      return function (y) {
+        return x + y;
+      }
+    }
+  ```
+
+
+## 4. Compose 
+Compose 被用來堆高積木，在數學觀念上，就是``合成函數``的意思： **f(g(x))** 代表 input (x) --> g --> f --> 輸出。合成函數 Compose 實作如下：
+  ```js
+    // ES 6
+    const compose = (f,g) => x => f(g(x)); 
+    // ES5
+    var compose = function (f, g) {
+      return function (x) {
+        return f(g(x));
+      }
+    }
+  ```
+* Compose 用來結合多個自選的 functions 來變成一個全新的 function.
+* Compose 定義 g 會比 f 先執行：建立一個由右至左的資料流，遠比標準合成函數（巢狀呼叫）更有可讀性。
+* x 就是合成函數 Compose 的管道參數，也就是 input.
+
+一個實際運用的範例： strings -> toUpperCase -> explaim -> 輸出
+  ```js
+    const toUpperCase = x => x.toUpperCase();
+    const exclaim = x => x.concat('!');
+    // shout composes toUpperCase & exclaim
+    const shout = compose(exclaim, toUpperCase);
+    console.log(shout('What the fuck?')); // WHAT THE FUCK?!
+  ```
+Compose 建立一個右至左的資料流，而不是巢狀的由內到外，稱為``left direction`` 更能貼近數學上的意義；其實 Compose 就是來自數學，而且遵守以下定律：
+* 結合律（associativity）
+```js
+// 在 compose 中分組一點都不重要
+var associative = compose(f, compose(g, h)) == compose(compose(f, g), h);
+// true
+```
+由於 Compose 在結合律下相等，因此 Compose 分組並不重要。結論是， Compose 裡面無需 Compose, 只要確定資料流由右至左，我們只需要一個 Compose：
+  ```js
+    const compose = (f, g, h, i, j) => x => f(g(h(i(j(x)))));
+    const ans = compose(3); // x = 3
+  ```
+寫出一個參數數量可變的 ``Compose(...f)`` 讓他安全可靠有靈活性。
+
+Compose 讓子分組可以不需要，或者說可以任意拆解 ...f 便自行分組：
+```js
+  const loudLastUpper = compose(exclaim, toUpperCase, head, reverse);
+
+  // 或
+  const last = compose(head, reverse);
+  const loudLastUpper = compose(exclaim, toUpperCase, last);
+
+  // 或
+  const last = compose(head, reverse);
+  const angry = compose(exclaim, toUpperCase);
+  const loudLastUpper = compose(angry, last);
+
+  // 更多變種⋯
+```
+...一個以自己喜歡的方式玩樂高積木的態度。最佳的分組方式，就是 讓 ``re-use`` 最大化。

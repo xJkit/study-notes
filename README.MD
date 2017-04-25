@@ -285,46 +285,47 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   > Perfect for the development
 
 
-### Async Request Libraries
+### HTTP Request Libraries
 * [axios](https://github.com/mzabriskie/axios)
-
-  > Promise based HTTP client for the browser and node.js
+  * Promise based HTTP client for the browser and node.js
 
 * [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
+  * Isomorphic WHATWG Fetch API, for Node & Browserify
+  * 這個讓 fetch 變成 global, 你也可以在瀏覽器中使用 fetch()
+  * 這個也是 Promise-based, 但是需要 polyfilles: [es6-promise](https://github.com/stefanpenner/es6-promise)
+  * 欲使用 query string, 可搭配 [URLSearchParams](https://developer.mozilla.org/zh-TW/docs/Web/API/URLSearchParams)
 
-  > Isomorphic WHATWG Fetch API, for Node & Browserify
-
-  > 這個讓 fetch 變成 global, 你也可以在瀏覽器中使用 fetch()
-
-  > 這個也是 Promise-based, 但是需要 polyfilles: [es6-promise](https://github.com/stefanpenner/es6-promise)
-
-  > 欲使用 query string, 可搭配 [URLSearchParams](https://developer.mozilla.org/zh-TW/docs/Web/API/URLSearchParams)
-
-* [cheerio](https://github.com/cheeriojs/cheerio)
-
-  > Fast, flexible, and lean implementation of core jQuery designed specifically for the server
+* [SuperAgent](https://github.com/visionmedia/superagent)
+  * Ajax with less suck - (and node.js HTTP client to match) 
 
 * [Request](https://github.com/request/request)
+  * Simplified HTTP request client.
 
-  > Simplified HTTP request client.
+P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
 
-  > 適合拿來做 Web Crawler
+### Browser Automation
 
 * [PhantomJS](https://github.com/ariya/phantomjs)
-
-  > Scriptable Headless WebKit
-
-  > 一個沒有 UI 的瀏覽器！適合拿來做以下事情：
+  * Scriptable Headless WebKit
+  * 用 WebKit（Safari, Chrome） 自動化
+  * 一個沒有 UI 的瀏覽器！適合拿來做以下事情：
     1. Headless Web Testing (very fast testing without browsers)
     2. Page Automation (access & manipulate web pages)
     3. Screen Capture (programmatically capture web contents)
     4. Network Monitoring (automate performance analysis, track page loading)
 
+* [SlimerJS](https://github.com/laurentj/slimerjs)
+  * 建立在 Firefox 上做自動化
+
+* [CasperJS](https://github.com/casperjs/casperjs)
+  * 包裝 SlimerJS + PhantomJS 的自動化整合工具
+
 * [Webdriver](https://github.com/webdriverio/webdriverio/)
+  * Browser Automation Tools
+  * Webdriver/Selenium JavaScript bindings for Node.js
 
-  > Browser Automation Tools
-
-  > Webdriver/Selenium JavaScript bindings for Node.js
+* [cheerio](https://github.com/cheeriojs/cheerio)
+  * Fast, flexible, and lean implementation of core jQuery designed specifically for the server
 
 * 延伸閱讀：
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
@@ -693,9 +694,18 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
   * 快速開發 command line tools 的好用工具
 
+## Search Tools
+
 * [ack](https://github.com/petdance/ack2)
 
+  * [官方文檔](https://beyondgrep.com/)
   * 超強搜尋工具，可以搜尋檔案名稱、檔案內容，使用 Perl 實作
+  * Blazing fast, better search, for code search,
+
+* [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+
+  * 號稱比 ack 還快的搜尋工具...
+  * 用 C 實作
 
 # Secondary Languages
 *  [Haskell](https://www.haskell.org/)
