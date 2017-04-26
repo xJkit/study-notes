@@ -7,10 +7,25 @@
   * Principle of Least Surprise (最少意外原則)
   * Single Responsibility (單一責任原則)
 
-
-
 ## Reference 
   * [JavaScript Functional Programming 指南](https://jigsawye.gitbooks.io/mostly-adequate-guide/content/) by Franklin Risby (中譯)
+
+## Terms
+* ``Arity``
+  * the number of arguments or operands that the function takes
+  * 也就是函數 arguments 的數量
+  * 以下範例 arity 為 3 (ternary function):
+  ```js
+    const a = (x, y, z) => (x + y + z);
+    console.log(a.length) // => 3
+  ```
+* ``n-ary`` function
+  * 表示 arity 為 n 的函數
+  * A ``nullary`` function takes no arguments.
+  * A ``unary`` function takes one argument.
+  * A ``binary`` function takes two arguments.
+  * A ``ternary`` function takes three arguments.
+  * An ``n-ary`` function takes n arguments.
 
 ## 1. First-class Function
 
@@ -219,10 +234,12 @@ Compose 常見的錯誤就是，在沒有第一次部分呼叫前，就 compose 
 ``Compose`` 就是將 function 連結在一起：一群 pure functions, 一群只接受一個參數的 curries functions，就像管線一樣，資料從右到左流動。
 
 ## 5. Imperative(命令式) v.s Declarative(宣告式) Programming
+![Imgur](http://i.imgur.com/FoDO1zc.png)
 * 命令式：告訴電腦該怎麼做，「先做這個，再做那個。」
   > 一步一步指示
 * 宣告式：透過撰寫規範來得到結果。 
   > 表達程式，例如 SQL 語句。
+
 
 例如：迭代 ``cars``清單
 ```js
