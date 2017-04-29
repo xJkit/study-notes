@@ -206,9 +206,9 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   * 由於 ``react-css-modules`` 會拖垮效能，另一個輕量級的 alternatives 為使用 [babel-plugin-react-css-modules](https://github.com/gajus/babel-plugin-react-css-modules)
 
 * [PostCSS](https://github.com/postcss/postcss)
+  * Transforming styles with JS plugins
   * 文章：[Images in PostCSS Tricks](https://css-tricks.com/images-in-postcss/)
   * 文章：[10 Awesome PostCSS Plugins](http://www.hongkiat.com/blog/postcss-plugins/)
-  * Transforming styles with JS plugins
   * [autoprefixer](https://github.com/postcss/autoprefixer)
   * [rucksack](https://simplaio.github.io/rucksack/)
    * A little bag of CSS superpowers
@@ -439,30 +439,39 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 ### Web Service
 
 * [Express](https://github.com/expressjs/express)
-
-  > Fast, unopinionated, minimalist web framework for node.
-
-  > 超古老經典 Node 框架
+  * Fast, unopinionated, minimalist web framework for node.
+  * 超古老經典 Node 框架
 
 * [Koa](https://github.com/koajs/koa)
-
-  > 使用 generator 操作的 http framework
+  * 使用 generator 操作的 http framework
 
 * [POD](https://github.com/yyx990803/pod)
-
-  > git push deploy for Node.js
+  * git push deploy for Node.js
 
 * [PM2](https://github.com/Unitech/pm2)
-
-  > production process manager for Node.js applications with a built-in load balancer
+  * production process manager for Node.js applications with a built-in load balancer
 
 * [SocketIO](https://github.com/socketio/socket.io)
-
-  > Realtime application framework
+  * Realtime application framework
 
 * [Socket.io-client](https://github.com/socketio/socket.io-client)
+	* Realtime application framework (client)
 
-	> Realtime application framework (client)
+* [bcrypt](https://github.com/kelektiv/node.bcrypt.js/)
+  * bcrypt for node.js
+  * 一個幫你製作 hash 密碼的工具，常用在使用者認證的輔助工具。
+
+* [passport](https://github.com/jaredhanson/passport)
+  * Simple, unobtrusive authentication for Node.js.
+  * 相容 express middleware
+  * [官方網站](http://passportjs.org/)
+
+* [next.js](https://github.com/zeit/next.js/)
+  * ramework for server-rendered React apps
+  * 更方便的 Server-side rendering React app 開發工具
+
+* [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+  * jwt implementation for node.js
 
 ### Database
 
