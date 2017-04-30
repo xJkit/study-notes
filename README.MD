@@ -140,69 +140,54 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 ### React-related Libraries
 
 * [ant-design](https://github.com/ant-design/ant-design/)
-
-  > An enterprise-class UI design language and React-based implementation.
-
-  > [Official Site](https://ant.design/)
+  * An enterprise-class UI design language and React-based implementation.
+  * [Official Site](https://ant.design/)
 
 * [Material-UI](https://github.com/callemall/material-ui)
-
-  > React Components that Implement Google's Material Design
+  * React Components that Implement Google's Material Design
 
 * [react-paginate](https://github.com/AdeleD/react-paginate)
-
-  > demo: https://github.com/AdeleD/react-paginate/blob/master/docs/img/react-paginate.gif
+  * demo: https://github.com/AdeleD/react-paginate/blob/master/docs/img/react-paginate.gif
 
 * [react-component/pagination](https://github.com/react-component/pagination)
-
-  > example & docs: http://react-component.github.io/pagination/
+  * example & docs: http://react-component.github.io/pagination/
 
 * [react-component/slider](https://github.com/react-component/slider)
-
-  > example & docs: http://react-component.github.io/slider/
+  * example & docs: http://react-component.github.io/slider/
 
 * [rodal](https://github.com/chenjiahan/rodal)
-
-  > A React modal with animations.
-  > * __[project demo](https://github.com/xJkit/react-modal-example)__
+  * A React modal with animations.
+  *  __[project demo](https://github.com/xJkit/react-modal-example)__
 
 * [react-select](https://github.com/JedWatson/react-select)
-
-  > A Select control build with and for React JS
+  * A Select control build with and for React JS
 
 * [react-scroll](https://github.com/fisshy/react-scroll)
-
-  > Directive for basic scrolling and smooth scrolling
+  * Directive for basic scrolling and smooth scrolling
 
 * [react-mosaic](https://github.com/palantir/react-mosaic)
-
-  > A React tiling window manager. >> [demo](https://palantir.github.io/react-mosaic/
+  * A React tiling window manager. >> [demo](https://palantir.github.io/react-mosaic/
 )
 
-  > 適合做監視器的管理介面視窗，包含拖曳、放大、縮小、排序等功能。
+  * 適合做監視器的管理介面視窗，包含拖曳、放大、縮小、排序等功能。
+
+* [react-sketchapp](https://github.com/airbnb/react-sketchapp)
+  * render React components to Sketch
 
 * [classNames](https://github.com/JedWatson/classnames)
-
-  > A simple javascript utility for conditionally joining classNames together
-
-  > 可以把判斷邏輯、Inline CSS 寫在 Component 裡面的函式庫
+  * A simple javascript utility for conditionally joining classNames together
+  * 可以把判斷邏輯、Inline CSS 寫在 Component 裡面的函式庫
 
 * [Draft.js](https://facebook.github.io/draft-js/)
-
-  > A framework for building rich text editors in React.
-
-  > 適合拿來當管理介面的寫作 UI 編輯器
+  * A framework for building rich text editors in React.
+  * 適合拿來當管理介面的寫作 UI 編輯器
 
 * [react-css-modules](https://github.com/gajus/react-css-modules)
-
-  > Seamless mapping of class names to CSS modules inside of React components
-
-  > 寫出 Modular 與 Reusable CSS!
+  * Seamless mapping of class names to CSS modules inside of React components
+  * 寫出 Modular 與 Reusable CSS!
 
   * 設計哲學來自 [CSS Modules](https://github.com/css-modules/css-modules)，其為一種 __paradigm__
-
-    > 搭配 webpack, css-loader, style-loder. 也可使用 stylus 強化原生 CSS (搭配 stylus-loader)
-
+    * 搭配 webpack, css-loader, style-loder. 也可使用 stylus 強化原生 CSS (搭配 stylus-loader)
   * 由於 ``react-css-modules`` 會拖垮效能，另一個輕量級的 alternatives 為使用 [babel-plugin-react-css-modules](https://github.com/gajus/babel-plugin-react-css-modules)
 
 * [PostCSS](https://github.com/postcss/postcss)
