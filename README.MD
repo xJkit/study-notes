@@ -542,53 +542,45 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
     > A query language for your API
 
+``Tools``
+
+  * [MongoChef](http://3t.io/mongochef/)
+    * GUI for MongoDB
+
+  * [Robomongo](https://robomongo.org/)
+    * native MongoDB management tool with admin UI
+
+  * [Sequal Pro](https://github.com/sequelpro/sequelpro)
+    * MySQL 的 GUI Application
+    * Mac only
+
 ### API Documentation Tools
 
   * [Slate](https://github.com/lord/slate)
-
-    > Use Markdown & Ruby
+    * Use Markdown & Ruby
 
   * [apiDoc](https://github.com/apidoc/apidoc)
-
-    > RESTful web API Documentation Generator.
-
-    > [Demo](http://apidocjs.com/example_basic/)
+    * RESTful web API Documentation Generator.
+    * [Demo](http://apidocjs.com/example_basic/)
 
   * [API Blueprint](https://github.com/apiaryio/api-blueprint)
-
-    > A powerful high-level API design language for web APIs
+    * A powerful high-level API design language for web APIs
 
   * [Flatdoc](https://github.com/rstacruz/flatdoc/)
-
-    > Build sites fast from Markdown
+    * Build sites fast from Markdown
 
   * [Swagger](https://github.com/swagger-api)
-
-    > simple and powerful interface to your API
-
-    > lots of automation, API tooling, and even client SDK generation and discoverability
-
-    > [Demo](http://petstore.swagger.io/)
+    * simple and powerful interface to your API
+    * lots of automation, API tooling, and even client SDK generation and discoverability
+    * [Demo](http://petstore.swagger.io/)
 
   * [RAML](http://raml.org/)
-
-    > built on broadly-used standards such as YAML and JSON and it has many tools
+    * built on broadly-used standards such as YAML and JSON and it has many tools
 
 ### Miscellaneous
 
-  * [MongoChef](http://3t.io/mongochef/)
-
-    > GUI for MongoDB
-
-  * [Robomongo](https://robomongo.org/)
-
-    > native MongoDB management tool with admin UI
-
-  * [Sequal Pro](https://github.com/sequelpro/sequelpro)
-
-    > MySQL 的 GUI Application
-
-    > Mac only
+* [pkg](https://github.com/zeit/pkg)
+  * 把 node.js 包成執行檔 (Windows, Mac OS, Linux)
 
 ---
 
