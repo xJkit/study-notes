@@ -255,8 +255,21 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   > RESTful API 快速驗證工具
 
 * [ESLint](https://github.com/eslint/eslint)
+  * A fully pluggable tool for identifying and reporting on patterns in JavaScript
+  * 由於 eslint 常常包含許多 ``devDependencies``（eslint 本身、eslint-config-airbnb 以及其相依套件），因此快速安裝 eslint 的方式為使用套件 ``install-peerdeps``
+  	* [install-peerdeps](https://www.npmjs.com/package/install-peerdeps)
+	```sh
+	  > npm info eslint-config-airbnb peerDependencies # 可以看到有關的 peerDependencies 套件
+	  ### 使用 install-peerdeps 之前：
+	  > npm install eslint-config-airbnb eslint@^3.9.1 eslint-plugin-jsx-a11y@^2.2.3 eslint-plugin-import@^2.1.0 eslint-plugin
+	  -react@^6.6.0 --save-dev
 
-  > A fully pluggable tool for identifying and reporting on patterns in JavaScript
+	  ### 使用 install-peerdeps
+	  > npm install -g install-peerdeps
+	  > install-peerdeps eslint-config-airbnb --dev
+    # 注意：由於 eslint 本身就是相依套件其中之一，因此無須另外安裝！
+	``` 
+  * ``install-peerdeps`` 能讓 macOS 以及 Windows 上能正常運作
 
 * [merge conflict](https://github.com/smashwilson/merge-conflicts)
 
