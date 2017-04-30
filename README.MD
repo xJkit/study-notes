@@ -675,7 +675,7 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
       * [Get started with docker for Mac](https://docs.docker.com/docker-for-mac/)
 
-### CIsv
+### Continuous Integrations
 
   * [Jenkins](https://github.com/jenkinsci/jenkins)  
   * [Travis CI](https://github.com/travis-ci/travis-ci)
