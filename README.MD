@@ -66,7 +66,7 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
     > 在 ``npm postinstall`` 之中把 react native 原生的 debugger 換掉
 
-#### Redux Middleware for Async Action Side Effects  
+#### Redux Middleware for Async Action Side Effects
 
 * [redux-thunk](https://github.com/gaearon/redux-thunk) - :star: __3.9K__
 
@@ -103,7 +103,7 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 * [redux-observable](https://github.com/redux-observable/redux-observable) - :star: __~2K__
 
-  > [官方文檔](https://redux-observable.js.org/) 
+  > [官方文檔](https://redux-observable.js.org/)
 
   > 以 [RxJS](http://reactivex.io/) 為基礎來開發的 Middleware
 
@@ -253,7 +253,7 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 	  > npm install -g install-peerdeps
 	  > install-peerdeps eslint-config-airbnb --dev
     # 注意：由於 eslint 本身就是相依套件其中之一，因此無須另外安裝！
-	``` 
+	```
   * ``install-peerdeps`` 能讓 macOS 以及 Windows 上能正常運作
 
 * [merge conflict](https://github.com/smashwilson/merge-conflicts)
@@ -285,7 +285,7 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   * 欲使用 query string, 可搭配 [URLSearchParams](https://developer.mozilla.org/zh-TW/docs/Web/API/URLSearchParams)
 
 * [SuperAgent](https://github.com/visionmedia/superagent)
-  * Ajax with less suck - (and node.js HTTP client to match) 
+  * Ajax with less suck - (and node.js HTTP client to match)
 
 * [Request](https://github.com/request/request)
   * Simplified HTTP request client.
@@ -322,7 +322,7 @@ P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
   * JavaScript library to make drawing animation on SVG
 
 * [Fabric](https://github.com/kangax/fabric.js/)
-  * Javascript Canvas Library, SVG-to-Canvas (& canvas-to-SVG) Parser 
+  * Javascript Canvas Library, SVG-to-Canvas (& canvas-to-SVG) Parser
   * Powerful, simple JS HTML5 canvas library
 
 ### Browser Automation
@@ -662,7 +662,7 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
 ### Continuous Integrations
 
-  * [Jenkins](https://github.com/jenkinsci/jenkins)  
+  * [Jenkins](https://github.com/jenkinsci/jenkins)
   * [Travis CI](https://github.com/travis-ci/travis-ci)
   * [Circle CI](https://github.com/circleci)
 
@@ -684,7 +684,7 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 * [Visual Studio Code](https://code.visualstudio.com/)
   * 微軟開源的輕量編輯器，啟動速度快過 atom.
   * 得我新寵。
-  * [快捷鍵 VSCode for Mac](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) 
+  * [快捷鍵 VSCode for Mac](http://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
 * [neovim](https://github.com/neovim/neovim)
   * [Official Website](https://neovim.io/)
@@ -697,6 +697,7 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 * [fish](https://fishshell.com/)
   * friendly-interactive shell for the 90s
   * Project tutorial: __[fish-shell-mac](https://github.com/xJkit/fish-shell-mac)__ ,an installation guide for fish on Mac
+  * 參考資料：[阮一峰的 fish 教程](http://www.ruanyifeng.com/blog/2017/05/fish_shell.html)
 
 * [htop](https://github.com/hishamhm/htop)
   * A better top unix-like tool with interactive text-mode
