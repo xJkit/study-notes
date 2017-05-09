@@ -5,3 +5,7 @@
 * ``cd`` switches you into the directory you specify.
 * ``mkdir`` creates a new directory in the working directory.
 * ``touch`` creates a new file inside the working directory.
+
+## Fish shell
+
+## Bash shell
