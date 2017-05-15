@@ -1,11 +1,13 @@
 # Introduction to Docker
+
 A application-level virtualization technology.
+
 * Reference: [《Docker —— 從入門到實踐­》正體中文版](https://philipzheng.gitbooks.io/docker_practice/content/introduction/what.html)
 
 ## Get Started With Docker
 
 1. Introduction to virtualization technologies
-2. Docker's Client-Server Architecture
+1. Docker's Client-Server Architecture
   > 主要三部分： Client, Docker_Host, Registry
 
   > 你不直接與後兩者接觸，而是使用 Clients 溝通
@@ -50,7 +52,7 @@ A application-level virtualization technology.
 
 1. Image Layers:
   * 每一個 Image 為上一層 Image 所建立， 為 Image Stack
-  * 每一個 Image Layer 分別代表不同的 File System 差異  
+  * 每一個 Image Layer 分別代表不同的 File System 差異
   * 最底下的 Image 稱為 Base Layer
   * Image 與 Container 最大的差異:
     * Image Stack 全部 Read-Only
@@ -293,9 +295,9 @@ A application-level virtualization technology.
   * 使用 version: '2' 的 yaml 版本紀錄設定讓不同容器自動連接起來，連 --link 的指令都不用打！ (彼此透過 container 名稱連接)
 
     > 注意： version: '1' 語法是以 container 名字為 level 1, 而 version: '2' 則是都歸類在 services 地下
-    
+
     > 每一個 container 底下首要須標注 ``image``(指定鏡像檔)  或 ``build``(從 Dockerfile 創造)
-  
+
   * ``docker-compose.yml`` 設定檔範例：
 
   ```yml
@@ -319,7 +321,7 @@ A application-level virtualization technology.
     ```
 
     注意：由於在 ``docker-compose.yml`` 中使用了 __volumes__, 記得要把 __Dockerfile__ 中的 ``COPY`` 指令給移除！
-  
+
   * 深入 ``docker-compose`` workflow 與相關指令：
     * docker-compose 與 docker 本身指令相當相似，差別在專門是透過 docker-compose 指令所創造出來的服務
     * 在執行 docker-compose 指令時，與 docker 指令最大差別為必須該路徑底下有 ``docker-compose.yml`` 設定檔, 以下指令才會 work.
@@ -333,130 +335,10 @@ A application-level virtualization technology.
         docker-compose start # 啟動 compose 的 containers 服務
         docker-compose down # 徹底移除： stop -> rmove containers, networks, images, volumes
         docker-compose rm # 刪除透過 docker-compose.yml 所產生的 containers (必須先 stop 才能 rm)
-        docker-compose build 
+        docker-compose build
           # 當更動 Dockerfile 時使用 docker-compose up 不會產生最新的 image 檔案
           # 必須使用 build 根據 Dockerfile 全部重頭打造(rebuild all)。
-        
-      ```
 
-      > 注意： docker-compose 
-
-## Docker Networking
-
-1. Default Docker Network Model:
-
-    ![network model](./docker_network.jpg)
-
-    在 Docker 與 Host 之間成為 ``docker0`` 的網路介面(bridge)，溝通 Host 主機與 Container 的橋樑
-    * 在 Host 主機上使用 **ifconfig** 將會看見 ``docker0`` 網路介面
-    ＊ Mac OS 上面由於作業系統限制，無法看見
-
-    網路介面在 docker 中有四種類型：
-    * ``none`` network (網路隔絕)
-    * ``bridge`` network (透過docker中的虛擬介面來區隔區域網路)
-    * ``host`` network (將網路架在主機上，與主機共用 network stacks)
-    * ``overlay`` network (不同主機之間的溝通)
-
-2. 常用指令說明：
-
-  ```sh
-    docker network ls # 列出所有網路介面
-    docker network inspect [interface_name] # 秀出指定介面的詳細資訊
-    docker network create --driver [bridge/host/none]
-    docker network connect [network_name] [container_name]
-    docker run -d --net [interface] [container_image] 
-      # 將 container run 在指定的網路介面
-      # 可以使用 --name [new_name] 指定 container name
-  ```
-
-3. 網路介面說明：
-  * ``none`` network:
-    * 所有的 containers 都是網路獨立的(isolated)，對外界隔絕
-    * 稱為 **Close container**
-    * 只有 lo (loopback) 網路介面
-    * 範例：
-
-      ```sh
-        docker run -d --net none redis # 將 redis 以 none network 的形式啟動
-      ```
-
-    * 應用場景：
-      * 網路隔絕，擁有最佳保護
-      * 如果 container 需要 http request 則不適用此場景
-      * 對於 network security 要求比較高的場景
-    
-  * ``bridge`` network:
-    * default type of all containers
-    * 透過建立不同的 bridge network 可以自訂區域網路, 可以與外界溝通
-    * 擁有兩個網路介面： lo (loopback) 以及 private (bridge network to the host)
-    * 相同的 bridge 可以彼此溝通，不同的 bridge network 不能彼此溝通(除非透過 docker network connect 將容器連接)
-    * 範例：
-
-      ```sh
-        docker run -d --name container_1 busybox 
-          # 當你 run 一個容器而不指定網路介面，預設連線到 「bridge」(driver 與 name 同名)
-          # 也就是說以前所有 run 的 container 在不指定 network 情形下都可以互相連通
-        docker network create --driver bridge my_bridge_net # 創造一個新的網路介面
-        docker run -d --name container_2 --net my_bridge_net redis
-          # 透過 network create 一個全新的 bridge, 稱為 my_bridge_net
-          # 透過 run 一個全新的容器並指定連接到 my_bridge_net 網路介面
-          # 可透過 docker network ls 以及 docker network inspect 檢查各種介面的詳細資訊
-        docker network connect my_bridge_net container_3 # 將 container_3 連接到指定的介面：my_bridge_net
-      ```
-    
-    * 應用場景：
-      * suitable where you want to set up a relatively small network on a single host
-
-  * ``host`` network:
-    * network 防護最低，把 container 的網路介面架在 host 上面，能存取 host 的其他介面
-    * 又稱為 **open containers**
-    * 優點： Performance 最快（因為無須 ip table 轉換）
-    * 缺點：非常危險，不適用於 production
-
-  * ``overlay`` network:
-    * 可以 deploy on cross, multiple network hosts
-    * 使用 overlay network 前提：
-      * Running Docker engine on **Swarm** mode
-      * A key-value store such as consul
-    * 應用場景：
-      * 最常見於 production.
-      * 詳細內容請參見 ``docker-swarm``.
-
-4. 使用 ``docker-compose`` 架構網路：
-  * 預設使用 ``docker-compose up -d`` 會在容器形成之前自行產生網路介面(bridge), 名字為 [current_dirname]\_default
-  * 在 **docker-compose.yml** 檔案中自定義網路介面：
-      
-      ```yml
-        version: '2'
-        services:
-          wordpress:
-            image: wordpress
-            ports:
-              - 8080:80
-            environment:
-              - WORDPRESS_DB_USER=test
-              - WORDPRESS_DB_PASSWORD=test@wordpressDB
-              - WORDPRESS_DB_NAME=wp-test # Will create if does not exist
-              - WORDPRESS_TABLE_PREFIX=ts
-            networks: # 連接自定介面
-              - my_net
-              - my_net_2
-          mysql:
-            image: mariadb
-            environment:
-              - MYSQL_ROOT_PASSWORD=root@wordpressDB
-              - MYSQL_DATABASE=wp-test
-              - MYSQL_USER=test
-              - MYSQL_PASSWORD=test@wordpressDB
-            networks: # 連接自定介面
-              - my_net
-
-        # 新增自定義網路介面設定
-        networks:
-          my_net:
-            driver: bridge
-          my_net_2:
-            driver: bridge
       ```
 
 ## Create a Continious Integration Pipeline
