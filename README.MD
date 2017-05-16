@@ -14,7 +14,11 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 ## Front End
 
+前端博大精深，易學難精，記錄一些參考資料，持續學習：
+
 * [前端面試問題集錦](https://github.com/xJkit/Front-end-Developer-Interview-Questions)
+* [Modern Web 2016 影片](http://www.ithome.com.tw/videos/modernweb2016)
+* [JSDC 系列影片](https://www.youtube.com/user/JSDCTW)
 
 ### React officials
 
