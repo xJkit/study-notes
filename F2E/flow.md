@@ -223,6 +223,10 @@ const getMaybeNumber(num: ?number): number {
 }
 ```
 
+## Flow in React
+
+`Flow Types 取代 PropTypes 或 prop-types`
+
 ## References
 
 * [Official Repository](https://github.com/facebook/flow)
