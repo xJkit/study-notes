@@ -59,6 +59,30 @@ Flow 的使用依照專案開發有多種不同的搭配方式
 
 ## Flow 的資料型態(Type Annotations)
 
+Type         | Refinement | 用途
+-------------|------------|------------------------------------------------
+Primitive    |            | C1
+Literal      |            | C2
+Mixed        |            | C3
+Any          |            |
+Maybe        |            |
+Variable     |            |
+Function     |            |
+Object       |            |
+Array        |            |
+Tuple        |            |
+Class        |            |
+Type Alias   |            |
+Interface    |            |
+Generic      |            |
+Union        | true       | 使用 `|`，斷定參數的可能類型，可以是未知或已知，類似於 `Enum`.
+Intersection |            | 使用 `&`，斷定參數同時符合的類型，常用於同時符合兩物件的 key 值 (小心 impossible intersection)
+Typeof       |            | 不宣告型態，而是繼承某定義好的資料型態，回傳 Flow type 並拿來使用。
+Type Casting |            | 直接宣告 express 的資料類型，無需使用 function 或 variable 當作容器。使用 `()`，包好 Type Assertions 與 Type Casting
+Utility      |            | Flow 專有工具輔助函數，包含 `keys<T>`, `$diff<A, B>`
+Module       |            | 將 Flow type 定義 **import** 或 **export**，常用於 `Type Alias`, `Class` 或 `Interface`間的交換
+Comment      |            | 來自 [flotate](https://github.com/jareware/flotate), 把 Flow 語法寫在 JS 註解中，讓其他工具能正常搭配這個完全合法的 JavaScript 程式碼。
+
 資料型態在 Flow 的角色非常重要，因為你就是要使用 "Type" 所以才來使用 Flow 阿，不然搞笑？ Flow 所支援的資料型態如下：
 
 ### [基礎資料型態(Primitive Type)](https://flow.org/en/docs/types/primitives/)
