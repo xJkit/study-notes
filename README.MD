@@ -146,7 +146,6 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
   * [FSA: Flux Standard Action](https://github.com/acdlite/flux-standard-action)
   * [RSAA: Redux Standard Api-calling Action](https://github.com/agraboso/redux-api-middleware#redux-standard-api-calling-actions)
 
-
 ### React-related Libraries
 
 * [ant-design](https://github.com/ant-design/ant-design/)
