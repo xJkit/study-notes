@@ -210,6 +210,26 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 * [PurifyCSS](https://github.com/purifycss/purifycss)
   * 移除不必要的 CSS names
 
+* [react-monocle](https://github.com/team-gryff/react-monocle)
+  * A developer tool to visualize a React application's component hierarchy.
+  * 讓你的 React 組建可視化
+
+* [why-did-you-update](https://github.com/garbles/why-did-you-update)
+  * Puts your console on blast when React is making unnecessary updates.
+  * 幫你檢查你的組建不必要的重複渲染
+
+* [html-to-react](https://github.com/roman01la/html-to-react-components)
+  * 直接把 html 網頁轉換成 jsx
+  * 沒使用過，不過好像很牛逼...
+
+* [react-storybook](https://github.com/storybooks/storybook)
+  * Interactive development & testing environment for React and React-Native UI components
+  * React Storybook可以在你开发的过程中将React组件独立于整个应用程序进行查看
+    * 独立的组件运行环境
+    * 组件的热加载
+    * 可以与Redux、Relay以及Meteor无缝集成
+    * 支持CSS
+
 ### Modern F2E Essential Tools
 
 * [Webpack](https://github.com/webpack/webpack)
