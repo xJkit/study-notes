@@ -385,19 +385,204 @@ P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
   * [瀏覽器跨領域4種方法：cors/jsonp/proxy/fetch 與fetch api 最佳實踐](https://segmentfault.com/a/1190000006095018)
   * 更多的 Web Crawling / Scraping 的方式請參見： [Awesome Web Scraping](https://github.com/lorien/awesome-web-scraping)
 
-### Unit Testing
+### Testing: Unit Tests & Integration Tests & Functional Tests
 
-> Testing tasks are related to the client-side libraries, please also check them for more information.
+測試分成 `Unit Testing`, `Integration Testing` 以及 `Functional Testing`:
 
-> Todos
+1. Unit Testing:
+  * 提供 mocked input --> f(x) --> expected output
+  * 僅針對單一片段程式碼
+  * 使用 code coverage reporting 做報告
+1. Integration Testing:
+  * 使用 `spy`, `stub` 對特定的行為做測試
+  * 需要在瀏覽器環境下測試 (browser or browser-like)，不論是 processes 或 UI
+1. Functional Testing:
+  * 使用 browser 或 browser-like 環境下寫程式發動 api 測試 (Browser Automation)
 
-  * [Mocha]()
-  * [Chai]()
-  * [Expect]()
-  * [Enzyme]()
-  * [Jest]()
-  * [Karma]()
+> Unit Test gives you `What`; TDD gives you `When`; BDD gives you `How`.
 
+#### Unit Testing environments & frameworks
+
+* [Mocha](https://github.com/mochajs/mocha)
+  * 最夯的測試框架，不用我多說了吧
+  * 只提供測試環境，工具要自己兜，比如說通常搭配 Chai 作為 assertion library
+  * 使用 describe (代表 testing suite) 與 it (代表 testing case) 的寫法。
+  * describe/it 全域污染，有些人不愛。
+
+* [Jasmine](https://github.com/jasmine/jasmine)
+  * 提供測試環境，沒有套件依賴，也是內建很多東西
+  * 內建 assertion
+  * 內建 mocks, spies, stubs
+
+* [Jest](https://github.com/facebook/jest)
+  * Facebook 推出的測試框架, 凌駕在 Jasmine 上的框架
+  * 速度比 Mocha 慢得多，但是使用者體驗很棒，很多功能都內建
+  * 內建 assertion
+  * 內建 snapshots (確保這次變更是根據前一次的測試結果)
+  * 內建 code coverage reports
+  * 內建 mocks, spies, stubs
+
+* [Ava](https://github.com/avajs/ava)
+  * Futuristic JavaScript test runner
+  * 主打測試的 concurrency (run in parallel), 不全域污染
+  * 內建 snapshot
+
+* [Tape](https://github.com/substack/tape)
+  * tap-producing test harness for node and browsers
+  * 輕量、有很多 module 可以掛
+  * 使用 `test` 開頭，寫法尚未習慣
+
+Assertion Libraries
+
+* [Chai](https://github.com/chaijs/chai)
+  * BDD / TDD assertion framework for node.js and the browser that can be paired with any testing framework.
+  * 最常與 Mocha 搭配使用，但不限定。
+
+* [Expect](https://github.com/mjackson/expect)
+  * Write better assertions
+  * 很久沒更新的樣子
+
+UI tests
+
+* [Enzyme](https://github.com/airbnb/enzyme)
+  * Airbnb 針對 React 做的 UI 測試 library
+
+Code coverage & online platforms
+
+* [istanbul (nyc)](https://github.com/gotwarlost/istanbul)
+  * Code coverage tool for JavaScript
+
+platforms:
+
+* [Codecov](https://codecov.io/#features)
+* [Coveralls](https://coveralls.io/features)
+* [CodeClimate](https://codeclimate.com/features)
+* [Codacy](https://codacy.com/product)
+
+結論：
+
+1. 整套包好的解決方案 -> `Jest` (凌駕在 Jasmine 上的巨人)
+1. 自由度高，可客製化 -> `Mocha`
+1. low-level -> `Tape`
+
+#### Integration Testing
+
+Integration tests 就是要讓你的測試能在瀏覽器、跨平台環境中執行。
+
+* [Karma](https://github.com/karma-runner/karma)
+  * Test runner for JavaScript
+  * 測試執行環境，提供真實跨平台瀏覽器測試，還包含 JSDom、Phantom 等瀏覽器
+  * 其他使用 Karma 的原因：
+
+  ```text
+    > You want to test code in real browsers.
+    > You want to test code in multiple browsers (desktop, mobile, tablets, etc.).
+    > You want to execute your tests locally during development.
+    > You want to execute your tests on a continuous integration server.
+    > You want to execute your tests on every save.
+    > You love your terminal.
+    > You don't want your (testing) life to suck.
+    > You want to use Istanbul to automagically generate coverage reports.
+    > You want to use RequireJS for your source files.
+  ```
+
+* [JSDom](https://github.com/tmpvar/jsdom)
+  * A JavaScript implementation of the WHATWG DOM and HTML standards, for use with node.js
+  * 使用 node (v6+) 在 html 環境中執行測試，包含 scrape 網頁內容
+  * emulate enough of a subset of a web browser to be useful for testing and scraping real-world web applications.
+
+Stubs and spies
+
+* [Sinon](https://github.com/sinonjs/sinon)
+  * Test spies, stubs and mocks for JavaScript.
+  * Mocha + chai + sinon 根本絕配
+
+* [testdouble](https://github.com/testdouble/testdouble.js)
+  * A minimal test double library for TDD with JavaScript
+
+
+#### Functional Testing
+
+又稱為 Browser automation 或是 Acceptance Testing. 根據 library 所提供的 api 來做真實瀏覽器的自動化測試。
+
+先說結論：
+
+1. 最快上手、最簡單明瞭、最容易跨平台，直接挑選 `TestCafe`
+1. 最大社群 support、要寫 JS 語言以外的測試程式碼，使用 `Selenium`
+1. 行為單純、沒有太複雜的測試場景（例如表單填寫而已），透過 headless browser工具是最快最好的選擇，選 `CasperJS`.
+
+* [Selenium](https://github.com/SeleniumHQ/selenium)
+  * A browser automation framework and ecosystem
+  * 提供一個虛擬伺服器來模擬使用者行為，不局限於拿來寫測試
+  * 跨平台、跨語言
+  * 需要引入瀏覽器驅動程式 (WebDriver)才能正常運作：`Node.js <=> WebDriver <=> Selenium Server <=> FF/Chrome/IE/Safari`
+  * 然而有些人覺得使用 Selenium + WebDriver 太麻煩，有更上一層樓包裝他們的延伸專案：
+    * [Protractor](https://github.com/angular/protractor) - E2E test framework for Angular apps 用於 Angular 專案
+    * [WebdriverIO](https://github.com/webdriverio/webdriverio) - 包裝 Selenium 並擁有更優雅的 Syntax, Flexible, Community.
+    * [Nightwatch](https://github.com/nightwatchjs/nightwatch)
+      * Automated testing and continous integration framework based on node.js and selenium webdriver
+      * 除了 test server 還有 assertions, tools.
+
+* [Casper](https://github.com/casperjs/casperjs)
+  * Navigation scripting and testing utility for PhantomJS and SlimerJS
+  * 建立在 `Phantom` 與 `Slim` 上
+  * 在 headless browser 環境上執行更快的測試環境
+
+* [TestCafe](https://github.com/DevExpress/testcafe)
+  * Best tool alternative for Selenium
+  * Automated browser testing for the modern web development stack
+  * 自動化流程：
+    * 啟動瀏覽器
+    * 執行瀏覽器 UI 測試
+    * 產生測試報告
+  * 無需任何瀏覽器外掛依賴
+  * 內建 dom 選擇器，無需 cheerio
+  * 其他功能：
+  ```text
+    > Automatic screenshots of the tested page taken whenever the test fails or triggered from test code.
+    > File upload support.
+    > Detecting JavaScript errors on the tested page.
+    > Handling native browser dialogs (i.e., alert, confirm, prompt, beforeunload ) using custom logic whenever they are invoked during a test run.
+    > Resizing the browser window during test execution.
+    > Adjusting the speed of test execution.
+  ```
+
+* [Cucumber](https://github.com/cucumber/cucumber-js)
+  * 專門拿來 BDD 測試，且包含上述的 automated tests
+  * 適合拿來給 RD 和 PM 協同合作：
+    * Business Crew: 使用 `Gherkin` 語法寫適用場景
+    * Developer: 使用 `程式` 根據上述場景來實作測試。程式可透過多種語言實作，當然包含 `JavaScript`
+  * BDD 測試 `Scenario` 流程：
+    * Given
+    * When
+    * Then
+  * BDD 測試範例：
+    * 使用 `Gherkin` 寫 Scenario
+    ```gherkin
+      Feature: A reader can share an article to social networks
+        As a reader
+        I want to share articles
+        So that I can notify my friends about an article I liked
+        Scenario: An article was opened
+          Given I'm inside and article
+          When I share the article
+          Then the article should change to a "shared" state
+    ```
+    * 使用 `JavaScript` 實作 Scenario
+    ```javascript
+      module.exports = function() {
+        this.Given(/^I'm inside and article$/, function(callback) {
+          // functional testing tool code
+        })
+        this.When(/^I share the article$/, function(callback) {
+          // functional testing tool code
+        })
+
+        this.Then(/^the article should change to a "shared" state$/, function(callback) {
+          // functional testing tool code
+        })
+      }
+    ```
 
 ### Static Site Generators
 
