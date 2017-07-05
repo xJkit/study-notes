@@ -780,6 +780,34 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
   * [RAML](http://raml.org/)
     * built on broadly-used standards such as YAML and JSON and it has many tools
 
+### Multimedia & Live Streaming
+
+* [hls.js](https://github.com/video-dev/hls.js/tree/master)
+  * JavaScript HLS client using Media Source Extension
+  * 了解 m3u8 打直播串流技術裡面都有記載
+
+* [FFmpeg](https://github.com/FFmpeg/FFmpeg)
+  * a collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata
+  * Libraries 清單：
+  ```text
+    * libavcodec provides implementation of a wider range of codecs.
+    * libavformat implements streaming protocols, container formats and basic I/O access.
+    * libavutil includes hashers, decompressors and miscellaneous utility functions.
+    * libavfilter provides a mean to alter decoded Audio and Video through chain of filters.
+    * libavdevice provides an abstraction to access capture and playback devices.
+    * libswresample implements audio mixing and resampling routines.
+    * libswscale implements color conversion and scaling routines.
+  ```
+  * Tools 清單：
+  ```text
+    * ffmpeg is a command line toolbox to manipulate, convert and stream multimedia content.
+    * ffplay is a minimalistic multimedia player.
+    * ffprobe is a simple analysis tool to inspect multimedia content.
+    * ffserver is a multimedia streaming server for live broadcasts.
+    * Additional small tools such as aviocat, ismindex and qt-faststart.
+  ```
+
+
 ### Miscellaneous
 
 * [pkg](https://github.com/zeit/pkg)
