@@ -188,4 +188,14 @@ Service Worker 在 Online/Offline 的運作方式：
 
 > 注意：Service Workers 權力很大，包含 intercept network requests, modify, redirect, 甚至 fabricate! 因此僅允許 HTTPS 連線才能使用（localhost 除外）
 
+#### 註冊 Service Worker
+
+你必須先判斷瀏覽器支援度：
+
+```js
+if ('serviceWorker' in window.navigator) {
+  // ...
+}
+```
+
 ### Manifest.json
