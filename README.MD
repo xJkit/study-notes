@@ -201,12 +201,8 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 CSS related libraries
 
-* [ant-design](https://github.com/ant-design/ant-design/)
-  * An enterprise-class UI design language and React-based implementation.
-  * [Official Site](https://ant.design/)
-
-* [Material-UI](https://github.com/callemall/material-ui)
-  * React Components that Implement Google's Material Design
+* [CSS-in-JS](https://github.com/MicheleBertoli/css-in-js)
+  * 有大神將所有的 CSS in JS 技術都整理在一起了！
 
 * [classNames](https://github.com/JedWatson/classnames)
   * A simple javascript utility for conditionally joining classNames together
@@ -233,6 +229,19 @@ CSS related libraries
 * [styled-component](https://github.com/styled-components/styled-components)
   * Visual primitives for the component age
   * 多包一層 component 然後在上面寫純 CSS, 算是介於 CSS Modules 跟 inline-CSS 的混合解決方案
+
+React UI Frameworks
+
+* [ant-design](https://github.com/ant-design/ant-design/)
+  * An enterprise-class UI design language and React-based implementation.
+  * [Official Site](https://ant.design/)
+
+* [Material-UI](https://github.com/callemall/material-ui)
+  * React Components that Implement Google's Material Design
+
+* [Office-ui-fabric-react](https://github.com/OfficeDev/office-ui-fabric-react)
+  * React components for building experiences for Office and Office 365
+  * 微軟出的，ui 就是針對 Windows Office 和 風格來弄
 
 ### Modern F2E Essential Tools
 
