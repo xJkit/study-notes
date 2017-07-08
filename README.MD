@@ -349,6 +349,7 @@ P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
 * [Ramda](https://github.com/ramda/ramda) :star: ~8K
   * A practical functional library for JavaScript that is designed specifically for a functional programming style
   * A style that makes it easy to create functional pipelines and never mutates user data.
+  * 延伸閱讀：[透過 Ramda 使用 lens 更新深層 state](https://vanslaars.io/post/setstate-lenses/)
 
 #### Data Structures
 
