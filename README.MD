@@ -819,6 +819,26 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
     * Additional small tools such as aviocat, ismindex and qt-faststart.
   ```
 
+* [Video.js](https://github.com/videojs/video.js)
+  * open source HTML5 & Flash video player
+
+* [MediaElement.js](https://github.com/mediaelement/mediaelement)
+  * HTML5 \<audio\> or \<video\> player with support for MP4, WebM, and MP3 as well as HLS, Dash, YouTube, Facebook, SoundCloud and others with a common HTML5 MediaElement API, enabling a consistent UI in all browsers.
+  * 能支援超多格式，包含聲音和影像！還可以串流影片！
+  * [官方網站](http://www.mediaelementjs.com/)
+
+* [CreateJS](https://github.com/CreateJS)
+  * [官方網站](http://createjs.com/)
+  * 善用 HTML5 Canvas 的多媒體工具組，包含：
+    * [EaselJS](http://createjs.com/easeljs) - Useful for creating games, generative art, and other highly graphical experiences.
+    * [TweenJS](http://createjs.com/tweenjs) - A simple but powerful JavaScript library for tweening and animating HTML5 and JavaScript properties. Works stand-alone or integrated with EaselJS.
+    * [SoundJS](http://createjs.com/soundjs) - A JavaScript library that provides a simple API, and powerful features to make working with audio a breeze. Easily ties in audio file loading to PreloadJS.
+    * [PreloadJS](http://createjs.com/preloadjs) - A JavaScript library that lets you manage and co-ordinate the loading of assets and data.
+
+* [JWPlayer](https://github.com/jwplayer/jwplayer)
+  * [官方 Demo](https://developer.jwplayer.com/jw-player/demos/)
+  * JW Player is the world's most popular embeddable media player.
+  * 商用軟體必須授權（付費）
 
 ### Miscellaneous
 
