@@ -199,6 +199,10 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
     * 可以与Redux、Relay以及Meteor无缝集成
     * 支持CSS
 
+* [Ink](https://github.com/vadimdemedes/ink)
+  * React for CLIs
+  * 使用 React 建構 command line interface 的 Application, 還可以寫測試，太潮啦
+
 CSS related libraries
 
 * [CSS-in-JS](https://github.com/MicheleBertoli/css-in-js)
@@ -388,6 +392,16 @@ P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
 * [CasperJS](https://github.com/casperjs/casperjs)
   * 包裝 SlimerJS + PhantomJS 的自動化整合工具
 
+* [nightwatch](https://github.com/nightwatchjs/nightwatch)
+  * Automated testing and continous integration framework based on node.js and selenium webdriver
+
+* [testcafe](https://github.com/DevExpress/testcafe)
+ * Automated browser testing for the modern web development stack.
+
+* [nightmare](https://github.com/segmentio/nightmare)
+  * A high-level browser automation library.
+  * 基於 Electron 的自動化測試工具，比 Phantom 好寫
+
 * [Webdriver](https://github.com/webdriverio/webdriverio/)
   * Browser Automation Tools
   * Webdriver/Selenium JavaScript bindings for Node.js
@@ -401,16 +415,26 @@ P.S: Web crawler/scraper = ``上述請求工具(node.js) + cheerIO``
 
 ### Testing: Unit Tests & Integration Tests & Functional Tests
 
-測試分成 `Unit Testing`, `Integration Testing` 以及 `Functional Testing`:
+> [An Overview of JavaScript Testing in 2017](https://medium.com/powtoon-engineering/a-complete-guide-to-testing-javascript-in-2017-a217b4cd5a2a)
 
-1. Unit Testing:
+> [JavaScript Testing: Unit vs Functional vs Integration Tests](https://www.sitepoint.com/javascript-testing-unit-functional-integration/)
+
+> [just-say-no-to-more-end-to-end-tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
+
+測試分成 `Unit Testing`, `Integration Testing` 以及 `Functional Testing`, Goolge 大神建議以 `70/20/10` 的比例分配：
+
+![imgUrl](http://m.imgur.com/kfNCJQL.png)
+
+1. Unit Testing(70%):
+  * 又名： White-box testing(看到真實情況)
   * 提供 mocked input --> f(x) --> expected output
   * 僅針對單一片段程式碼
   * 使用 code coverage reporting 做報告
-1. Integration Testing:
+1. Integration Testing(20%):
   * 使用 `spy`, `stub` 對特定的行為做測試
   * 需要在瀏覽器環境下測試 (browser or browser-like)，不論是 processes 或 UI
-1. Functional Testing:
+1. Functional Testing(10%):
+  * 又名： E2E test, Acceptance Test, black-box testing
   * 使用 browser 或 browser-like 環境下寫程式發動 api 測試 (Browser Automation)
 
 > Unit Test gives you `What`; TDD gives you `When`; BDD gives you `How`.
@@ -485,6 +509,7 @@ Integration tests 就是要讓你的測試能在瀏覽器、跨平台環境中�
 
 * [Karma](https://github.com/karma-runner/karma)
   * Test runner for JavaScript
+  * 視為測試啟動器， Google 所開源的測試運行框架,檔案變更就跑一次。可以跑單元測試，也可以跑 E2E.
   * 測試執行環境，提供真實跨平台瀏覽器測試，還包含 JSDom、Phantom 等瀏覽器
   * 其他使用 Karma 的原因：
 
@@ -514,10 +539,9 @@ Stubs and spies
 * [testdouble](https://github.com/testdouble/testdouble.js)
   * A minimal test double library for TDD with JavaScript
 
-
 #### Functional Testing
 
-又稱為 Browser automation 或是 Acceptance Testing. 根據 library 所提供的 api 來做真實瀏覽器的自動化測試。
+又稱為 Browser automation, E2E Test 或是 Acceptance Test. 根據 library 所提供的 api 來做真實瀏覽器的自動化測試。
 
 先說結論：
 
@@ -530,21 +554,35 @@ Stubs and spies
   * 提供一個虛擬伺服器來模擬使用者行為，不局限於拿來寫測試
   * 跨平台、跨語言
   * 需要引入瀏覽器驅動程式 (WebDriver)才能正常運作：`Node.js <=> WebDriver <=> Selenium Server <=> FF/Chrome/IE/Safari`
-  * 然而有些人覺得使用 Selenium + WebDriver 太麻煩，有更上一層樓包裝他們的延伸專案：
-    * [Protractor](https://github.com/angular/protractor) - E2E test framework for Angular apps 用於 Angular 專案
-    * [WebdriverIO](https://github.com/webdriverio/webdriverio) - 包裝 Selenium 並擁有更優雅的 Syntax, Flexible, Community.
-    * [Nightwatch](https://github.com/nightwatchjs/nightwatch)
-      * Automated testing and continous integration framework based on node.js and selenium webdriver
-      * 除了 test server 還有 assertions, tools.
+
+Selenuim-based frameworks:
+
+* [Protractor](https://github.com/angular/protractor) - E2E test framework for Angular apps 用於 Angular 專案
+* [WebdriverIO](https://github.com/webdriverio/webdriverio) - 包裝 Selenium 並擁有更優雅的 Syntax, Flexible, Community.
+* [Nightwatch](https://github.com/nightwatchjs/nightwatch)
+  * Automated testing and continous integration framework based on node.js and selenium webdriver
+  * 除了 test server 還有 assertions, tools.
+
+Headless browser frameworks:
 
 * [Casper](https://github.com/casperjs/casperjs)
   * Navigation scripting and testing utility for PhantomJS and SlimerJS
-  * 建立在 `Phantom` 與 `Slim` 上
-  * 在 headless browser 環境上執行更快的測試環境
+  * 可以使用 `Phantom`(WebKit) 與 `Slim`(Gecko) 環境來執行測試
+
+* [nightmare](https://github.com/segmentio/nightmare)
+  * [官方網站像極了駭客網站](http://www.nightmarejs.org/)
+  * 不依賴 Phantom 或 Slim, 不依賴 WebDriver, 直接使用 Electron 來測，也直接擁有 Electron 豐富的 [Extensive Browser API](https://electron.atom.io/docs/api/browser-window/)
+  * Unit Test 不依賴框架， 自由選購。可使用 Mocha + Chai 做單元測試， Karma 做整合測試。
+  * 缺點：不能開啟真實的瀏覽器來測試，只能使用 Electron.
+
+* [Zombie](https://github.com/assaf/zombie)
+  * Insanely fast, full-stack, headless browser testing using node.js
+  * 使用自己的 Headless browser
 
 * [TestCafe](https://github.com/DevExpress/testcafe)
   * Best tool alternative for Selenium
   * Automated browser testing for the modern web development stack
+  * 因為可以直接打開作業系統瀏覽器，適合跨瀏覽器 UI 測試
   * 自動化流程：
     * 啟動瀏覽器
     * 執行瀏覽器 UI 測試
