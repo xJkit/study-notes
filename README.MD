@@ -525,6 +525,13 @@ Integration tests 就是要讓你的測試能在瀏覽器、跨平台環境中�
     > You want to use RequireJS for your source files.
   ```
 
+* [testem](https://github.com/testem/testem)
+  * A test runner that makes Javascript unit testing fun.
+  * framwork agnostic
+  * corss browser compatibilites, including headless browsers(phantom)
+  * cross OS supports
+  * TDD & CI modes
+
 * [JSDom](https://github.com/tmpvar/jsdom)
   * A JavaScript implementation of the WHATWG DOM and HTML standards, for use with node.js
   * 使用 node (v6+) 在 html 環境中執行測試，包含 scrape 網頁內容
