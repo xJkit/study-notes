@@ -1,10 +1,45 @@
 # JavaScript Memos
 
+## Class
+
+`class` and `extends`:
+
+```js
+class Car {
+  constructor({ wheels }) {
+    this.type = 'car';
+    this.wheels = wheels;
+  }
+
+  drive() {
+    return 'I am driving';
+  }
+}
+
+class Honda extends Car {
+  constructor(options) {
+    super(options); // parent class constructor is called, for sure!
+    this.model = options.model;
+  }
+}
+
+const car = new Car({ wheels: 4 });
+console.log(car.type); //car
+console.log(car.drive()); //I am driving
+console.log(car.wheels) //4
+
+const honda = new Honda({ wheels: 6, model: 'accord' });
+console.log(honda.wheels); //6
+console.log(honda.type); //car
+console.log(honda.model) //accord
+```
+
 ## Generators
+
 1. generator 初試呼叫時僅回傳`Iterator`, 不會執行。此 Iterator 稱為 `generator object`.
-2. 在`generator object` 使用 `next()`方法迭代，並一一取得 Iterator 回傳值。
-3. .next() 回傳物件，具有 value(回傳值) 與 done(布林) 兩個屬性；回傳值依據 `yield` 右邊的 expression 為主。而 ``yield`` 為下次 next() 帶值的入口。
-5. 基本語法範例：
+1. 在`generator object` 使用 `next()`方法迭代，並一一取得 Iterator 回傳值。
+1. .next() 回傳物件，具有 value(回傳值) 與 done(布林) 兩個屬性；回傳值依據 `yield` 右邊的 expression 為主。而 ``yield`` 為下次 next() 帶值的入口。
+1. 基本語法範例：
 
 ```js
 function *generator() {
@@ -15,7 +50,6 @@ function *generator() {
 const num = generator(); // 產生 Generator Iterator
 
 console.log(num); // Generator iterator / Generator object / Generator prototype
-
 console.log(num.next());
 console.log(num.next());
 console.log(num.next());
@@ -23,6 +57,7 @@ console.log(num.next());
 ```
 
 以上結果分別印出：
+
 ```sh
 GeneratorFunctionPrototype {
   "_invoke": [Function invoke]
@@ -44,7 +79,8 @@ Object {
   "value": undefined
 }
 ```
-5. 注意事項：
+
+* 注意事項：
   * ``next()`` 呼叫最後一個 ``yield`` 時尚未結束， ``done`` 屬性依然是 **false**, value 依然有值。最後一次以後保持回傳值 ``undefined`` 與 true. (有 return 就不會 undefined)
   * ``next()`` 第一次呼叫時代入任何值將被丟棄，因為沒有任何 yield 當作媒介，只會回傳 yield 右邊的敘述。
   * Generator 初始化時應注意：
@@ -77,7 +113,7 @@ Object {
       ```
   * 注意： `generator` 無法搭配 `Arrow Function`!
 
-6. 特殊用法：
+* 特殊用法：
   * 搭配 ``for...of`` 迴圈
     * 直接抓 Generator 的 value 並迭代 Iterator 裡所有的 yields.
     * Generator 裡面的 ``return`` 值會被忽略。
