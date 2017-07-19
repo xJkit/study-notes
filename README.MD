@@ -199,6 +199,9 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
     * 可以与Redux、Relay以及Meteor无缝集成
     * 支持CSS
 
+* [react-dropzone](https://github.com/okonet/react-dropzone)
+  * 強大檔案上傳功能，拖曳、預覽都沒問題。
+
 * [Ink](https://github.com/vadimdemedes/ink)
   * React for CLIs
   * 使用 React 建構 command line interface 的 Application, 還可以寫測試，太潮啦

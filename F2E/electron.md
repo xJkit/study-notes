@@ -33,6 +33,9 @@ GitHub > Electron > Atom.
     * resizable: *bool* 開啟/關閉調整大小調整
     * frame: *bool* 開啟/關閉視窗上方的框
     * show: *bool* 開啟/關閉視窗顯示(啟動時)
+    * webPreferences:
+      * backgroundThrottling: *bool* - 開啟/關閉 Chromium 的 bakcground throttling
+
   * 方法：
     * loadURL(*url*): 打開視窗後讀取 url 或檔案
       * 例如 `loadURL('https://tw.yahoo.com')` 就是開啟一個網站
@@ -61,6 +64,9 @@ GitHub > Electron > Atom.
     * click: *function* - 點擊
 * `Tray`
   * new Tray(*pathToIcon*)
+  * .setToolTip(*string*)
+  * .popUpContextMenu(*menuConfig*) - *menuConfig* 來自 `Menu.buildFromTemplate([{}...])`
+  * .setTitle(*string*) - 設定 tray icon 標題
 
   ```js
   const { app, BrowserWindow, ipcMain } = require('electron');
@@ -283,6 +289,13 @@ __Bounds__ 分為 `window bounds` 與 `click event bounds`, 為視窗在 OS 中�
 
 ## Object-oriented Programming within Electron
 
+在 `index.js` 中 `app.on('ready', () => { ...})`
+
+## IPC between Electron & React
+
+## Background Throttling
+
+
 ## FAQ
 
 1. 功能邏輯應該寫在 Web App 裡，還是寫在 Electron App 裡？
@@ -295,3 +308,4 @@ __Bounds__ 分為 `window bounds` 與 `click event bounds`, 為視窗在 OS 中�
 ## Projects
 
 1. [videoinfo](https://github.com/xJkit/videoinfo.git)
+1. [electron-tray-app](https://github.com/xJkit/electron-tray-app.git)
