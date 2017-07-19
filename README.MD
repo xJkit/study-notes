@@ -77,6 +77,9 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
     > 在 ``npm postinstall`` 之中把 react native 原生的 debugger 換掉
 
+* [redux-form](https://github.com/erikras/redux-form/)
+  * A Higher Order Component using react-redux to keep form state in a Redux store
+
 #### Redux Middleware for Async Action Side Effects
 
 * [redux-thunk](https://github.com/gaearon/redux-thunk) - :star: __3.9K__

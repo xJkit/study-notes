@@ -295,7 +295,6 @@ __Bounds__ 分為 `window bounds` 與 `click event bounds`, 為視窗在 OS 中�
 
 ## Background Throttling
 
-
 ## FAQ
 
 1. 功能邏輯應該寫在 Web App 裡，還是寫在 Electron App 裡？
