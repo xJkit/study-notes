@@ -35,7 +35,6 @@ GitHub > Electron > Atom.
     * show: *bool* 開啟/關閉視窗顯示(啟動時)
     * webPreferences:
       * backgroundThrottling: *bool* - 開啟/關閉 Chromium 的 bakcground throttling
-
   * 方法：
     * loadURL(*url*): 打開視窗後讀取 url 或檔案
       * 例如 `loadURL('https://tw.yahoo.com')` 就是開啟一個網站
@@ -67,6 +66,9 @@ GitHub > Electron > Atom.
   * .setToolTip(*string*)
   * .popUpContextMenu(*menuConfig*) - *menuConfig* 來自 `Menu.buildFromTemplate([{}...])`
   * .setTitle(*string*) - 設定 tray icon 標題
+* `shell` - Manage files and URLs using their default applications.
+  * .showItemInFolder(*outputPath*) - 開啟檔案位置（並且 hightlight 起來）
+
 
   ```js
   const { app, BrowserWindow, ipcMain } = require('electron');
@@ -294,6 +296,48 @@ __Bounds__ 分為 `window bounds` 與 `click event bounds`, 為視窗在 OS 中�
 ## IPC between Electron & React
 
 ## Background Throttling
+
+## **Package**/Build/Distribute Electron to Desktop App
+
+打包方式非常多元，需要了解不是只有執行檔而已， Mac OS 下有 `.app` 和 `.dmg`, 而 Windows 底下則有 `.exe`, `.msi` 或是一個安裝檔
+
+* [electron-packager](https://github.com/electron-userland/electron-packager)
+  * a tool which bundles your electron-based app into folders ready for distribution
+  * 打包方式： cli 或 JS api
+    * cammand line tool 直接打包
+    * 透過 JavaScript API (node.js) 打包
+    * 特點：
+      * Mac OS 可打包成 .app, Windows 下可打包成 .app 和 .exe
+      * Windows(32/64 bit) 底下只能生成 `.exe`(執行檔及目錄)，不能做成安裝檔。
+      * Mac OS 下生成 `.app`, Linux(x86/x86_64) 下
+
+* [electron-builder](https://github.com/electron-userland/electron-builder)
+  * A complete solution to package and build a ready for distribution Electron app with “auto update” support out of the box
+  * 打包方式： cli 或 JS api
+  * 特點：
+    * 支援 Mac OS 與 Windows. Linux is not supported yet.
+    * Mac OS 只能打包成 `.dmg`
+    * Windows 底下能打包 `.exe`, `.msi`
+    * 支援 Auto Update, 使用相依套件 [electron-updater](https://www.npmjs.com/package/electron-updater)
+    * 非常多的 [options](https://github.com/electron-userland/electron-builder/wiki/Options)
+
+* [electron-forge](https://github.com/electron-userland/electron-forge)
+  * [electron-compile](https://github.com/electron/electron-compile)
+    * compile JS and CSS in Electron applications
+    * 能使用 app ready 底下最新功能的 JavaScirpt (ES6+)
+  * [electron-rebuild](https://github.com/electron/electron-rebuild)
+    * Automatically recompiles native Node.js modules against the correct Electron version.
+
+* asar
+  * 一種壓縮格式，避免你的程式被看光、打亂並且瘦身的好工具
+
+* [grunt-electron-installer](https://github.com/electron-archive/grunt-electron-installer)
+  * Grunt plugin that builds Windows installers for Electron apps using Squirrel.
+  * 使用自動化工具 `Grunt` 打包 Electron app
+  * 打包方式： only cli
+  * 僅支援 Windows OS
+
+## 使用 electron-packager 打包應用程式
 
 ## FAQ
 
