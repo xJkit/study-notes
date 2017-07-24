@@ -25,6 +25,8 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
 * [react](https://github.com/facebook/react)
 * [react-router](https://github.com/ReactTraining/react-router)
+  * v2 -> v4 [unofficial migration guide](https://codeburst.io/react-router-v4-unofficial-migration-guide-5a370b8905a)
+  * [Official Migrating from v2/v3 to v4](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/migrating.md)
 * [react-native](https://github.com/facebook/react-native#getting-started)
   > A framework for building native apps with React.
 
@@ -821,6 +823,8 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
   * [Sequal Pro](https://github.com/sequelpro/sequelpro)
     * MySQL 的 GUI Application
     * Mac only
+
+  * [Apollo]()
 
 ### API Documentation Tools
 
