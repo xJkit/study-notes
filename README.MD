@@ -981,23 +981,51 @@ Full Stack JavaScript, thanks to [Node.js](https://nodejs.org/en/).
 
 ---
 
-# DevOps
+## DevOps
 
-  * [Docker](https://www.docker.com/)
+DevOps = Developement + Operation.
 
-    > 超狂 application-level containers, BJ4.
+![Imgur](http://i.imgur.com/StUeaL8.png)
 
-    > 傳送門：
+### Virtualization
 
-      * [Get started with docker for Mac](https://docs.docker.com/docker-for-mac/)
+* [Docker](https://www.docker.com/)
 
-### Continuous Integrations & Deliveries
+  * 超狂 application-level containers, BJ4.
+  * 傳送門： [Get started with docker for Mac](https://docs.docker.com/docker-for-mac/)
 
-  * [Jenkins](https://github.com/jenkinsci/jenkins)
-  * [Travis CI](https://github.com/travis-ci/travis-ci)
-  * [Circle CI](https://github.com/circleci)
-  * [Drone](https://github.com/drone/drone)
-    - Continuous Delivery platform built on Docker, written in Go
+### Continuous Integrations
+
+* [Jenkins](https://github.com/jenkinsci/jenkins)
+
+* [Travis CI](https://github.com/travis-ci/travis-ci)
+
+* [Circle CI](https://github.com/circleci)
+
+* [Drone](https://github.com/drone/drone)
+  * Continuous Delivery platform built on Docker, written in Go
+
+### Continouns deliveries and deployment
+
+* [Vagrant](https://github.com/mitchellh/vagrant)
+  * a tool for building and distributing development environments
+  * Development environments managed by Vagrant can run on local virtualized platforms such as VirtualBox or VMware, in the cloud via AWS or OpenStack, or in containers such as with Docker or raw LXC.
+
+* [Ansible](https://github.com/ansible/ansible)
+  * simple IT automation platform that makes your applications and systems easier to deploy
+  * Avoid writing scripts or custom code to deploy and update your applications— automate in a language that approaches plain English, using SSH, with no agents to install on remote systems
+
+* [Puppet](https://github.com/puppetlabs/puppet)
+  * Server automation framework and application
+
+* [Chef](https://github.com/chef/chef)
+  * A systems integration framework, built to bring the benefits of configuration management to your entire infrastructure
+
+* [Salt](https://github.com/saltstack/salt)
+  * Software to automate the management and configuration of any infrastructure or application at scale.
+
+* [Kubernetes](https://github.com/kubernetes/kubernetes)
+  * Production-Grade Container Scheduling and Management
 
 ---
 
