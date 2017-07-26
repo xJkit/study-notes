@@ -129,11 +129,18 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 
   > 觀看 [基礎範例](http://jsbin.com/jexomi/edit?js,output)
 
+* [redux-cycles](https://github.com/cyclejs-community/redux-cycles)
+  * Bring functional reactive programming to Redux using Cycle.js
+
 * [redux-saga](https://github.com/redux-saga/redux-saga) - :star: __~6K__
 
   > 使用 ES6 generators 讓非同步請求統一放在 saga 中使得更加容易處理與測試
 
   > 現今最流行處理 async 的方式，但是需要 generators 的知識！
+
+* [redux-ship](https://github.com/clarus/redux-ship)
+  * Composable, testable and typable side effects for Redux
+
 
 * [Why do we need middleware for async flow in Redux?](http://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux/34623840#34623840)
   > 非同步網路請求到底是放在 middleware? 還是放在 action creator 裡面？作者在 StackOverflow 有非常好的說明(包含是否適用 redux-thunk 或 redux-saga，有兩者比較的討論串)
