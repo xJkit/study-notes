@@ -337,7 +337,9 @@ __Bounds__ 分為 `window bounds` 與 `click event bounds`, 為視窗在 OS 中�
   * 打包方式： only cli
   * 僅支援 Windows OS
 
-## 使用 electron-packager 打包應用程式
+## 使用 `electron-packager` 結合 `create-react-app` 打包應用程式
+
+* [How to build an Electron app using create-react-app](https://medium.freecodecamp.org/building-an-electron-application-with-create-react-app-97945861647c)
 
 ## FAQ
 
@@ -347,6 +349,7 @@ __Bounds__ 分為 `window bounds` 與 `click event bounds`, 為視窗在 OS 中�
 ## References
 
 * [Electron-API-Documentation](https://electron.atom.io/docs/api/)
+* [How to build an Electron app using create-react-app](https://medium.freecodecamp.org/building-an-electron-application-with-create-react-app-97945861647c)
 
 ## Projects
 
