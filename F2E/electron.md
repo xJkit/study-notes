@@ -340,6 +340,11 @@ __Bounds__ 分為 `window bounds` 與 `click event bounds`, 為視窗在 OS 中�
 ## 使用 `electron-packager` 結合 `create-react-app` 打包應用程式
 
 * [How to build an Electron app using create-react-app](https://medium.freecodecamp.org/building-an-electron-application-with-create-react-app-97945861647c)
+* 打包相關資訊
+  * [Electron builder 打包和自动更新](https://ijser.cn/about-electron-builder/) @ IJSE
+  * [Question: What's the difference with electron-forge?](https://github.com/electron-userland/electron-builder/issues/1193)
+
+## 使用 electron-packager 打包應用程式
 
 ## FAQ
 
