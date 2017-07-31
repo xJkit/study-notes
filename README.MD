@@ -338,6 +338,9 @@ React UI Frameworks
 
   > Perfect for the development
 
+* [lerna](https://github.com/lerna/lerna)
+  * A tool for managing JavaScript projects with multiple packages
+
 ### HTTP Request Libraries
 * [axios](https://github.com/mzabriskie/axios)
   * Promise based HTTP client for the browser and node.js
