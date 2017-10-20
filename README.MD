@@ -1019,11 +1019,11 @@ DevOps = Developement + Operation.
 * [Drone](https://github.com/drone/drone)
   * Continuous Delivery platform built on Docker, written in Go
 
-### Continouns deliveries and deployment
+### Continuous deliveries and deployment
 
 * [Vagrant](https://github.com/mitchellh/vagrant)
   * a tool for building and distributing development environments
-  * Development environments managed by Vagrant can run on local virtualized platforms such as VirtualBox or VMware, in the cloud via AWS or OpenStack, or in containers such as with Docker or raw LXC.
+  * Development environments managed by Vagrant can run on local virtual platforms such as VirtualBox or VMWare, in the cloud via AWS or OpenStack, or in containers such as with Docker or raw LXC.
 
 * [Ansible](https://github.com/ansible/ansible)
   * simple IT automation platform that makes your applications and systems easier to deploy
