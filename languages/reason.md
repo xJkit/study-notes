@@ -2,6 +2,45 @@
 
 REASON 是一個搭建在 `OCaml` 上的函數式程式語言，將 OCaml 的語法修飾成 JavaScript 開發者所習慣的方式。
 
+## Features
+
+* Functional
+  ```reason
+  /* composition */
+  let increment x => x + 1;
+  let double x => x + x;
+  let eleven = increment (double 5);
+  ```
+* Strong inferred type system
+  * 不需要每一個都明定資歷類型， Reason 預設會幫你定義最適合的 type
+  ```reason
+    /* same type */
+    let myInt = 5;
+    let myInt: imt = 5;
+
+  ```
+* Algebraic data types
+  ```reason
+    type myResponseVariant =
+      | Yes
+      | No
+      | PrettyMuch;
+    let areYouCrushingIt = Yes;
+  ```
+* Pattern Matching
+  ```reason
+    /* powerful version of Switch in Reason */
+    let message =
+      switch areYouCrushingIt {
+        | No => "No worries"
+        | Yes => "Great!"
+        | PrettyMuch => "Nice!"
+      };
+    /* message is "great" */
+  ```
+
+## Installation
+
 執行 REASON (副檔名 .re) 的方式有兩種：
 1. 使用 REASON-to-JavaScirpt Compiler:  [BuckleScript](https://github.com/BuckleScript/bucklescript)
   ```sh
@@ -15,6 +54,9 @@ REASON 是一個搭建在 `OCaml` 上的函數式程式語言，將 OCaml 的語
     opam switch 4.02.3
   ```
   * more detail: [Native QuickStart](https://reasonml.github.io/guide/native/quickstart)
+  * REPL 測試工具：
+    * `utop` for OCaml
+    * `rtop` for Reason
 
 ## Language Basics
 
@@ -50,14 +92,16 @@ REASON 是一個搭建在 `OCaml` 上的函數式程式語言，將 OCaml 的語
           let myName = me.name;
         ```
 
-
 ```reason
 let greeting = "hello!";
 ```
-
 
 ## References
 
 * [官方 QuickStart](https://reasonml.github.io/guide/javascript/quickstart)
 * [BuckleScript](https://github.com/BuckleScript/bucklescript)
 * [OPAM](https://github.com/ocaml/opam)
+
+### Videos
+
+* [Mixing ReasonML into your React apps, Robbie McCorkell - React London September 2017](https://www.youtube.com/watch?v=gZweJw_egaE&list=PLW6ORi0XZU0BL3Up9mXpP75ilJBDOjMsQ&utm_content=buffera6439&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
