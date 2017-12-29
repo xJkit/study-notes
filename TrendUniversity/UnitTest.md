@@ -46,6 +46,22 @@
 * Test Framework offers:
   * class libraries, test runner, test results(summaries)
 
+## 20171102
+
+* External Dependencies:
+  * Time
+  * Network
+  * 3-party lib
+  * Memory
+  * ...
+
+* Dependency Breaking
+* Refactoring
+  * change code but not behaviour
+
+* Methods
+  * Constructor injection
+
 ## References
 
 * [ghsukumar GitHub 整理好的 UT 原則](https://github.com/ghsukumar/SFDC_Best_Practices)
