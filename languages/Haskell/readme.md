@@ -145,6 +145,48 @@ zipTest'' = zip [1,2,3] [4,5] -- [(1,4),(2,5)]
 -- 函數式程式語言的一般思路：先取一個初始的集合併將其變形，執行過濾條件，最終取得正確的結果。
 ```
 
+### Types
+
+在 GHCi 中可以使用指令 `:t` 來查看 types.
+
+* Char 一個字元
+* String 字串（等價於 [Char]）
+* Int 整數（有界）-2147483648~2147483647
+* Integer 整數（無界）非常大但效能較差
+* Float 單精度浮點數 (ex. 25.132742)
+* Double 雙精度浮點數 (ex. 25.132741228718345)
+* Bool 布林值(True/False)
+
+### Type Variables
+
+型別變數類似 OO 中的 generic, 可以是任意型別。
+[a] -> a
+
+### Typeclasses
+
+測試一下等號的型別：
+
+```sh
+ghci> :t (==)
+(==) :: (Eq a) => a -> a -> Bool
+```
+
+`=>` 左邊為型別約束， `Eq` 這一 Typeclass 提供了判斷相等性的介面，凡是可比較相等性的型別必屬於 `Eq` class.
+
+常見的 Typeclasses:
+
+
+Typeclass | 意義 | 實現函數 | 範圍
+---------|----------|--------- |----
+ Eq | 包含可判斷相等性的型別 | `==`, `/=` | 除函數以外的所有型別都屬於 Eq
+ Ord | 包含可比較大小的型別 | `<, >, <=, >=` | 除了函數以外，我們目前所談到的所有型別都屬於 Ord 類; 型別若要成為Ord的成員，必先加入Eq家族。
+ Show | 可用字串表示的型別 | show | 除函數以外的所有型別都是 Show 的成員
+ Read | 與 Show 相反 | read | -
+ Enum | 成員都是連續的型別 -- 也就是可枚舉 | - | 包含 ( ), Bool, Char, Ordering, Int, Integer, Float 和 Double
+Bounded | 成員都有一個上限和下限
+Num | 表示數字 | - | 包含所有的數字：實數和整數
+Integral | 表示數字 | - | 僅包含整數, 其中的成員型別有 Int 和 Integer
+Floating | 僅包含浮點型別 | - | 包含 Float 和 Double
 ## 參考資料：
 
 * [Haskell 趣學指南](https://learnyoua.haskell.sg/content/zh-tw)
