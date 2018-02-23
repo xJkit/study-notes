@@ -1,0 +1,5 @@
+"Rule: ocaml: ml -> cmo & cmi (%=hello )": "\2537D\189\006\031\181|\017\134\223q\177\1514\135"
+"Resource: /Users/xJkit/Documents/Workspace/study-notes/languages/ocaml/hello.ml": "\177\004qB\175R\245\169P\228\014Am\177\167?"
+"Rule: ocaml dependencies ml (%=hello )": "\196J\160%\021\139\252\201\028\182\130\024\003\022\022\237"
+"Rule: ocaml: ml & cmi -> cmx & o (%=hello )": "(A\212\151\194\152x[Q\203\176\169J\006\136\029"
+"Rule: ocaml: cmx* & o* -> native (%=hello )": "=\223\242\r&\255#\233i\0054\137T?\216\128"

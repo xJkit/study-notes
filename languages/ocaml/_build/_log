@@ -1,0 +1,10 @@
+### Starting build.
+# Target: hello.ml.depends, tags: { extension:ml, file:hello.ml, ocaml, ocamldep, quiet }
+/Users/xJkit/.opam/4.06.1/bin/ocamldep.opt -modules hello.ml > hello.ml.depends
+# Target: hello.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:hello.cmo, file:hello.ml, implem, ocaml, quiet }
+/Users/xJkit/.opam/4.06.1/bin/ocamlc.opt -c -o hello.cmo hello.ml
+# Target: hello.cmx, tags: { compile, extension:cmx, extension:ml, file:hello.cmx, file:hello.ml, implem, native, ocaml, quiet }
+/Users/xJkit/.opam/4.06.1/bin/ocamlopt.opt -c -o hello.cmx hello.ml
+# Target: hello.native, tags: { dont_link_with, extension:native, file:hello.native, link, native, ocaml, program, quiet }
+/Users/xJkit/.opam/4.06.1/bin/ocamlopt.opt hello.cmx -o hello.native
+# Compilation successful.
