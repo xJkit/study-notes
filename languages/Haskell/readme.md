@@ -18,6 +18,8 @@ Mac OS:
 brew cask install haskell-platform
 ```
 
+check more about [installation guide](https://www.haskell.org/platform/mac.html#osx-homebrewcask) for more platforms.
+
 ### 基本概念
 
 * Pure Functions
@@ -82,7 +84,69 @@ Tuple | List
   - 有用到才會計算
   - Lazy infinite list
 
-check more about [installation guide](https://www.haskell.org/platform/mac.html#osx-homebrewcask) for more platforms.
+* Higher-order functions
+  - pass a function as an argument, then return another function
+  - 例子：
+  ```haskell
+    pass3 f = f 3
+    add4 = (+) 4 -- 參數沒代滿
+    add4 3 -- 將會是 7
+  ```
+* Partial Application
+ - 在 Haskell 中 function 的參數沒代滿是合法的。
+ - 未代滿的參數回傳另一個 function 等著剩下的參數代入
+ - 由於有 Partical Application, 參數的 `順序` 格外重要。
+ - 以加法為例：
+  ```haskell
+    add1 = (+) 1
+    add1' = (1+)
+    add1'' = (+1)
+    -- 以上三者等價
+  ```
+
+* Operators
+  - +, *, :, ++ 這些 operator 在 Haskell 中其實都是 function.
+  ```haskell
+    3 + 4 -- 7
+    (+) 3 4 -- 7 (等價寫法)
+  ```
+  - 將任意 function 轉成 operator: 使用兩個 `backticks`:
+  ```haskell
+    mod 7 5 -- 答案為 2
+    7 `mod` 5 -- 等價寫法
+  ```
+
+* Map
+  - `map :: (a -> b) -> [a] -> [b]`
+  - 常搭配 partial application 做第一個參數使用：
+  ```haskell
+    map (1+) [1,2,3] -- [2,3,4]
+    map (5*) [2,3,4] -- [10,15,20]
+  ```
+
+* Filter
+  - `filter :: (a -> Bool) -> [a] -> [a]`
+  - 搭配 where 蠻好用的:
+  ```haskell
+    removeOdd = filter (isEven) where isEven x = x `mod` 2 == 0
+    remove [1..10] -- 得到 [2,4,6,8,10]
+  ```
+  - 還可以搭配 Map 和 Pair 的操作：
+  ```haskell
+    getTrueItemFromPair (pairs) = map snd (filter fst pairs)
+    getTrueItemFromPair [(True, 1), (False, 2), (True, 3)] -- [1,3]
+  ```
+* Foldl 與 Foldr
+  - `foldl :: Foldable t => (b -> a -> b) -> b -> t a -> b`
+  - `foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b`
+  - 類似 JavaScript 中的 `reduce` 與 `reduceRight`
+  - foldl 從 左邊開始計算， foldr 從右邊開始計算，在 `減法` 情形下是有差別的：
+  ```haskell
+    foldl (-) 0 [1,2,3] -- -6
+    foldr (-) 0 [1,2,3] -- 2
+  ```
+  - `foldl` 比 `foldr` 速度稍微快一點
+  - `foldl` 無法用於 infinite list 但是 `foldr` 可以 (多虧 lazy)
 
 ### 開發工具
 

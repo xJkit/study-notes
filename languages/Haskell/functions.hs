@@ -33,6 +33,9 @@ doubleList'' x = case x of
 
 -- attension: case expression cannot mix with guards
 
+-- use partical application with map function (推薦寫法)
+doubleListWithMap = map (2*)
+
 -- use recursion to remove odd numbers (safer)
 removeOdds nums =
   if null nums
@@ -74,3 +77,14 @@ fancySeven'' = x + y
 
 fancyTen' = 2 * (a + 1)
   where a = 4
+
+-- Higher order functions
+pass3 f = f 3
+times2 x = x * 2
+
+-- combine filter and map
+getTrueItem (pairs) = map snd (filter fst pairs)
+
+-- reduce in JavaScript
+reduce [] = 0
+reduce (x: xs) = x + (reduce xs)
