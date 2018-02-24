@@ -1,10 +1,79 @@
 # Haskell 學習筆記
 
+Haskell 基本特色：
+
+1. Purely Functional
+  - functions are values
+  - values never changes
+2. Lazy
+3. Statically Typed
+
 ## 一些基本的東西
+
+### Installation
+
+Mac OS:
+
+```sh
+brew cask install haskell-platform
+```
+
+### 基本概念
+
+* Pure Functions
+  * all functions are pure
+  * cannot modify state
+  * cannot depend on state
+  * same input get same output
+
+不是 Pure Function 的例子：
+  * print string to a console: modifies external state
+  * read a file: depends on external state at different times
+  * get the current time: 不同時間回傳不同數值
+  * get a random number: 每次都回傳不同數值
+
+是 Pure Function 的例子：
+  * 計算字串長度
+
+* Recursion
+在 Haskell 中沒有 Loop 只有 Recursion.
+
+* List
+  - 基本宣告：[1, 2, 3]
+  - Homogeneous List: 必須相同型別
+  - [1, 2, 3] 為語法糖，真正長相是 1 : 2 : 3 : []
+  - "This" 字串 String 語法糖，真正長相是 'T':'h':'i':'s':[]
+  - 所以 String 的 type 為 [Char]
+  - 常用 list functions:
+    - head 取得第一個元素
+    - tail 取得最後一個
+    - null 判別是否為空 list
+
+* Tuple
+  - 基本宣告： (1, "Hello", 'c', [1,2,3])
+  - 不限制相同型別
+  - pair: 只有兩個元素，如 (1,2), ("Hi", 3.14).
+  - 常用 tuple functions:
+    - fst 取 pair 第一個
+    - snd 取 pair 第二個
+
+
+Tuple | List
+---------|---------
+ (...) | [...]
+ 可以不同型別 | 必須相同型別
+ 固定長度(fixed length) | unbounded length
+
+
+
+
+check more about [installation guide](https://www.haskell.org/platform/mac.html#osx-homebrewcask) for more platforms.
 
 ### 開發工具
 
-1. GHCi
+1. GHC
+  - 最受歡迎的 Haskell Compiler
+  - GHCi：Haskell REPL
 2. Stack
 
 ### Fundamentals
