@@ -26,6 +26,13 @@ doubleList x =
 doubleList' [] = []
 doubleList' (x : xs) = (2 * x) : (doubleList' xs)
 
+-- use case expressions
+doubleList'' x = case x of
+  [] -> []
+  (x: xs) -> (2 * x) : (doubleList'' xs)
+
+-- attension: case expression cannot mix with guards
+
 -- use recursion to remove odd numbers (safer)
 removeOdds nums =
   if null nums
@@ -41,3 +48,29 @@ removeOdds' (x: xs) =
   if mod x 2 == 1
   then removeOdds' xs
   else x : removeOdds' xs
+
+-- use pattern matching + guards
+removeOdds'' [] = []
+removeOdds'' (x: xs)
+    | mod x 2 == 1 = removeOdds'' xs -- remove odd number
+    | otherwise  = x : removeOdds'' xs
+
+
+
+-- let binding (+ in)
+-- (bottom-up approach)
+fancySeven =
+  let x = 3
+      y = 4
+  in x + y
+
+fancyTen = (let a = 4 in 2 * (a + 1))
+
+-- where binding
+-- (top-down approach)
+fancySeven'' = x + y
+  where x = 3
+        y = 4
+
+fancyTen' = 2 * (a + 1)
+  where a = 4

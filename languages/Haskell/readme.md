@@ -65,7 +65,22 @@ Tuple | List
  固定長度(fixed length) | unbounded length
 
 
+* Pattern Matching
+  - different cases for a function
+  - guards: `|`
+  - case expression: `case of` (cannot mix case with guards)
 
+* Let binding
+  -
+* Where binding
+
+* White spaces
+  - 千萬不要使用 tab 縮排，務必使用空白。
+  - Haskell 頗注重縮排，像是 let binding 中多個變數綁定必須縮排一直線才行。
+
+* Lazy evaluation
+  - 有用到才會計算
+  - Lazy infinite list
 
 check more about [installation guide](https://www.haskell.org/platform/mac.html#osx-homebrewcask) for more platforms.
 
