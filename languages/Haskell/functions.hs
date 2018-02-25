@@ -58,7 +58,12 @@ removeOdds'' (x: xs)
     | mod x 2 == 1 = removeOdds'' xs -- remove odd number
     | otherwise  = x : removeOdds'' xs
 
+-- use where in filter function
+removeOddsWhere = filter isEven
+  where isEven x = x `mod` 2 == 0
 
+-- use lambda expression in filter function
+removeOddsFilter = filter (\x -> x `mod` 2 == 0)
 
 -- let binding (+ in)
 -- (bottom-up approach)
@@ -88,3 +93,7 @@ getTrueItem (pairs) = map snd (filter fst pairs)
 -- reduce in JavaScript
 reduce [] = 0
 reduce (x: xs) = x + (reduce xs)
+
+-- function applications
+ops = map (\f -> f 3) [(+1), (\x -> 2*x + 3), (*2)]
+ops' = map ($3) [(+1), (\x -> 2*x + 3), (*2)]

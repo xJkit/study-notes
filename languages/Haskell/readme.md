@@ -72,9 +72,9 @@ Tuple | List
   - guards: `|`
   - case expression: `case of` (cannot mix case with guards)
 
-* Let binding
-  -
-* Where binding
+* `Let` binding
+
+* `Where` binding
 
 * White spaces
   - 千萬不要使用 tab 縮排，務必使用空白。
@@ -84,6 +84,9 @@ Tuple | List
   - 有用到才會計算
   - Lazy infinite list
 
+Functions are `values`.
+Operators are `functions`.
+
 * Higher-order functions
   - pass a function as an argument, then return another function
   - 例子：
@@ -92,6 +95,8 @@ Tuple | List
     add4 = (+) 4 -- 參數沒代滿
     add4 3 -- 將會是 7
   ```
+  - map, filter, fold, zipWith
+
 * Partial Application
  - 在 Haskell 中 function 的參數沒代滿是合法的。
  - 未代滿的參數回傳另一個 function 等著剩下的參數代入
@@ -147,6 +152,45 @@ Tuple | List
   ```
   - `foldl` 比 `foldr` 速度稍微快一點
   - `foldl` 無法用於 infinite list 但是 `foldr` 可以 (多虧 lazy)
+
+* zip / zipWit·h / zipWith3
+
+* Lambda Expressions
+  - 宣告： `(\x -> 2 * x)`
+  - 就像是 JavaScript 的 anonymous function
+  - 當然跟 `map`, `filter` 等 結合就會很強大
+  ```haskell
+    map (\x -> x * 2) [2,3,4] -- [4, 6, 8]
+  ```
+
+* Function Composition
+  - `.`: 使用 dot sign 來 compose functions
+  ```haskell
+    strLength nums = length (show nums)
+    strLength' = length . show
+    -- 以上兩者等價
+
+    notNull = not . null
+  ```
+  - function 必須 **只能有一個 argument** 才能 compose
+
+* Function Application
+  - `$`: 使用 dollar sign 表示將右邊 function 的執行結果代入左邊
+  - 使用時機：當 compose 很多 functions
+  ```haskell
+    f $ g x = f (g x)
+    f $ g $ h $ k x = f( g (h (k x)) )
+  ```
+
+  - 使用時機：higher-order functions
+  ```haskell
+  ($3) = (\f -> f 3)
+
+  -- 以下兩者等價
+  ops = map (\f -> f 3) [(+1), (\x -> 2*x + 3), (*2)]
+  ops' = map ($3) [(+1), (\x -> 2*x + 3), (*2)]
+  ```
+
 
 ### 開發工具
 
