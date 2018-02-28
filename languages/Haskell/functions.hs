@@ -97,3 +97,15 @@ reduce (x: xs) = x + (reduce xs)
 -- function applications
 ops = map (\f -> f 3) [(+1), (\x -> 2*x + 3), (*2)]
 ops' = map ($3) [(+1), (\x -> 2*x + 3), (*2)]
+
+
+-- case expressions v.s pattern matching
+isPrime 2 = "is prime!"
+isPrime 3 = "is prime!"
+isPrime 5 = "is prime!"
+isPrime x = "not a prime!"
+
+isPrimeCase x = case x of 2 -> "is prime"
+                          3 -> "is prime"
+                          5 -> "is prime"
+                          y -> "not a prime"
