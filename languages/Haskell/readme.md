@@ -251,6 +251,7 @@ Operators are `functions`.
 `結論`： You almost don't need to specify types explicitly!
 
 * Polymorphic functions
+
   *  當 function 的型別有定義 `type variable` 的時候
   * 與 Object Oriented 的 polymorphism 毫無關係
   * 比較像是 Java 的 `generics` 或 C++ 的 `templates`
@@ -262,6 +263,23 @@ Operators are `functions`.
   * type constraints:
     * Num a => [a] -> a
     * 使用 `type class` 限制任一型別
+
+* Type Synonyms
+
+  * 使用 `type` 自行定義資料型態：
+
+  ```haskell
+    midpoint :: (Double, Double) -> (Double, Double) -> (Double, Double)
+    midpoint (x1, y1) (x2, y2) = (x1 + x2 / 2), (y1 + y2 / 2)
+
+    -- 以上 (Double, Double) 太繁瑣，可以使用 type
+    type Point = (Double, Double)
+    midpoint :: Point -> Point -> Point
+  ```
+
+* newtype
+
+* records
 
 ### 開發工具
 
