@@ -277,9 +277,55 @@ Operators are `functions`.
     midpoint :: Point -> Point -> Point
   ```
 
-* newtype
+* `newtype`
+
+  * Create a new type represented by an existing one (cannot mix up)
+  * 讓一個資料型態再次縮小其形態的集合，能更精確定義資料範圍
+  * 例如 _CustomerId_ 雖然是 `Int` 但是不能隨便輸入數值，而是經過一個 _MakeCustomerId_ 函數所產生的 Int 才行
+
+  ```haskell
+    newtype CustomerId = MakeCustomerId Int -- MakeCustomerId is a constructor
+    -- badCustomerId
+    badCustomerId :: CustomerId
+    badCustomerId = 13 -- invalid
+    -- good customerId
+    customer :: CustomerId
+    customer = MakeCustomerId 13
+    -- 從 CustomerId 取得數值 : pattern matching
+    customerToInt (MakeCustomerId i) = i
+  ```
 
 * records
+
+  * 以 `data` 選宣告
+
+* Algebraic data types
+  * Package some values together + name container
+  * `newtype`, but more arguments!
+  ```haskell
+    newtype CustomerId = CustomerId Int
+    data Customer = Customer CustomerId String Int
+    -- 例子：
+    x :: (Double, Double, Double)
+    -- 你不會曉得 x 是什麼？三維座標系？
+    data RGB = RGB Double Double Double
+    x :: RGB
+    -- 原來 x 是一個 RGB!
+  ```
+* Algebraic data type `Constructor`
+
+  * diffent kind of values for that type.
+
+  ```haskell
+    -- ex.1
+    data Bool = True | False
+    x :: Bool
+    x = True
+    -- ex.2 就像 Enum
+    data response = Yes | No | Help | Quit
+  ```
+
+* Parameterized Type
 
 ### 開發工具
 
