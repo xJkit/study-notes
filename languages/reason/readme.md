@@ -34,3 +34,4 @@ You can use `create-react-app` with reason scripts like so:
 ## References
 
 * [a-first-reason-react-app-for-js-developers](https://jamesfriend.com.au/a-first-reason-react-app-for-js-developers)
+* [a-reason-react-tutorial@Jared Forsyth](https://jaredforsyth.com/posts/a-reason-react-tutorial/)
