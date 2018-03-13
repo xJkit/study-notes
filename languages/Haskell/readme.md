@@ -516,6 +516,63 @@ ghci> :t (==)
 | Integral  | 表示數字                           | -                       | 僅包含整數, 其中的成員型別有 Int 和 Integer                                                      |
 | Floating  | 僅包含浮點型別                     | -                       | 包含 Float 和 Double                                                                             |
 
+### Higher Order Functions
+
+* 函數做為參數並回傳另一個函數
+* 拒絕 **循環** 與 **狀態** 的改變，而是通過`定義問題`來解決問題 --> 使用 **Higher Order Function**
+
+`Curried Function`
+
+Haskell 中所有函數皆是 Curried function:
+
+```haskell
+  > max 4 5
+  -- 5
+  > (max 4) 5
+  -- 5
+
+```
+由 `max` 的函數型別可知一二：
+
+```haskell
+max :: (Ord a) => a -> a -> a
+
+-- 等同於下列：
+max :: (Ord a) => a -> (a -> a)
+-- 相當於取一個參數回傳另一個函數
+```
+
+`zipWith`
+
+```haskell
+zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c] ww
+-- 取一個函數作為參數（其有兩個參數）,兩個 lists.
+-- 範例: 以下兩者結果相同
+zipWith (\x y -> x * y) [1, 2, 3] [4, 5, 6]
+zipWith (*) [1, 2, 3] [4, 5, 6]
+```
+
+### Modules
+
+GHCi 預設裝載 `Prelude` 模組，以下介紹其他常見模組。
+
+在 GHCi 中直接引入，可使用 `:m` 並以空格分開，同時引入多項模組
+
+```haskell
+  :m Data.List Data.Map Data.Set
+```
+
+在 Haskell 中使用 `import` 載入。
+
+```haskell
+  import Data.List -- 載入全部
+  import Data.List (nub, sort) -- 只載入兩項
+  import Data.List hiding (nub) -- 載入全部除了 nub. 避免函數衝突
+  import qualified Data.Map -- 載入全部，但是使用函數時必須全名，如 Data.Map.filter 避免與既有的 filter 命名衝突
+  import qualified Data.Map as M -- 取 Alias Data.Map, 如此呼叫 M.filter 就可以了
+```
+
 ## 參考資料：
 
 * [Haskell 趣學指南](https://learnyoua.haskell.sg/content/zh-tw)
+* [Hoogle: Haskell 模組搜尋引擎](https://www.haskell.org/hoogle/)
