@@ -575,4 +575,4 @@ GHCi 預設裝載 `Prelude` 模組，以下介紹其他常見模組。
 ## 參考資料：
 
 * [Haskell 趣學指南](https://learnyoua.haskell.sg/content/zh-tw)
-* [Hoogle: Haskell 模組搜尋引擎](https://www.haskell.org/hoogle/)
+* [Hoogle - Haskell 模組搜尋引擎](https://www.haskell.org/hoogle/)
