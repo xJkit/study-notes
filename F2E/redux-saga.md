@@ -48,11 +48,10 @@ Saga 為一個對付 Side Effects(非同步請求) 的 pattern, 監聽 actions �
 
 **小結：** Redux-Thunk 沒什麼不好，小專案還是可以用，而且搭配 ``async/await`` 非常直覺。倘若專案在非同步請求邏輯非常複雜，建議呼叫 Saga Pattern 來處理這一切。
 
-
 類別          | Imperative  | Declarative
 -------------|-------------|-------------
 DOM          | jQuery      | React
-Side Effects | Redux-Thunk | Redux-Saga
+Side Effects | Redux-Saga  | Redux-Observable
 
 
 ## Redux-Saga 術語對照表
