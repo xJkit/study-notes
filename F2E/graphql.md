@@ -1,5 +1,6 @@
 # GraphQL Notes
-> ref: https://www.howtographql.com
+
+> Reference: [How-to-graphql](https://www.howtographql.com)
 
 ## Introduction
 
@@ -100,3 +101,4 @@ GraphQL 的優勢:
       createPerson(name: String!, age: Int!): Person!
     }
   ```
+

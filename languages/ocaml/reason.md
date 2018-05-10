@@ -40,14 +40,37 @@ REASON 是一個搭建在 `OCaml` 上的函數式程式語言，將 OCaml 的語
   ```
 
 ## Installation
+> [Official REASON Installation Guide](https://reasonml.github.io/docs/en/global-installation.html)
+> [Official ReasonReact Installation Guide](https://reasonml.github.io/reason-react/docs/en/installation.html)
+
+要使用 Reason(ML) 必須搭配 Tool chain 才能成功使用：
+
+  ```js
+    npm install --global reason-cli@3.1.0-darwin
+  ```
+
+[reason-cli](https://github.com/reasonml/reason-cli) 不是一個 library, 只是一個方便 npm 的使用者安裝 OCaml tool chain 的 Makefile.
+
+OCaml tool chain for Reason:
+
+* ocamlmerlin
+* ocamlmerlin-reason
+* refmt (Reason G=版本的 prettier)
+* rtop (reason cli, 如同 Haskell 的 ghci)
+* ocamlrun
+* ocamlc/ocamlopt
+* ocamlfind
+
 
 執行 REASON (副檔名 .re) 的方式有兩種：
 1. 使用 REASON-to-JavaScirpt Compiler:  [BuckleScript](https://github.com/BuckleScript/bucklescript)
+
   ```sh
     npm install --global bs-platform
     bsb -init hello-reason-app -theme basic-reason
   ```
-2. 使用 OCaml 與 `OPAM`:
+
+* 使用 OCaml 與 `OPAM`:
   * opam 是 OCaml Package Manager, 使用他來安裝 REASON
   * 執行 reason 必須使用 compiler 版本為 4.02.3
   ```sh
@@ -92,9 +115,68 @@ REASON 是一個搭建在 `OCaml` 上的函數式程式語言，將 OCaml 的語
           let myName = me.name;
         ```
 
-```reason
-let greeting = "hello!";
-```
+* **let** binding
+  * let `<name>`: `<type>` = `<expression>`;
+
+  ```reason
+    let greeting: string = "Hello, REASON!";
+    let jim = "JIM"; // type inference
+  ```
+
+  * 綁定後的數值原生 **immutable**, 但是可以重新綁定：
+
+  ```reason
+  let hello = "hi";
+  > let hello: string = "hi";
+  hello = "reason";
+  > Error: The value hello is not an instance variable
+  let hello = "reason";
+  ```
+
+* **Type** alias
+
+  ```reason
+    Reason # type score = int;
+    type score = int;
+    Reason # let x: score = 40;
+    let x: score = 40;
+    Reason # 60;
+    - : score = 60
+    Reason # type scores = list(score);
+    type scores = list(score);
+    Reason # [60, 70, 80];
+    - : list(score) = [60, 70, 80]
+  ```
+
+* **Scoping**
+  * Lexical Scope
+
+  ```reason
+    Reason # let foo = "FOO";
+    let foo: name = "FOO";
+    Reason #
+    {
+      let foo = "bar";
+      foo;
+    };
+    - : name = "bar"
+    Reason # foo;
+    - : name = "FOO"
+  ```
+
+* **expression**
+  * 每一個 block 回傳最後一個 statement
+
+  ```reason
+    Reason # let fullName = {
+      let fname = "Jay";
+      let lname = "Chung";
+      fname ++ lname;
+    };
+    let fullName: string = "JayChung";
+  ```
+
+  * 也就是說要得到一個複雜運算的數值不一定要宣告**函數**，可以使用 expression 即可
 
 ## References
 
