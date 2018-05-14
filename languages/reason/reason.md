@@ -581,7 +581,7 @@ let add = (x, y) => {
 
 * **Partial Application**
 
-在 Reason 中所有 function 都是 **curry** function:
+在 Reason 中所有 function 都是 **curried** function:
 
 ```reason
 let add = (x, y) => x + y;
@@ -592,7 +592,31 @@ addFive(10);
 /* - : int = 15 */
 ```
 
-由於 curry function, 以下兩者寫法相同：
+也就是說不論有多少 arity，都只是 syntax sugar, 最終都等同於：
+
+```reason
+let add = (x, y, z) => x + y + z; /* let add: (int, int, int) => int = <fun>; */
+
+/* syntax sugar for: */
+let add = x => y => z => x + y + z; /* let add: (int, int, int) => int = <fun>; */
+```
+
+OCaml compiler 會避免多餘的 function call, 也就是說編譯出只會有 **1次** 的 function call:
+
+```js
+// output.js
+function add(x, y, z) {
+  return (x + y | 0) + z | 0;
+}
+```
+
+所以竭盡所能使用 curried function 吧：
+
+* Nice syntax
+* Currying for free (every function takes a single argument, actually!)
+* No performance cost
+
+更多 curried function 範例：
 
 ```reason
 let someAdd = (x, y) => x + y * 10;
@@ -622,7 +646,7 @@ List.map(add(10), num);
 /* - : list(int) = [11, 12, 13, 14, 15] */
 ```
 
-* **Label Parameters**
+* **Labeled Arguments**
 
 Label parameter 可以任意指定參數代入（無須依照順序），搭配 partial application 也是非常好用。
 
@@ -639,7 +663,26 @@ name(~lastName="Chung", ~firstName="Jay");
 
 name(~lastName="Chung")(~firstName="Jay"); /* Partial Application */
 /* "Jay Chung" */
+```
 
+你可以 rename arguments, 使用 **as**， 在 function 實作中避免 type 又可以保持 label 的意義完整性:
+
+```reason
+let name = (~firstName as fname, ~lastName as lname) => {
+  fname ++ " " ++ lname;
+};
+```
+> 注意：使用 ( **:** ) for defining types, **as** for renaming arguments 不要跟 JavaScript 搞混了
+
+
+function label parameter 可以擁有 default value:
+
+```reason
+let name = (~firstName, ~middleName="Yao Nien", ~lastName) => {
+  firstName ++ " " ++ middleName ++ " " ++ lastName;
+};
+
+name(~firstName="Jay", ~lastName="Chung");
 ```
 
 ## References
@@ -647,6 +690,7 @@ name(~lastName="Chung")(~firstName="Jay"); /* Partial Application */
 * [官方 QuickStart](https://reasonml.github.io/guide/javascript/quickstart)
 * [BuckleScript](https://github.com/BuckleScri·pt/bucklescript)
 * [OPAM](https://github.com/ocaml/opam)
+* [What is ReasonML? by Dr. Axel Rauschmayer](http://2ality.com/2017/11/about-reasonml.html)
 
 ### Videos
 
