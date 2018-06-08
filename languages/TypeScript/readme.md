@@ -77,6 +77,20 @@ import Util = require('./Util');
 var commonUtil = require("./utils_commonjs");
 ```
 
+## Built-in Declarations
+
+在 TypeScript 2.0+ 新增了 lib 功能，也就是可以直接 import 一些內建的定義檔。使用方式是在 `tslint.config` 裡面新增 lib:
+
+```json
+  "compilerOptions": {
+    "lib": ["es2015", "es5"] /* Specify library files to be included in the compilation. */
+  }
+```
+
+像是 `TemplateStringsArray` 就是給 template strings 在用的 Type, 來自 **es5**.
+
+更多的定義檔可參考[這裡](https://github.com/Microsoft/TypeScript/tree/master/lib)。
+
 ## References
 
 * [TypeScript Deep Dive](https://legacy.gitbook.com/book/basarat/typescript/details)
@@ -84,3 +98,5 @@ var commonUtil = require("./utils_commonjs");
 * [TypeScript 入門教程](https://legacy.gitbook.com/book/xcatliu/typescript-tutorial/details)
 * [swift-is-like-typescript](https://alhazmy13.github.io/swift-is-like-typescript/)
 * [TypeScript Style Guide](https://basarat.gitbooks.io/typescript/content/docs/styleguide/styleguide.html)
+* [TypeScript What's New](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#including-built-in-type-declarations-with---lib)
+* [TypeScript 2.0+ lib 內建定義檔](https://github.com/Microsoft/TypeScript/tree/master/lib)
