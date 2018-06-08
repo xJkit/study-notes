@@ -25,7 +25,7 @@ var Person = /** @class */ (function () {
     return Person;
 }());
 var Jay = new Person('Jay Chung');
-Jay.dance();
+Jay.dance(); // Jay Chung is dancing...
 /** extends */
 var Hero = /** @class */ (function (_super) {
     __extends(Hero, _super);
@@ -43,5 +43,5 @@ var Hero = /** @class */ (function (_super) {
     return Hero;
 }(Person));
 var Faye = new Hero('Faye Lin');
-Faye.dance();
-Faye.superDance();
+Faye.dance(); // Hero Faye Lin is dancing amazing!!!
+Faye.superDance(); // Faye Lin is dancing...
