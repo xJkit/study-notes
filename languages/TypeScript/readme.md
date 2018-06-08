@@ -76,3 +76,11 @@ import Util = require('./Util');
 ```js
 var commonUtil = require("./utils_commonjs");
 ```
+
+## References
+
+* [TypeScript Deep Dive](https://legacy.gitbook.com/book/basarat/typescript/details)
+* [TypeScript Handbook](https://zhongsp.gitbooks.io/typescript-handbook/)
+* [TypeScript 入門教程](https://legacy.gitbook.com/book/xcatliu/typescript-tutorial/details)
+* [swift-is-like-typescript](https://alhazmy13.github.io/swift-is-like-typescript/)
+* [TypeScript Style Guide](https://basarat.gitbooks.io/typescript/content/docs/styleguide/styleguide.html)
