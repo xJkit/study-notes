@@ -8,6 +8,7 @@ class Jay {
 
   constructor() {
     this.name = "Jay Chung";
+    this.age = 30;
   }
 }
 

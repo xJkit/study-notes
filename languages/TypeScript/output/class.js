@@ -6,6 +6,7 @@
 var Jay = /** @class */ (function () {
     function Jay() {
         this.name = "Jay Chung";
+        this.age = 30;
     }
     return Jay;
 }());
