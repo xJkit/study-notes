@@ -1,6 +1,6 @@
 # J's Study Notes
 
-> 個人學習 JavaScript 的心路歷程，以此紀念。
+> 個人學習 JavaScript & Functional Programming 的心路歷程，以此紀念。
 
 > If you stranger finds something incorrect, a pull request is much appreciated.
 
@@ -21,7 +21,7 @@ Given synopsis below. Please check more detail on the ``Project Demo``.
 * [JSDC 系列影片](https://www.youtube.com/user/JSDCTW)
 * [Under the hood ReactJS](https://bogdan-lyashenko.github.io/Under-the-hood-ReactJS/)
 
-### React officials
+### React
 
 * [react](https://github.com/facebook/react)
 * [react-router](https://github.com/ReactTraining/react-router)
@@ -1129,3 +1129,6 @@ DevOps = Developement + Operation.
   > High performance compiled language
 
   > 有人說這是 21 世紀的 C...
+
+* TypeScript
+  > 詳情請見 [TypeScript](https://github.com/xJkit/study-notes/blob/master/languages/TypeScript/readme.md) 筆記區。
