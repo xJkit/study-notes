@@ -127,7 +127,7 @@ A application-level virtualization technology.
         ```shell
           $ docker run -t jayz54780/debian . --no-cache=true
         ```
-  * 其他好用的 Instructions:
+  * 其他好用的 Instructions: (更多指令請參考 [這裏](https://philipzheng.gitbooks.io/docker_practice/content/dockerfile/instructions.html))
     1. ``CMD``
         1. 這個是當別人從你建立的 image 檔案 run 出一個 container 時會最先執行的指令
         2. 如果你沒有在 Dockerfile 裡頭註明 CMD, 如此一來便會以 base image layer 為主
@@ -146,21 +146,21 @@ A application-level virtualization technology.
     2. ``COPY``
       1. 在 build context 過程中將檔案或資料夾拷貝到 docker image 之中保存
       2. 範例：
-        ```shell
-          $ touch test.txt
-          $ vim Dockerfile # 在 Dockerfile 新增 COPY 指令
-          $ docker build -t jayz54780/deian .
-        ```
-        其中 Dockerfile 最後一行加上 ``COPY``:
+      ```shell
+        $ touch test.txt
+        $ vim Dockerfile # 在 Dockerfile 新增 COPY 指令
+        $ docker build -t jayz54780/deian .
+      ```
+      其中 Dockerfile 最後一行加上 ``COPY``:
 
-        ```
-          FROM ubuntu:latest
-          RUN apt-get update && apt-get install -y \
-          git \
-          python \
-          vim
-          COPY test.txt /src/test.txt
-        ```
+      ```
+        FROM ubuntu:latest
+        RUN apt-get update && apt-get install -y \
+        git \
+        python \
+        vim
+        COPY test.txt /src/test.txt
+      ```
 
     3.  ``ADD``
       1. 與 ``COPY `` 雷同，加上具有下列功能：
